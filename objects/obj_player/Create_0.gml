@@ -1,6 +1,7 @@
 //STATS
 global.php=100;
 stamina=100;
+global.body_type=0;
 //INVENTORY
 g=1;
 hg=0;

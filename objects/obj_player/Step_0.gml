@@ -1,5 +1,3 @@
-if keyboard_check_released(ord("P"))
-
 //DEATH
 if global.php<1
 {

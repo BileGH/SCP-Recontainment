@@ -13,7 +13,22 @@
                     "id": "6fc61438-7189-49cd-9b48-1ada65e19d8d",
                     "modelName": "GMTextureGroup",
                     "mvc": "1.0",
-                    "groupName": "Default1",
+                    "groupName": "player_group",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 2,
+                "Value": {
+                    "id": "ab173664-9792-4e95-b061-b5cdcb51fcec",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "dead_bodies",
                     "targets": 461609314234257646,
                     "autocrop": true,
                     "border": 2,

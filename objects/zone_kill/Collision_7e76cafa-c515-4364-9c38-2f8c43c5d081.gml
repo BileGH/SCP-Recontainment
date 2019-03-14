@@ -1,0 +1,1 @@
+with (obj_player) global.php=global.php-1000;
