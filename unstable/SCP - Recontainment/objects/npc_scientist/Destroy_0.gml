@@ -1,1 +1,0 @@
-instance_create_layer(x,y,"BulletLayer",obj_scientist_dead)
