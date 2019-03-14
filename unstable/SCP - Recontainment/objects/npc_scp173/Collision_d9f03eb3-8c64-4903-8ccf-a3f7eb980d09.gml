@@ -1,0 +1,1 @@
+if blinked=1 with(obj_player) instance_destroy()

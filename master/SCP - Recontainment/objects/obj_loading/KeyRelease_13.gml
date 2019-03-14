@@ -1,0 +1,1 @@
+instance_change(obj_loading2,1);

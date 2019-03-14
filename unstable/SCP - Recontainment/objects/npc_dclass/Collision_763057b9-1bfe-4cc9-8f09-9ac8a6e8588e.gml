@@ -1,0 +1,1 @@
+if keyboard_check(ord("E")) stop=1
