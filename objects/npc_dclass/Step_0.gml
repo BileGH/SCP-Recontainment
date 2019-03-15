@@ -1,6 +1,6 @@
 if hp<1 instance_destroy();
 
-if instance_exists(obj_player) && stop=0 && moving<1
+if stop=0 && moving<1
 {
 	dir=random_range(1,4)
 	

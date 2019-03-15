@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "40c2d1b2-f9c2-4c65-9af6-0c702e80cd30",
+            "Value": {
+                "id": "888785dc-7407-481f-b909-d2d90cacb57f",
+                "resourcePath": "sprites\\txr_door_horizonal_closed\\txr_door_horizonal_closed.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4ab10773-b380-4df0-bb49-c93152b4c6d0",
             "Value": {
                 "id": "d7927aab-ed92-4811-b130-0598a625b783",
@@ -220,6 +228,14 @@
                 "id": "b52dbc9b-775a-4ad9-8896-8eeca2c0dafe",
                 "resourcePath": "objects\\obj_cursor\\obj_cursor.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "504fa57a-f169-4102-8a49-d15bd9bc4d1c",
+            "Value": {
+                "id": "c726e88a-828b-4a08-8628-1a51b25e3a03",
+                "resourcePath": "sprites\\txr_door_vertical_closed\\txr_door_vertical_closed.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -343,6 +359,14 @@
             }
         },
         {
+            "Key": "82b0b1fa-379e-4552-8ff8-cd6b75680eb4",
+            "Value": {
+                "id": "e9d40930-0384-4b93-b522-0867918fc98c",
+                "resourcePath": "sprites\\txr_door_horizonal_open\\txr_door_horizonal_open.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "84b133d5-259f-47da-8693-525764c6af80",
             "Value": {
                 "id": "cb4e099b-bfef-4c47-915f-a02784a8ffe2",
@@ -371,6 +395,14 @@
             "Value": {
                 "id": "a678ba7d-0345-47c3-8f6c-4d88ef3022f5",
                 "resourcePath": "objects\\npc_scientist\\npc_scientist.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "89e90587-9fa1-484d-b419-2bd06201002b",
+            "Value": {
+                "id": "f2485523-6ae0-4cf0-a901-67b18911ed44",
+                "resourcePath": "objects\\obj_door_horizontal\\obj_door_horizontal.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -516,6 +548,14 @@
                 "id": "b3c56eb3-e4c9-4419-a732-ff2aab8f9c5b",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "cde5ae49-92aa-4518-9919-822e63c875ef",
+            "Value": {
+                "id": "a1d8634d-d73b-4d5c-9b11-f97ced40f702",
+                "resourcePath": "sprites\\txr_door_vertical_open\\txr_door_vertical_open.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
