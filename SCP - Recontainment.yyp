@@ -311,14 +311,6 @@
             }
         },
         {
-            "Key": "76d7193b-4527-4473-a535-343d4284b9fc",
-            "Value": {
-                "id": "778a8c0c-63d3-4c32-8fc8-1373410cd74b",
-                "resourcePath": "objects\\obj_soundtrack\\obj_soundtrack.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "76df6583-e40f-42f8-8403-1a5de72aa56f",
             "Value": {
                 "id": "92d810c6-483a-41a9-9559-997b58391593",
