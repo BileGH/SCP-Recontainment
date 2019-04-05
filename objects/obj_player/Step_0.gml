@@ -1,10 +1,23 @@
 //DEATH
-if global.php<1
+if global.php<1 instance_destroy();
+
+//BLINKING
+
+blink=blink-1;
+if blink<1
 {
-	instance_destroy();
-	global.dead=1;
-	global.dead_self=1;
-}
+	draw_sprite(txr_blink,-1,x,y);
+	blinked=1;
+};
+if global.blinked=1 blk=blk-1;
+
+if blk<1
+{
+	global.blinked=0;
+	blk=21;
+	blink=240;
+	sprite_flush(txr_blink);
+};
 
 //MOVEMENT
 

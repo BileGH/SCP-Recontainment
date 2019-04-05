@@ -1,6 +1,5 @@
 //STATS
 global.php=100;
-stamina=100;
 global.body_type=0;
 //INVENTORY
 g=1;
@@ -12,3 +11,7 @@ hgc=0;
 //AMMO
 ga=50;
 hga=15;
+//BLINKING
+global.blinked=0;
+blk=10;
+blink=240;

@@ -4,6 +4,6 @@ menu_index+=menu_move;
 if(menu_index <0) menu_index=buttons-1;
 if(menu_index>buttons-1) menu_index=0;
 
-if (menu_index!=last_selected) audio_play_sound(snd_menu,1,0)
+if (menu_index!=last_selected) audio_play_sound(snd_equip_hg,1,0)
 
 last_selected=menu_index;
