@@ -6,7 +6,7 @@ if global.php<1 instance_destroy();
 blink=blink-1;
 if blink<1
 {
-	draw_sprite(txr_blink,-1,x,y);
+	draw_sprite(txr_blink,1,x,y);
 	blinked=1;
 };
 if global.blinked=1 blk=blk-1;

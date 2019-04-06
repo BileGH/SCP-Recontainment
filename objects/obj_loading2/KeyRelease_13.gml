@@ -1,1 +1,1 @@
-instance_change(obj_menu,1)
+room_goto(map_menu);

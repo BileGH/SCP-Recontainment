@@ -2,8 +2,6 @@ if hp<1 instance_destroy();
 
 if instance_exists(obj_player) image_angle=point_direction(x,y,mouse_x,mouse_y);
 
-if global.dead=1 image_angle=direction;
-
 if follow=0 move_towards_point(x,y,spd)
 
 if instance_exists(obj_player) && follow=1
