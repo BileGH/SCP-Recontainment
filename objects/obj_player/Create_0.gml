@@ -1,6 +1,5 @@
 //STATS
 global.php=100;
-global.body_type=0;
 //INVENTORY
 g=1;
 hg=0;
@@ -8,6 +7,7 @@ key=0;
 //COOLDOWN
 gc=0;
 hgc=0;
+step=0
 //AMMO
 ga=50;
 hga=15;
