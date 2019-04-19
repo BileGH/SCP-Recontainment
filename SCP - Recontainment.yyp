@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "2217223e-a98a-435d-82b1-d0dcddbecfd7",
+            "Value": {
+                "id": "43924f23-7951-435f-8dc6-678b52ed8413",
+                "resourcePath": "objects\\obj_blink\\obj_blink.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "24cc0b98-fa64-4eff-b0e9-a7b13299914f",
             "Value": {
                 "id": "2cd85795-11f4-4210-a2dc-415cdc092ec8",
@@ -146,7 +154,7 @@
             "Key": "27e26f50-14c3-46c3-a450-d6887fa93828",
             "Value": {
                 "id": "47c51d0b-c4b0-402d-b5ee-4d0661f02ea7",
-                "resourcePath": "objects\\obj_dead_body\\obj_dead_body.yy",
+                "resourcePath": "objects\\obj_dead_body_player\\obj_dead_body_player.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -343,6 +351,14 @@
             }
         },
         {
+            "Key": "71cc71b0-8fa0-4d85-834c-aa13a421bfa3",
+            "Value": {
+                "id": "e42f3355-c777-45dc-a985-fc6540706aca",
+                "resourcePath": "objects\\obj_dead_body_scientist\\obj_dead_body_scientist.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "76df6583-e40f-42f8-8403-1a5de72aa56f",
             "Value": {
                 "id": "92d810c6-483a-41a9-9559-997b58391593",
@@ -371,6 +387,14 @@
             "Value": {
                 "id": "e2526be0-1cf6-46b5-8711-de9c0bae317f",
                 "resourcePath": "objects\\npc_scp173\\npc_scp173.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7f6c2725-1b4c-4b39-84b9-3dcc75e91e96",
+            "Value": {
+                "id": "92722a36-1bf9-465e-9808-923eb3257f7c",
+                "resourcePath": "objects\\obj_dead_body_dclass\\obj_dead_body_dclass.yy",
                 "resourceType": "GMObject"
             }
         },
