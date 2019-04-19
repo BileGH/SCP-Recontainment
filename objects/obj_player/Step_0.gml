@@ -6,8 +6,8 @@ if global.php<1 instance_destroy();
 blink=blink-1;
 if blink<1
 {
-	draw_sprite(txr_blink,1,x,y);
-	blinked=1;
+	instance_create_layer(x,y,"Top_Layer",obj_blink)
+	global.blinked=1;
 };
 if global.blinked=1 blk=blk-1;
 
@@ -16,15 +16,53 @@ if blk<1
 	global.blinked=0;
 	blk=21;
 	blink=240;
-	sprite_flush(txr_blink);
+	instance_destroy(obj_blink,true)
 };
 
 //MOVEMENT
 
-if keyboard_check(ord("W")) y=y-10;
-if keyboard_check(ord("S")) y=y+10;
-if keyboard_check(ord("A")) x=x-10;
-if keyboard_check(ord("D")) x=x+10;
+if keyboard_check(ord("W"))
+{
+	y=y-10;
+	if step<1
+	{
+		audio_sound_pitch(snd_mtf_walk,random_range(0.8,1.2))
+		audio_play_sound(snd_mtf_walk,1,false)
+		step=25
+	}
+}
+if keyboard_check(ord("S"))
+{
+	y=y+10;
+	if step<1
+	{
+		audio_sound_pitch(snd_mtf_walk,random_range(0.8,1.2))
+		audio_play_sound(snd_mtf_walk,1,false)
+		step=25
+	}
+}
+if keyboard_check(ord("A"))
+{
+	x=x-10;
+	if step<1
+	{
+		audio_sound_pitch(snd_mtf_walk,random_range(0.8,1.2))
+		audio_play_sound(snd_mtf_walk,1,false)
+		step=25
+	}
+}
+if keyboard_check(ord("D"))
+{
+	x=x+10;
+	if step<1
+	{
+		audio_sound_pitch(snd_mtf_walk,random_range(0.8,1.2))
+		audio_play_sound(snd_mtf_walk,1,false)
+		step=25
+	}
+}
+
+step=step-1
 
 image_angle=point_direction(x,y,mouse_x,mouse_y);
 
