@@ -6,8 +6,10 @@ if instance_exists(obj_player) && follow=1
 	image_angle=direction;
 }
 
-if follow=0
+if follow=0 && wait<1
 {
-	move_towards_point(x,y,spd);
+	speed=0
 	image_angle=direction;
 }
+
+wait=wait-1

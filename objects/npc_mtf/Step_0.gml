@@ -2,7 +2,7 @@ if hp<1 instance_destroy();
 
 if instance_exists(obj_player) image_angle=point_direction(x,y,mouse_x,mouse_y);
 
-if follow=0 move_towards_point(x,y,spd)
+if follow=0 move_towards_point(x,y,0)
 
 if instance_exists(obj_player) && follow=1
 {
@@ -26,3 +26,5 @@ if (ga<1)
 	gc=200;
 	ga=50;
 }
+
+wait=wait-1
