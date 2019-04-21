@@ -4,7 +4,7 @@ switch (menu_index)
 		room_goto(map_test_room);
 		break;
 	case 1:
-		room_goto(map_tutorial);
+		//room_goto(map_tutorial);
 		break;
 	case 2:
 		game_end();
