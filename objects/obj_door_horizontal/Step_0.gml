@@ -1,3 +1,1 @@
-if open=0 object_set_sprite(obj_door_horizontal,txr_door_vertical_closed)
-
-if open=1 object_set_sprite(obj_door_horizontal,txr_door_vertical_open)
+wait=wait-1
