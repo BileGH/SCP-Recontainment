@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "0346bb10-10b4-479f-8c98-af480926af87",
+            "Value": {
+                "id": "b6efb904-4d44-47a7-8879-365209f2cf75",
+                "resourcePath": "sprites\\txr_blood_pouddle\\txr_blood_pouddle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "04e1ef80-b601-45c8-a9e6-47aa6ba57976",
             "Value": {
                 "id": "c377520f-1e6e-4973-982d-72996674358f",
@@ -140,6 +148,14 @@
                 "id": "da78e38b-886b-4474-bf59-63d07f1b361b",
                 "resourcePath": "rooms\\map_modules\\map_modules.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "21f497e6-41a8-4367-a8a6-b879043a738d",
+            "Value": {
+                "id": "2c6cd0a5-6829-4f2f-a87e-6365e884b54b",
+                "resourcePath": "objects\\obj_blood_puddle\\obj_blood_puddle.yy",
+                "resourceType": "GMObject"
             }
         },
         {
