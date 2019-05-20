@@ -1,5 +1,5 @@
-if open=0
+if state=0
 {
-	open=1
+	state=1
 	audio_play_sound(snd_door,1,false)
 }
