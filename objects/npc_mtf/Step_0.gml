@@ -1,12 +1,14 @@
 if hp<1 instance_destroy();
 
+speed=0
+
 if instance_exists(obj_player) image_angle=point_direction(x,y,mouse_x,mouse_y);
 
 if follow=0 move_towards_point(x,y,0)
 
 if instance_exists(obj_player) && follow=1
 {
-	move_towards_point(obj_player.x,obj_player.y+500,spd);
+	move_towards_point(obj_player.x,obj_player.y+250,spd);
 }
 
 if mouse_check_button(mb_left) && (gc<1) && (ga>0) && (instance_exists(obj_player))
@@ -17,7 +19,7 @@ if mouse_check_button(mb_left) && (gc<1) && (ga>0) && (instance_exists(obj_playe
 		gc=4;
 		ga=ga-1;
 	}
-	
+
 gc=gc-1;
 
 if (ga<1)

@@ -1,10 +1,10 @@
 if hp<1 instance_destroy();
+	
+image_angle=direction
 
 if stop=0 && moving<1
 {
 	dir=random_range(1,4)
-	
-	image_angle=direction
 	
 	if dir=1 move_towards_point(x+100,y,spd)
 	
@@ -14,7 +14,7 @@ if stop=0 && moving<1
 	
 	if dir=4 move_towards_point(x,y-100,spd)
 	
-	moving=600;
+	moving=60;
 }
 
 moving=moving-1;
