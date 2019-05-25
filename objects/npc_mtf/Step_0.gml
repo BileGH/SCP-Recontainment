@@ -15,8 +15,8 @@ if mouse_check_button(mb_left) && (gc<1) && (ga>0) && (instance_exists(obj_playe
 	{
 		audio_play_sound(snd_hg_shot,1,0);
 		audio_play_sound(snd_bullet_drop,1,0);
-		instance_create_layer(x,y,"BulletLayer",obj_bullet_g);
-		gc=4;
+		instance_create_layer(x,y,"BulletLayer",obj_bullet_hg);
+		gc=40;
 		ga=ga-1;
 	}
 
@@ -24,9 +24,9 @@ gc=gc-1;
 
 if (ga<1)
 {
-	audio_play_sound(snd_g_reload,1,0)
-	gc=200;
-	ga=50;
+	audio_play_sound(snd_hg_reload,1,0)
+	gc=132;
+	ga=12;
 }
 
 wait=wait-1

@@ -1,8 +1,8 @@
 //STATS
 global.php=100;
 //INVENTORY
-g=1;
-hg=0;
+g=0;
+hg=1;
 key=0;
 //COOLDOWN
 gc=0;
