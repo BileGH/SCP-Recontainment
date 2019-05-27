@@ -14,16 +14,18 @@ if global.blinked=1 blk=blk-1;
 if blk<1
 {
 	global.blinked=0;
-	blk=21;
-	blink=240;
+	blk=30;
+	blink=600;
 	instance_destroy(obj_blink,true)
 };
 
 //MOVEMENT
 
+if keyboard_check(vk_lshift) global.walk=12
+
 if keyboard_check(ord("W"))
 {
-	y=y-10;
+	y=y-global.walk;
 	if step<1
 	{
 		audio_sound_pitch(snd_mtf_walk,random_range(0.8,1.2))
@@ -33,7 +35,7 @@ if keyboard_check(ord("W"))
 }
 if keyboard_check(ord("S"))
 {
-	y=y+10;
+	y=y+global.walk;
 	if step<1
 	{
 		audio_sound_pitch(snd_mtf_walk,random_range(0.8,1.2))
@@ -43,7 +45,7 @@ if keyboard_check(ord("S"))
 }
 if keyboard_check(ord("A"))
 {
-	x=x-10;
+	x=x-global.walk;
 	if step<1
 	{
 		audio_sound_pitch(snd_mtf_walk,random_range(0.8,1.2))
@@ -53,7 +55,7 @@ if keyboard_check(ord("A"))
 }
 if keyboard_check(ord("D"))
 {
-	x=x+10;
+	x=x+global.walk;
 	if step<1
 	{
 		audio_sound_pitch(snd_mtf_walk,random_range(0.8,1.2))
@@ -61,6 +63,8 @@ if keyboard_check(ord("D"))
 		step=25
 	}
 }
+
+global.walk=5
 
 step=step-1
 

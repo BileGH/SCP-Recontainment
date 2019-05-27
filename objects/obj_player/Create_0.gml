@@ -1,5 +1,6 @@
 //STATS
 global.php=100;
+global.walk=5;
 //INVENTORY
 g=0;
 hg=1;
@@ -13,5 +14,5 @@ ga=50;
 hga=15;
 //BLINKING
 global.blinked=0;
-blk=10;
-blink=240;
+blk=30;
+blink=600;
