@@ -8,7 +8,7 @@ if follow=0 move_towards_point(x,y,0)
 
 if instance_exists(obj_player) && follow=1
 {
-	move_towards_point(obj_player.x,obj_player.y+250,spd);
+	move_towards_point(obj_player.x+100,obj_player.y+210,spd);
 }
 
 if mouse_check_button(mb_left) && (gc<1) && (ga>0) && (instance_exists(obj_player))
