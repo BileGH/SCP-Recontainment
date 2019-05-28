@@ -54,17 +54,17 @@
             "visible": true
         }
     ],
-    "origin": 4,
+    "origin": 9,
     "originLocked": true,
     "playbackSpeed": 15,
     "playbackSpeedType": 0,
     "premultiplyAlpha": false,
-    "sepmasks": false,
+    "sepmasks": true,
     "swatchColours": null,
     "swfPrecision": 2.525,
     "textureGroupId": "6fc61438-7189-49cd-9b48-1ada65e19d8d",
     "type": 0,
     "width": 484,
-    "xorig": 242,
-    "yorig": 250
+    "xorig": 186,
+    "yorig": 247
 }
