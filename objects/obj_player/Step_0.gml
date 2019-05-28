@@ -1,9 +1,13 @@
 //DEATH
+
 if global.php<1 instance_destroy();
 
 //BLINKING
 
+if keyboard_check (vk_lalt) blink=0;
+
 blink=blink-1;
+
 if blink<1
 {
 	instance_create_layer(x,y,"Top_Layer",obj_blink)
@@ -21,7 +25,16 @@ if blk<1
 
 //MOVEMENT
 
-if keyboard_check(vk_lshift) global.walk=12
+if keyboard_check(vk_lshift) && sprint>0
+{
+	global.walk=12;
+	sprint=sprint-1;
+	sc=60;
+}
+
+sc=sc-1;
+
+if sc<1 && sprint<301 sprint=sprint+1;
 
 if keyboard_check(ord("W"))
 {

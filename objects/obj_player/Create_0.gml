@@ -1,14 +1,16 @@
 //STATS
 global.php=100;
 global.walk=5;
+sprint=300;
 //INVENTORY
 g=0;
 hg=1;
 key=0;
 //COOLDOWN
-gc=0;
-hgc=0;
-step=0
+gc=60;
+hgc=60;
+step=0;
+sc=0;
 //AMMO
 ga=50;
 hga=15;
@@ -16,3 +18,6 @@ hga=15;
 global.blinked=0;
 blk=30;
 blink=600;
+//HUD
+draw_set_font(fnt_default);
+draw_set_color(c_black);
