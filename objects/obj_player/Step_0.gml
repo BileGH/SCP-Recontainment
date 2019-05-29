@@ -1,3 +1,9 @@
+//SAVING
+
+if keyboard_check(vk_f8) game_save("save")
+
+if keyboard_check(vk_f9) game_load("save")
+
 //DEATH
 
 if global.php<1 instance_destroy();
@@ -122,12 +128,12 @@ if mouse_check_button(mb_left)
 		ga=ga-1;
 	}
 	//Handgun
-	if (hg=1) && (hgc<1) && (hga>0)
+	if (hg=1) && (hgc<1) && (hga>0) && mouse_check_button_pressed(mb_left)
 	{
 		audio_play_sound(snd_hg_shot,1,0);
 		audio_play_sound(snd_bullet_drop,1,0);
 		instance_create_layer(x,y,"BulletLayer",obj_bullet_hg);
-		hgc=40;
+		hgc=10;
 		hga=hga-1;
 	}
 	//Keycard

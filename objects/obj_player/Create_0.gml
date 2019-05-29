@@ -7,8 +7,8 @@ g=0;
 hg=1;
 key=0;
 //COOLDOWN
-gc=60;
-hgc=60;
+gc=120;
+hgc=120;
 step=0;
 sc=0;
 //AMMO
