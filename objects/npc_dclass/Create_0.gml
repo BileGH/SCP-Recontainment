@@ -4,3 +4,4 @@ stop=0;
 move=0;
 moving=0;
 dir=0;
+direction=random_range(0,999)
