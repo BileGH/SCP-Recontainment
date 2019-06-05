@@ -575,6 +575,14 @@
             }
         },
         {
+            "Key": "8929adef-0c61-48a0-83c4-b231df48e018",
+            "Value": {
+                "id": "d554795f-7db1-4d4e-bfef-8aebc65fbabd",
+                "resourcePath": "sprites\\txr_scp106\\txr_scp106.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "89e90587-9fa1-484d-b419-2bd06201002b",
             "Value": {
                 "id": "f2485523-6ae0-4cf0-a901-67b18911ed44",
@@ -699,6 +707,14 @@
             "Value": {
                 "id": "ad1ee3f2-a970-4f5d-8a98-88b8ce45e909",
                 "resourcePath": "objects\\obj_menu_test_map\\obj_menu_test_map.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "afab1325-433c-4653-853d-f53cd7390c23",
+            "Value": {
+                "id": "50f4ace6-2f6c-4583-a03b-f6a3fbc99c52",
+                "resourcePath": "objects\\npc_scp106\\npc_scp106.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -855,6 +871,14 @@
             }
         },
         {
+            "Key": "d98e23c8-afc7-44b2-a29c-48362d924df1",
+            "Value": {
+                "id": "b6d4927b-2917-45c5-ae13-368cfd8cf886",
+                "resourcePath": "sprites\\txr_scp106_spawn\\txr_scp106_spawn.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d9aafb09-cb6d-44dd-b5ee-eec35ee16083",
             "Value": {
                 "id": "942e9184-3d7a-4399-8a10-45a82415de18",
@@ -892,6 +916,14 @@
                 "id": "383c4040-bacc-4df6-b7f5-748f41692cc4",
                 "resourcePath": "sprites\\txr_target_down\\txr_target_down.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e7c8d122-5446-4ec8-b730-7588eba1a974",
+            "Value": {
+                "id": "d38640a2-f538-414b-a658-160518525d9e",
+                "resourcePath": "objects\\obj_scp106_spawn\\obj_scp106_spawn.yy",
+                "resourceType": "GMObject"
             }
         },
         {
