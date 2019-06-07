@@ -1,1 +1,1 @@
-kill=random_range(1,2)
+kill=random_range(0,1)
