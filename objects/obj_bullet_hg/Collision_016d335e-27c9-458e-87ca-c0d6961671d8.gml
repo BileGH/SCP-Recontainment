@@ -1,6 +1,9 @@
-with (other)
+if wait<1 
 {
-	hp=hp-17;
-}
+		with (other)
+	{
+		hp=hp-17;
+	}
 
-instance_destroy();
+	instance_destroy();
+}
