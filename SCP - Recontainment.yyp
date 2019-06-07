@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "0a14f5c9-c83c-4896-9b56-8842b99c5c20",
+            "Value": {
+                "id": "5fad2fbd-5b03-43c9-a64a-62b1067b57fd",
+                "resourcePath": "sounds\\snd_femur_broken\\snd_femur_broken.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "0a4b2220-0e95-4825-be00-3c73cc973e1f",
             "Value": {
                 "id": "d5370a7e-cbba-45f7-a234-89e2af2196a9",
@@ -76,6 +84,14 @@
                 "id": "ab04948a-5bc0-49ac-aadb-6ccc3995e419",
                 "resourcePath": "fonts\\fnt_default\\fnt_default.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "0fe229f0-8c4e-4dd0-bfe1-b36d453506f5",
+            "Value": {
+                "id": "5ef5ba1a-8919-49b8-a6be-cff42df73c30",
+                "resourcePath": "objects\\obj_scp173_cage\\obj_scp173_cage.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -123,6 +139,14 @@
             "Value": {
                 "id": "118ea678-f442-462e-b807-ad42d7b0a221",
                 "resourcePath": "sprites\\txr_background\\txr_background.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "189045ea-6313-4ba7-9178-d7d31630972f",
+            "Value": {
+                "id": "b874df3e-03d7-4915-8980-3dccd614ddf1",
+                "resourcePath": "sprites\\txr_scp173\\txr_scp173.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -276,6 +300,14 @@
                 "id": "e0b844e3-f51e-48c2-9798-d552191da148",
                 "resourcePath": "sprites\\txr_csplatter\\txr_csplatter.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3958f13c-42cf-43fd-b3a5-630628ca74fe",
+            "Value": {
+                "id": "60d83ce0-ae4c-4913-9ee2-c8e2bf9e480b",
+                "resourcePath": "sounds\\snd_scare\\snd_scare.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -500,6 +532,14 @@
                 "id": "e2526be0-1cf6-46b5-8711-de9c0bae317f",
                 "resourcePath": "objects\\npc_scp173\\npc_scp173.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7b4f96de-225c-441c-a499-1af7007a497d",
+            "Value": {
+                "id": "8807a15d-9663-41aa-ba86-8610db9dc31f",
+                "resourcePath": "sprites\\txr_scp173_cage\\txr_scp173_cage.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

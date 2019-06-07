@@ -24,7 +24,7 @@ if global.blinked=1 blk=blk-1;
 if blk<1
 {
 	global.blinked=0;
-	blk=30;
+	blk=10;
 	blink=600;
 	instance_destroy(obj_blink,true)
 };
