@@ -1,3 +1,2 @@
-blinked=0;
-blink=240;
-blk=10;
+scare=0
+wait=0
