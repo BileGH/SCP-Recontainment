@@ -1,0 +1,1 @@
+kill=random_range(1,2)
