@@ -1,0 +1,1 @@
+if keyboard_check(vk_f9) game_load("save")
