@@ -2,7 +2,7 @@
     "id": "af462a40-551a-4093-890a-f97f2d1f4465",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_menu_test_map",
+    "name": "obj_menu_new_game",
     "eventList": [
         
     ],
