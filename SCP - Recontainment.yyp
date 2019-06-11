@@ -762,7 +762,7 @@
             "Key": "af462a40-551a-4093-890a-f97f2d1f4465",
             "Value": {
                 "id": "ad1ee3f2-a970-4f5d-8a98-88b8ce45e909",
-                "resourcePath": "objects\\obj_menu_test_map\\obj_menu_test_map.yy",
+                "resourcePath": "objects\\obj_menu_new_game\\obj_menu_new_game.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -924,6 +924,14 @@
                 "id": "fadf0517-c083-4afc-9d0b-9a8065d66f51",
                 "resourcePath": "sounds\\snd_static\\snd_static.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "d785d054-b009-4f8b-acb3-c363db4aa784",
+            "Value": {
+                "id": "4afc9e47-22d2-46b9-9995-c02b0d00b11e",
+                "resourcePath": "sprites\\txr_femur_breaker\\txr_femur_breaker.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
