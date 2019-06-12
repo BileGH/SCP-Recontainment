@@ -231,6 +231,14 @@
             }
         },
         {
+            "Key": "2a878274-c9eb-4b10-bed1-ecdd88362e14",
+            "Value": {
+                "id": "309698eb-c85a-4f9b-916a-0310d6d5d1b3",
+                "resourcePath": "objects\\obj_door\\obj_door.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2aeaa143-09c4-4353-8826-53feb85dd3de",
             "Value": {
                 "id": "e59e65bf-7438-4a37-988f-d42298761969",
@@ -692,6 +700,14 @@
                 "id": "6720c295-8eb4-4322-8504-6f8bc2aa8475",
                 "resourcePath": "rooms\\map_menu\\map_menu.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "9fdbae06-90aa-4f4b-9581-719b1d6969ad",
+            "Value": {
+                "id": "96a2e416-f73a-43d9-a8bb-03d4aede964b",
+                "resourcePath": "sprites\\txr_door\\txr_door.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
