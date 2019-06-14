@@ -2,7 +2,7 @@
     "id": "c02dde94-db43-4648-af7c-836aeb4c8a42",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_fov",
+    "name": "txr_fov",
     "For3D": false,
     "HTile": false,
     "VTile": false,

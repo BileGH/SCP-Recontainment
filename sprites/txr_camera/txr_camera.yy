@@ -2,7 +2,7 @@
     "id": "ac59db2c-ea4c-436e-bd4d-64a16a4a8008",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_camera",
+    "name": "txr_camera",
     "For3D": false,
     "HTile": false,
     "VTile": false,

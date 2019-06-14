@@ -3,6 +3,6 @@ if instance_exists(obj_player) {
     x = XPlayer y = YPlayer
 }
 
-OffsetThePlayer = 6
+OffsetThePlayer = 4
 HowFarBehind = 3 * OffsetThePlayer + 1
-DifferenceOfViews = view_hport[0]/view_wport[0]
+DifferenceOfViews = view_wport[0]/view_hport[0]
