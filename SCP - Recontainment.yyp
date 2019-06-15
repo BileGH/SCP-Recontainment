@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "1d2452a5-b35c-476c-8f41-14700ade2f14",
+            "Value": {
+                "id": "c6c37021-3095-4b09-8c7b-f541cb882191",
+                "resourcePath": "sprites\\txr_fovcone\\txr_fovcone.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2072ac63-fef7-4254-abf3-a348976f270a",
             "Value": {
                 "id": "da78e38b-886b-4474-bf59-63d07f1b361b",

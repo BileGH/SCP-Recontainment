@@ -1,12 +1,8 @@
 draw_self()
 
 with(obj_player) {
-draw_primitive_begin(pr_trianglelist);
-draw_vertex(x + lengthdir_x(other.HowFarAwayBehind, image_angle+180), y + lengthdir_y(other.HowFarAwayBehind, image_angle+180));
-draw_vertex(x + lengthdir_x(other.ShadowSize, (image_angle+180)+other.VisibleDegree), y + lengthdir_y(other.ShadowSize, (image_angle+180)+other.VisibleDegree));
-draw_vertex(x + lengthdir_x(other.ShadowSize, (image_angle+180)-other.VisibleDegree), y + lengthdir_y(other.ShadowSize, (image_angle+180)-other.VisibleDegree));
-draw_primitive_end();
-}
+draw_sprite_ext(txr_fovcone,0,x,y,1,1,image_angle,0,1)
+};
 
 with(obj_wall) {
     draw_set_colour(c_black)
