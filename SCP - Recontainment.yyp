@@ -231,14 +231,6 @@
             }
         },
         {
-            "Key": "2985aaae-3328-4b29-8d23-d680d164aa22",
-            "Value": {
-                "id": "b7c9d549-862c-4a3d-82c8-4ca8e7f5e557",
-                "resourcePath": "datafiles_yy\\[REDACTED].rar.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "2a878274-c9eb-4b10-bed1-ecdd88362e14",
             "Value": {
                 "id": "309698eb-c85a-4f9b-916a-0310d6d5d1b3",
