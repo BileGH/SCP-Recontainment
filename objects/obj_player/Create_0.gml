@@ -1,23 +1,31 @@
 //STATS
-global.php=100;
-global.walk=5;
+global.php=100; //Player Health
+global.walk=5; //Current speed
 sprint=300;
 //INVENTORY
-g=0;
-hg=1;
-key=0;
+g=0; //Rifle gun
+hg=1; //Handgun gun
+key=0; //Keycard, probably
 //COOLDOWN
-gc=120;
-hgc=120;
-step=0;
-sc=0;
+gc=120; //Delay to shoot from rifle gun
+hgc=120; //Delay to shoot from handgun gun
+step=0; //Timer until you take a step
+sc=0; //
 //AMMO
-ga=50;
-hga=15;
+ga=50; //Rifle gun ammo
+hga=15; //Handgun gun ammo
 //BLINKING
-global.blinked=0;
-blk=30;
-blink=600;
+global.blinked=0; //The state when you have blinked
+blk=30; //The time you stay with closed eyes, while blinking
+blink=600; //Timer until you blink
 //HUD
 draw_set_font(fnt_default);
 draw_set_color(c_black);
+
+SPEED = 0.5
+HOWSLOWERTOSLOWDOWN=1.5
+WALKINGSPEED = 5
+RUNNINGSPEED = 12
+STEPSPEED = 7
+TOSTEPTIMER = 25
+ACTUALSPEED = SPEED+HOWSLOWERTOSLOWDOWN
