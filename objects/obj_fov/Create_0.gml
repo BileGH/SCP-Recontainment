@@ -1,4 +1,4 @@
-ShadowSize = 6000
+ShadowSize = 600000
 VisibleDegree = 60
 HowFarAwayBehind = 50
 

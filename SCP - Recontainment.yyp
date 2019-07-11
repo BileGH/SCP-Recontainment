@@ -111,14 +111,6 @@
             }
         },
         {
-            "Key": "1366e76d-c12a-4341-a560-d59cc7e1b28f",
-            "Value": {
-                "id": "f3cafeb8-3509-4ed0-ad35-990c63ce454e",
-                "resourcePath": "objects\\obj_bullet_hg\\obj_bullet_hg.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "148cd986-bc5a-43ee-97c6-60d1e420c3e6",
             "Value": {
                 "id": "51b8a973-5536-47c6-ae06-a36af9db8e80",
@@ -1034,7 +1026,7 @@
             "Key": "e5088483-08a4-4ea1-a8a5-7f0bad4f8852",
             "Value": {
                 "id": "d46f2f41-2cf1-4db2-9771-86af4805df12",
-                "resourcePath": "objects\\obj_bullet_g\\obj_bullet_g.yy",
+                "resourcePath": "objects\\obj_bullet\\obj_bullet.yy",
                 "resourceType": "GMObject"
             }
         },

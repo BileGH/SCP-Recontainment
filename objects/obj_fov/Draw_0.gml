@@ -1,8 +1,10 @@
 draw_self()
 
+/*
 with(obj_player) {
 draw_sprite_ext(txr_fovcone,0,x,y,1,1,image_angle,0,1)
 };
+*/
 
 with(obj_wall) {
     draw_set_colour(c_black)

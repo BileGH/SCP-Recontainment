@@ -12,7 +12,7 @@ if keyboard_check(vk_escape)
 
 //DEATH
 
-if global.php<1 instance_destroy();
+if hp<1 instance_destroy();
 
 //BLINKING
 
@@ -37,9 +37,9 @@ if blk<1
 
 //MOVEMENT
 
-global.walk = WALKINGSPEED
+walk = WALKINGSPEED
 if keyboard_check(vk_lshift) && sprint > 0 {
-	global.walk = RUNNINGSPEED;
+	walk = RUNNINGSPEED;
 	sprint = sprint - 1;
 	sc = 60;
 }
@@ -79,8 +79,8 @@ if speed > 0 {
 	speed = 0
 }
 
-if speed > global.walk {
-	speed -= (speed-global.walk)/2
+if speed > walk {
+	speed -= (speed-walk)/2
 }
 
 
@@ -117,22 +117,22 @@ if keyboard_check_pressed(ord("3"))
 if mouse_check_button(mb_left)
 {
 	//P90
-	if (g=1) && (gc<1) && (ga>0)
+	if (g=1) && (COOLDOWNRIFLE<1) && (AMMORIFLE>0)
 	{
 		audio_play_sound(snd_hg_shot,1,0);
 		audio_play_sound(snd_bullet_drop,1,0);
-		instance_create_layer(x,y,"BulletLayer",obj_bullet_g);
-		gc=4;
-		ga=ga-1;
+		instance_create_layer(x,y,"BulletLayer",obj_bullet);
+		COOLDOWNRIFLE=4;
+		AMMORIFLE=AMMORIFLE-1;
 	}
 	//Handgun
-	if (hg=1) && (hgc<1) && (hga>0) && mouse_check_button_pressed(mb_left)
+	if (hg=1) && (COOLDOWNHANDGUN<1) && (AMMOHANDGUN>0) && mouse_check_button_pressed(mb_left)
 	{
 		audio_play_sound(snd_hg_shot,1,0);
 		audio_play_sound(snd_bullet_drop,1,0);
-		instance_create_layer(x,y,"BulletLayer",obj_bullet_hg);
-		hgc=10;
-		hga=hga-1;
+		instance_create_layer(x,y,"BulletLayer",obj_bullet);
+		COOLDOWNHANDGUN=10;
+		AMMOHANDGUN=AMMOHANDGUN-1;
 	}
 	//Keycard
 	if key=1
@@ -140,40 +140,47 @@ if mouse_check_button(mb_left)
 		
 	}
 }
-gc=gc-1;
-hgc=hgc-1;
+COOLDOWNRIFLE=COOLDOWNRIFLE-1;
+COOLDOWNHANDGUN=COOLDOWNHANDGUN-1;
 
-if (mouse_check_button_pressed(mb_left)) && (ga<1) && (g=1) audio_play_sound(snd_no_ammo_hg,1,0)
-if (mouse_check_button_pressed(mb_left)) && (hga<1) && (hg=1) audio_play_sound(snd_no_ammo_hg,1,0)
+if (mouse_check_button_pressed(mb_left)) && (AMMORIFLE<1) && (g=1) audio_play_sound(snd_no_ammo_hg,1,0)
+if (mouse_check_button_pressed(mb_left)) && (AMMOHANDGUN<1) && (hg=1) audio_play_sound(snd_no_ammo_hg,1,0)
 
 if (keyboard_check_pressed(ord("R"))) && (g=1) 
 {
 	audio_play_sound(snd_g_reload,1,0)
-	gc=200;
-	ga=50;
+	COOLDOWNRIFLE=200;
+	AMMORIFLE=50;
 }
 if (keyboard_check_pressed(ord("R"))) && (hg=1) 
 {
 	audio_play_sound(snd_hg_reload,1,0)
-	hgc=132;
-	hga=12;
+	COOLDOWNHANDGUN=132;
+	AMMOHANDGUN=12;
 }
 
 //SUICIDE
 
-if (hg=1) && (hgc<1) && (hga>0) && (keyboard_check_pressed(ord("K")))
+if (hg=1) && (COOLDOWNHANDGUN<1) && (AMMOHANDGUN>0) && (keyboard_check_pressed(ord("K")))
 {
 	audio_play_sound(snd_hg_shot,1,0);
 	audio_play_sound(snd_bullet_drop,1,0);
 	instance_destroy();
 }
 
-//WALL COLLISION
+//COLLISION
 
 
 if collision_line(x, y, x, y + vspeed, obj_wall, 0, 0) {
 	vspeed = 0 x=xprevious
 }
 if collision_line(x, y, x + hspeed, y, obj_wall, 0, 0) {
+	hspeed = 0 y=yprevious
+}
+
+if collision_line(x, y, x, y + vspeed, obj_door, 1, 0) {
+	vspeed = 0 x=xprevious
+}
+if collision_line(x, y, x + hspeed, y, obj_door, 1, 0) {
 	hspeed = 0 y=yprevious
 }
