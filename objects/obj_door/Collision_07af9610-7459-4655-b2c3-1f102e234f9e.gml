@@ -1,3 +1,4 @@
+/*
 if Opening = 0 and Open = 0 {
     with(obj_player) {
         if collision_point(x, y, other, 0, 0) {
