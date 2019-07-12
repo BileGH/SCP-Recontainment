@@ -1,4 +1,4 @@
-if hp<1 instance_destroy();
+if HP<1 instance_destroy();
 	
 image_angle=direction
 

@@ -1,4 +1,4 @@
-wait -= 1
-if wait < -30 {
+Wait -= 1
+if Wait < -30 {
 	instance_destroy()
 }

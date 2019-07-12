@@ -12,7 +12,7 @@ if keyboard_check(vk_escape)
 
 //DEATH
 
-if hp<1 instance_destroy();
+if HP<1 instance_destroy();
 
 //BLINKING
 
@@ -117,22 +117,22 @@ if keyboard_check_pressed(ord("3"))
 if mouse_check_button(mb_left)
 {
 	//P90
-	if (g=1) && (COOLDOWNRIFLE<1) && (AMMORIFLE>0)
+	if (g=1) && (CooldownRifle<1) && (AmmoRifle>0)
 	{
 		audio_play_sound(snd_hg_shot,1,0);
 		audio_play_sound(snd_bullet_drop,1,0);
 		instance_create_layer(x,y,"BulletLayer",obj_bullet);
-		COOLDOWNRIFLE=4;
-		AMMORIFLE=AMMORIFLE-1;
+		CooldownRifle=4;
+		AmmoRifle=AmmoRifle-1;
 	}
 	//Handgun
-	if (hg=1) && (COOLDOWNHANDGUN<1) && (AMMOHANDGUN>0) && mouse_check_button_pressed(mb_left)
+	if (hg=1) && (CooldownHandgun<1) && (AmmoHandgun>0) && mouse_check_button_pressed(mb_left)
 	{
 		audio_play_sound(snd_hg_shot,1,0);
 		audio_play_sound(snd_bullet_drop,1,0);
 		instance_create_layer(x,y,"BulletLayer",obj_bullet);
-		COOLDOWNHANDGUN=10;
-		AMMOHANDGUN=AMMOHANDGUN-1;
+		CooldownHandgun=10;
+		AmmoHandgun=AmmoHandgun-1;
 	}
 	//Keycard
 	if key=1
@@ -140,28 +140,28 @@ if mouse_check_button(mb_left)
 		
 	}
 }
-COOLDOWNRIFLE=COOLDOWNRIFLE-1;
-COOLDOWNHANDGUN=COOLDOWNHANDGUN-1;
+CooldownRifle=CooldownRifle-1;
+CooldownHandgun=CooldownHandgun-1;
 
-if (mouse_check_button_pressed(mb_left)) && (AMMORIFLE<1) && (g=1) audio_play_sound(snd_no_ammo_hg,1,0)
-if (mouse_check_button_pressed(mb_left)) && (AMMOHANDGUN<1) && (hg=1) audio_play_sound(snd_no_ammo_hg,1,0)
+if (mouse_check_button_pressed(mb_left)) && (AmmoRifle<1) && (g=1) audio_play_sound(snd_no_ammo_hg,1,0)
+if (mouse_check_button_pressed(mb_left)) && (AmmoHandgun<1) && (hg=1) audio_play_sound(snd_no_ammo_hg,1,0)
 
 if (keyboard_check_pressed(ord("R"))) && (g=1) 
 {
 	audio_play_sound(snd_g_reload,1,0)
-	COOLDOWNRIFLE=200;
-	AMMORIFLE=50;
+	CooldownRifle=200;
+	AmmoRifle=50;
 }
 if (keyboard_check_pressed(ord("R"))) && (hg=1) 
 {
 	audio_play_sound(snd_hg_reload,1,0)
-	COOLDOWNHANDGUN=132;
-	AMMOHANDGUN=12;
+	CooldownHandgun=132;
+	AmmoHandgun=12;
 }
 
 //SUICIDE
 
-if (hg=1) && (COOLDOWNHANDGUN<1) && (AMMOHANDGUN>0) && (keyboard_check_pressed(ord("K")))
+if (hg=1) && (CooldownHandgun<1) && (AmmoHandgun>0) && (keyboard_check_pressed(ord("K")))
 {
 	audio_play_sound(snd_hg_shot,1,0);
 	audio_play_sound(snd_bullet_drop,1,0);

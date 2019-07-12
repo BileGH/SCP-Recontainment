@@ -1,5 +1,5 @@
 //STATS
-hp=100; //Player Health
+HP=100; //Player Health
 walk=5; //Current speed
 sprint=300;
 //INVENTORY
@@ -7,13 +7,13 @@ g=0; //Rifle gun
 hg=1; //Handgun gun
 key=0; //Keycard, probably
 //COOLDOWN
-COOLDOWNRIFLE=120; //Delay to shoot from rifle gun
-COOLDOWNHANDGUN=120; //Delay to shoot from handgun gun
+CooldownRifle=120; //Delay to shoot from rifle gun
+CooldownHandgun=120; //Delay to shoot from handgun gun
 step=0; //Timer until you take a step
 sc=0; //
 //AMMO
-AMMORIFLE=50; //Rifle gun ammo
-AMMOHANDGUN=15; //Handgun gun ammo
+AmmoRifle=50; //Rifle gun ammo
+AmmoHandgun=15; //Handgun gun ammo
 //BLINKING
 global.blinked=0; //The state when you have blinked
 blk=30; //The time you stay with closed eyes, while blinking

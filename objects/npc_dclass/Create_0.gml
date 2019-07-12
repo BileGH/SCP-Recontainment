@@ -1,4 +1,4 @@
-hp=random_range(25,100);
+HP=random_range(25,100);
 spd=random_range(1,10);
 stop=0;
 move=0;

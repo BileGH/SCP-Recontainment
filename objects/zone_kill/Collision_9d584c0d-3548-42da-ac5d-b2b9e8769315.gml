@@ -1,1 +1,1 @@
-with (other) hp=hp-1000;
+with (other) HP=HP-1000;

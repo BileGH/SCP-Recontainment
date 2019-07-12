@@ -1,9 +1,9 @@
 with (other)
 {
-	if global.php<51 instance_destroy()
-	if global.php>49
+	if obj_player.HP<51 instance_destroy()
+	if obj_player.HP>49
 	{
-		global.php=global.php-50
+		obj_player.HP=obj_player.HP-50
 		x=obj_106_dimension.x
 		y=obj_106_dimension.y
 	}

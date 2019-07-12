@@ -1,4 +1,4 @@
-if hp<1 instance_destroy();
+if HP<1 instance_destroy();
 
 speed=0
 
@@ -15,7 +15,7 @@ if mouse_check_button(mb_left) && (gc<1) && (ga>0) && (instance_exists(obj_playe
 	{
 		audio_play_sound(snd_hg_shot,1,0);
 		audio_play_sound(snd_bullet_drop,1,0);
-		instance_create_layer(x,y,"BulletLayer",obj_bullet_hg);
+		instance_create_layer(x,y,"BulletLayer",obj_bullet);
 		gc=10;
 		ga=ga-1;
 	}

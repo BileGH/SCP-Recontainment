@@ -1,1 +1,1 @@
-with (obj_player) global.php=global.php-1000;
+with (obj_player) obj_player.HP=obj_player.HP-1000;
