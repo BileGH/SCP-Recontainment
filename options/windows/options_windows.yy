@@ -10,9 +10,9 @@
     "option_windows_copyright_info": "(c) 2019 ICG Studios",
     "option_windows_description_info": "",
     "option_windows_display_cursor": false,
-    "option_windows_display_name": "SCP - Recontainment",
+    "option_windows_display_name": "SCP - New View",
     "option_windows_enable_steam": false,
-    "option_windows_executable_name": "SCP - Reconatinment",
+    "option_windows_executable_name": "SCP - New View",
     "option_windows_icon": "${options_dir}\\windows\\icons\\icon.ico",
     "option_windows_installer_finished": "${options_dir}\\windows\\installer\\finished.bmp",
     "option_windows_installer_header": "${options_dir}\\windows\\installer\\header.bmp",
@@ -29,10 +29,10 @@
     "option_windows_texture_page": "2048x2048",
     "option_windows_use_splash": false,
     "option_windows_version": {
-        "build": 0,
+        "build": 4,
         "major": 0,
         "minor": 0,
-        "revision": 1
+        "revision": 9
     },
     "option_windows_vsync": true
 }
