@@ -1,31 +1,62 @@
+//WEAPONS
+global.SCARMaxAmmo = 20
+global.SCARReloadType = "Full"
+global.SCARDamage = 26
+global.SCARDamageDeviation = 3
+global.SCARFireDelay = 10
+global.SCARFireMode1 = "Auto"
+global.SCARFireMode2 = "Single"
+global.SCARFireMode3 = NaN
+global.SCARAmmoType = 556
+
+global.M1911MaxAmmo = 7
+global.M1911ReloadType = "Full"
+global.M1911Damage = 31
+global.M1911DamageDeviation = 6
+global.M1911FireDelay = 3
+global.M1911FireMode1 = "Single"
+global.M1911FireMode2 = NaN
+global.M1911FireMode3 = NaN
+global.M1911AmmoType = 45
+
 //STATS
-HP=100; //Player Health
-walk=5; //Current speed
-sprint=300;
-//INVENTORY
-g=0; //Rifle gun
-hg=1; //Handgun gun
-key=0; //Keycard, probably
-//COOLDOWN
-CooldownRifle=120; //Delay to shoot from rifle gun
-CooldownHandgun=120; //Delay to shoot from handgun gun
-step=0; //Timer until you take a step
-sc=0; //
-//AMMO
-AmmoRifle=50; //Rifle gun ammo
-AmmoHandgun=15; //Handgun gun ammo
+HP = 100; //Player Health
+CurrentSpeed = 5; //Current speed
+Stamina = 300;
+
+//WEAPONS AND EQUIPS
+Equip1 = "P90"
+Equip2 = "M9"
+Equipped = Equip1
+FireMode = string(Equipped)+"FireMode1"
+
+	//AMMO
+Ammo556 = 40
+Ammo45 = 40
+
+Mags556 = array_create(3, [30])
+Mags45 = array_create(2, [7])
+
+	//MACROS AND OTHER FUNCTIONS
+AmmoNumber = string(Equipped)+"Ammo556"
+#macro MagsNumber = 
+#macro MagAmmoNumber = 
+//Stuff
+step = 0; //Timer until you take a step
+sc = 0; //
+
 //BLINKING
-global.blinked=0; //The state when you have blinked
-blk=30; //The time you stay with closed eyes, while blinking
-blink=600; //Timer until you blink
+Blinked = 0; //The state when you have blinked
+blk = 30; //The time you stay with closed eyes, while blinking
+blink = 600; //Timer until you blink
 //HUD
 draw_set_font(fnt_default);
 draw_set_color(c_black);
 
-SPEED = 0.5
-HOWSLOWERTOSLOWDOWN=1.5
-WALKINGSPEED = 5
-RUNNINGSPEED = 12
-STEPSPEED = 7
-TOSTEPTIMER = 25
-ACTUALSPEED = SPEED+HOWSLOWERTOSLOWDOWN
+Speed = 0.5
+HowSlowerToSlowDown = 1.5
+WalkingSpeed = 5
+RunningSpeed = 12
+StepSoundSpeed = 7
+ToStepTimer = 25
+ActualSpeed = Speed + HowSlowerToSlowDown

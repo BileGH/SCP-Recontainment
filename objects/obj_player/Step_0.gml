@@ -1,186 +1,125 @@
 //SAVING
-
 if keyboard_check(vk_f8) game_save("save")
 
 if keyboard_check(vk_f9) game_load("save")
 
-if keyboard_check(vk_escape)
-{
+if keyboard_check(vk_escape) {
 	game_save("save")
 	room_goto(map_menu)
 }
 
 //DEATH
 
-if HP<1 instance_destroy();
+if HP < 1 instance_destroy();
 
 //BLINKING
 
-if keyboard_check (vk_lalt) blink=0;
+if keyboard_check(vk_lalt) blink = 0;
 
-blink=blink-1;
+blink = blink - 1;
 
-if blink<1
-{
-	instance_create_layer(x,y,"Top_Layer",obj_blink)
-	global.blinked=1;
+if blink < 1 {
+	instance_create_layer(x, y, "Top_Layer", obj_blink)
+	Blinked = 1;
 };
-if global.blinked=1 blk=blk-1;
+if Blinked = 1 blk = blk - 1;
 
-if blk<1
-{
-	global.blinked=0;
-	blk=10;
-	blink=600;
-	instance_destroy(obj_blink,true)
+if blk < 1 {
+	Blinked = 0;
+	blk = 10;
+	blink = 600;
+	instance_destroy(obj_blink, true)
 };
 
 //MOVEMENT
 
-walk = WALKINGSPEED
-if keyboard_check(vk_lshift) && sprint > 0 {
-	walk = RUNNINGSPEED;
-	sprint = sprint - 1;
+CurrentSpeed = WalkingSpeed
+if keyboard_check(vk_lshift) && Stamina > 0 {
+	CurrentSpeed = RunningSpeed;
+	Stamina = Stamina - 1;
 	sc = 60;
 }
 
 sc = sc - 1;
 
-if sc < 1 && sprint < 301 sprint = sprint + 1;
+if sc < 1 && Stamina < 301 Stamina = Stamina + 1;
 
 MOVING = 0
 if keyboard_check(ord("W")) {
-	vspeed -= ACTUALSPEED;
+	vspeed -= ActualSpeed;
 	MOVING = 1
 }
 if keyboard_check(ord("S")) {
-	vspeed += ACTUALSPEED;
+	vspeed += ActualSpeed;
 	MOVING = 1
 }
 if keyboard_check(ord("A")) {
-	hspeed -= ACTUALSPEED;
+	hspeed -= ActualSpeed;
 	MOVING = 1
 }
 if keyboard_check(ord("D")) {
-	hspeed += ACTUALSPEED;
+	hspeed += ActualSpeed;
 	MOVING = 1
 }
 
 if step < 1 {
 	audio_sound_pitch(snd_mtf_walk, random_range(0.8, 1.2))
 	audio_play_sound(snd_mtf_walk, 1, false)
-	step = TOSTEPTIMER
+	step = ToStepTimer
 }
 
 if speed > 0 {
-	speed -= HOWSLOWERTOSLOWDOWN
-	step -= speed / STEPSPEED
+	speed -= HowSlowerToSlowDown
+	step -= speed / StepSoundSpeed
 } else {
 	speed = 0
 }
 
-if speed > walk {
-	speed -= (speed-walk)/2
+if speed > CurrentSpeed {
+	speed -= (speed - CurrentSpeed) / 2
 }
 
 
-image_angle=point_direction(x,y,mouse_x,mouse_y);
+image_angle = point_direction(x, y, mouse_x, mouse_y);
 
-/*INVENTORY
+//INVENTORY
 
-if keyboard_check_pressed(ord("1"))
-{
-	audio_play_sound(snd_equip_hg,1,0);
-	g=1;
-	hg=0;
-	key=0;
-}
-*/
-
-if keyboard_check_pressed(ord("2"))
-{
-	audio_play_sound(snd_equip_hg,1,0);
-	hg=1;
-	g=0;
-	key=0;
+if keyboard_check_pressed(ord("1")) {
+	Equipped = Equip1
 }
 
-if keyboard_check_pressed(ord("3"))
-{
-	hg=0;
-	g=0;
-	key=1;
+
+if keyboard_check_pressed(ord("2")) {
+	Equipped = Equip2
 }
 
-//SHOOTING
+//SHOOTING AND RELOADING
 
-if mouse_check_button(mb_left)
-{
-	//P90
-	if (g=1) && (CooldownRifle<1) && (AmmoRifle>0)
-	{
-		audio_play_sound(snd_hg_shot,1,0);
-		audio_play_sound(snd_bullet_drop,1,0);
-		instance_create_layer(x,y,"BulletLayer",obj_bullet);
-		CooldownRifle=4;
-		AmmoRifle=AmmoRifle-1;
-	}
-	//Handgun
-	if (hg=1) && (CooldownHandgun<1) && (AmmoHandgun>0) && mouse_check_button_pressed(mb_left)
-	{
-		audio_play_sound(snd_hg_shot,1,0);
-		audio_play_sound(snd_bullet_drop,1,0);
-		instance_create_layer(x,y,"BulletLayer",obj_bullet);
-		CooldownHandgun=10;
-		AmmoHandgun=AmmoHandgun-1;
-	}
-	//Keycard
-	if key=1
-	{
-		
-	}
+if mouse_button = mb_left {
+	x -= 1;
 }
-CooldownRifle=CooldownRifle-1;
-CooldownHandgun=CooldownHandgun-1;
 
-if (mouse_check_button_pressed(mb_left)) && (AmmoRifle<1) && (g=1) audio_play_sound(snd_no_ammo_hg,1,0)
-if (mouse_check_button_pressed(mb_left)) && (AmmoHandgun<1) && (hg=1) audio_play_sound(snd_no_ammo_hg,1,0)
+if keyboard_check_pressed(ord("r")) {
 
-if (keyboard_check_pressed(ord("R"))) && (g=1) 
-{
-	audio_play_sound(snd_g_reload,1,0)
-	CooldownRifle=200;
-	AmmoRifle=50;
 }
-if (keyboard_check_pressed(ord("R"))) && (hg=1) 
-{
-	audio_play_sound(snd_hg_reload,1,0)
-	CooldownHandgun=132;
-	AmmoHandgun=12;
-}
+
+//Keycard
 
 //SUICIDE
-
-if (hg=1) && (CooldownHandgun<1) && (AmmoHandgun>0) && (keyboard_check_pressed(ord("K")))
-{
-	audio_play_sound(snd_hg_shot,1,0);
-	audio_play_sound(snd_bullet_drop,1,0);
-	instance_destroy();
-}
 
 //COLLISION
 
 
 if collision_line(x, y, x, y + vspeed, obj_wall, 0, 0) {
-	vspeed = 0 x=xprevious
+	vspeed = 0 x = xprevious
 }
 if collision_line(x, y, x + hspeed, y, obj_wall, 0, 0) {
-	hspeed = 0 y=yprevious
+	hspeed = 0 y = yprevious
 }
 
 if collision_line(x, y, x, y + vspeed, obj_door, 1, 0) {
-	vspeed = 0 x=xprevious
+	vspeed = 0 x = xprevious
 }
 if collision_line(x, y, x + hspeed, y, obj_door, 1, 0) {
-	hspeed = 0 y=yprevious
+	hspeed = 0 y = yprevious
 }

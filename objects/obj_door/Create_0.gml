@@ -11,4 +11,4 @@ HowFarInteractWithDoor = 180
 HowFarTeleportWhenStuckFront = 45 * image_xscale
 HowFarTeleportWhenStuckBack = 45 * image_xscale
 
-HowFarCollide = obj_player.walk
+HowFarCollide = obj_player.CurrentSpeed

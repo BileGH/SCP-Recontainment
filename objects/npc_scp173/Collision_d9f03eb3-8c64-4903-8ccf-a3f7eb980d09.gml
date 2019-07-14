@@ -1,1 +1,1 @@
-if global.blinked=1 with (other) instance_destroy()
+if obj_Player.Blinked=1 with (other) instance_destroy()

@@ -1,4 +1,4 @@
-if global.blinked=1
+if obj_Player.Blinked=1
 {
 	with (other) instance_destroy();
 	global.dead=1;
