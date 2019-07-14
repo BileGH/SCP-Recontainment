@@ -1,7 +1,8 @@
 with(obj_wall) {
-	MacroCollisionCheck {
-		instance_destroy(other)
-	}
+	MacroCollisionSolid
+}
+with(obj_door) {
+	MacroCollisionSolid
 }
 with(obj_player) {
 	MacroCollision
