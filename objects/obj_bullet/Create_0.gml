@@ -6,7 +6,8 @@ Owner = npc_mtf
 Damage = 10
 
 //MACROS
-#macro MacroCollisionCheck if collision_line(other.x, other.y, other.x+other.hspeed, other.y+other.vspeed, self, 1, 0)
+	//#macro MacroCollisionCheck if collision_line(other.x, other.y, other.x+other.hspeed, other.y+other.vspeed, self, 1, 0)
+#macro MacroCollisionCheck if collision_line(other.xprevious, other.yprevious, other.x, other.y, self, 1, 0)
 #macro MacroCollisionOutcome if object_index != other.Owner {HP -= other.Damage instance_destroy(other)}
 	//Alive. Has HP.
 #macro MacroCollision MacroCollisionCheck {MacroCollisionOutcome}

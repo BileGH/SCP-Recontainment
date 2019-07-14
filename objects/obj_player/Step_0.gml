@@ -95,7 +95,7 @@ if keyboard_check_pressed(ord("2")) {
 
 //SHOOTING AND RELOADING
 
-if mouse_button = mb_left {
+if mouse_check_button(mb_left) {
 	x -= 1;
 }
 

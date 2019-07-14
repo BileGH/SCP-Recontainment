@@ -25,22 +25,20 @@ CurrentSpeed = 5; //Current speed
 Stamina = 300;
 
 //WEAPONS AND EQUIPS
-Equip1 = "P90"
+Equip1 = "SCAR"
 Equip2 = "M9"
 Equipped = Equip1
-FireMode = string(Equipped)+"FireMode1"
+FireMode = string("global."+string(Equipped)+"FireMode1")
 
-	//AMMO
+//AMMO
 Ammo556 = 40
 Ammo45 = 40
 
 Mags556 = array_create(3, [30])
 Mags45 = array_create(2, [7])
 
-	//MACROS AND OTHER FUNCTIONS
-AmmoNumber = string(Equipped)+"Ammo556"
-#macro MagsNumber = 
-#macro MagAmmoNumber = 
+AmmoCurrentEquip = string(Equipped) + "AmmoType"
+MagsCurrentEquip = (string(Equipped) + "Ammo556")
 //Stuff
 step = 0; //Timer until you take a step
 sc = 0; //
