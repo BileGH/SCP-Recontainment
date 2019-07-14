@@ -1,20 +1,20 @@
 //WEAPONS
 global.SCARMaxAmmo = 20
-global.SCARReloadType = "Full"
+global.SCARReloadType = 1 //1 - FULL Reload.
 global.SCARDamage = 26
 global.SCARDamageDeviation = 3
 global.SCARFireDelay = 10
-global.SCARFireMode1 = "Auto"
-global.SCARFireMode2 = "Single"
+global.SCARFireMode1 = 3 //3 - Auto; 2 - Burst; 1 - Single; Fire Modes.
+global.SCARFireMode2 = 1
 global.SCARFireMode3 = NaN
 global.SCARAmmoType = 556
 
 global.M1911MaxAmmo = 7
-global.M1911ReloadType = "Full"
+global.M1911ReloadType = 3
 global.M1911Damage = 31
 global.M1911DamageDeviation = 6
 global.M1911FireDelay = 3
-global.M1911FireMode1 = "Single"
+global.M1911FireMode1 = 1
 global.M1911FireMode2 = NaN
 global.M1911FireMode3 = NaN
 global.M1911AmmoType = 45
@@ -28,7 +28,7 @@ Stamina = 300;
 Equip1 = "SCAR"
 Equip2 = "M9"
 Equipped = Equip1
-FireMode = string("global."+string(Equipped)+"FireMode1")
+FireMode = "global."+string(Equipped)+"FireMode1"
 
 //AMMO
 Ammo556 = 40
@@ -37,8 +37,8 @@ Ammo45 = 40
 Mags556 = array_create(3, [30])
 Mags45 = array_create(2, [7])
 
-AmmoCurrentEquip = string(Equipped) + "AmmoType"
-MagsCurrentEquip = (string(Equipped) + "Ammo556")
+AmmoCurrentEquip = "global." + string(Equipped) + "AmmoType"
+MagsCurrentEquip = "global." + string(Equipped) + "Ammo556"
 //Stuff
 step = 0; //Timer until you take a step
 sc = 0; //

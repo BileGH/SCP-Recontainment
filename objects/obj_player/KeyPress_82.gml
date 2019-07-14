@@ -1,1 +1,0 @@
-if FireMode = "Auto" {show_message(uwu)}

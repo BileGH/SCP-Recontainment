@@ -12,4 +12,4 @@ if follow=0 && wait<1
 	image_angle=direction;
 }
 
-wait=wait-1
+wait-=1
