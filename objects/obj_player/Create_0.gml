@@ -62,3 +62,5 @@ RunningSpeed = 12
 StepSoundSpeed = 11
 ToStepTimer = 25
 ActualSpeed = Speed + HowSlowerToSlowDown
+
+if debug_mode global.DebugInfo = 1

@@ -1,0 +1,1 @@
+if global.DebugInfo = 1 {draw_self()}

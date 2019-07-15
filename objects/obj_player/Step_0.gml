@@ -164,3 +164,12 @@ if collision_line(x, y, x, y + vspeed, obj_door, 1, 0) {
 if collision_line(x, y, x + hspeed, y, obj_door, 1, 0) {
 	hspeed = 0 y = yprevious
 }
+
+if keyboard_check_pressed(ord("K"))
+and keyboard_check_pressed(ord("O")) {
+	if global.DebugInfo = 0 {
+		global.DebugInfo = 1
+	} else {
+		global.DebugInfo = 0
+	}
+}
