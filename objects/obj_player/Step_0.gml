@@ -14,7 +14,9 @@ if HP < 1 instance_destroy();
 
 //BLINKING
 
-if keyboard_check(vk_lalt) blink = 0;
+if keyboard_check(vk_lalt) {
+	blk = 3 blink = 0
+}
 
 blink = blink - 1;
 
@@ -38,6 +40,9 @@ if keyboard_check(vk_lshift) && Stamina > 0 {
 	CurrentSpeed = RunningSpeed;
 	Stamina = Stamina - 1;
 	sc = 60;
+	StepSoundSpeed = 10
+} else {
+	StepSoundSpeed = 11
 }
 
 sc = sc - 1;
@@ -96,13 +101,49 @@ if keyboard_check_pressed(ord("2")) {
 //SHOOTING AND RELOADING
 
 if mouse_check_button(mb_left) {
-	x -= 1;
+	if FireMode = 3 {
+		if AmmoLoaded = 1 {
+			audio_play_sound(snd_hg_shot, 1, 0);
+			audio_play_sound(snd_bullet_drop, 1, 0);
+			ToFire = 0
+			ToFireCount = global.DSWeaponSCAR[| 4]
+			AmmoLoaded = 0
+			var Bullet = instance_create_layer(x, y, "BulletLayer", obj_bullet) with(Bullet) {
+				Damage = global.DSWeaponSCAR[| 2] + random_range(-global.DSWeaponSCAR[| 3], global.DSWeaponSCAR[| 4])
+				direction = other.image_angle Owner = other.id
+			}
+		}
+	}
 }
 
-if keyboard_check_pressed(ord("r")) {
+if mouse_check_button_pressed(mb_left) {
 
 }
 
+if keyboard_check_pressed(ord("R")) {
+	if MagEquip1Current = ds_list_size(MagEquip1) - 1 {
+		MagEquip1Current = 0
+	}
+	else {
+		MagEquip1Current += 1
+		audio_play_sound(snd_hg_reload,1,0)
+	}
+}
+
+if keyboard_check_pressed(ord("T")) {
+	if Ammo556 > 0 and MagEquip1[| MagEquip1Current] < global.DSWeaponSCAR[| 0] {
+		MagEquip1[| MagEquip1Current] += 1
+		Ammo556 -= 1
+	}
+}
+if ToFireCount > 0 {
+	ToFireCount -= 1
+} else {
+	if AmmoLoaded = 0 and MagEquip1[| MagEquip1Current] > 0 {
+		AmmoLoaded = 1
+		MagEquip1[| MagEquip1Current] -= 1
+	}
+}
 //Keycard
 
 //SUICIDE

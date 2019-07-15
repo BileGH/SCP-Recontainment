@@ -6,7 +6,7 @@ if instance_exists(obj_player) image_angle=point_direction(x,y,mouse_x,mouse_y);
 
 if follow=0 speed=0
 
-if instance_exists(obj_player) && follow=1
+if instance_exists(obj_player) && follow=1 && point_distance(x,y,obj_player.x+100,obj_player.y+210)>15
 {
 	move_towards_point(obj_player.x+100,obj_player.y+210,spd);
 }
@@ -15,7 +15,8 @@ if mouse_check_button(mb_left) && (gc<1) && (ga>0) && (instance_exists(obj_playe
 	{
 		audio_play_sound(snd_hg_shot,1,0);
 		audio_play_sound(snd_bullet_drop,1,0);
-		instance_create_layer(x,y,"BulletLayer",obj_bullet);
+		var Bullet = instance_create_layer(x,y,"BulletLayer",obj_bullet);
+		with (Bullet) {direction = other.image_angle Damage = other.Damage Owner = other.id}
 		gc=10;
 		ga=ga-1;
 	}

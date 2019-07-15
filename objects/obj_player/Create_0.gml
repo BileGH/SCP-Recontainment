@@ -1,51 +1,55 @@
 //WEAPONS
-global.SCARMaxAmmo = 20
-global.SCARReloadType = 1 //1 - FULL Reload.
-global.SCARDamage = 26
-global.SCARDamageDeviation = 3
-global.SCARFireDelay = 10
-global.SCARFireMode1 = 3 //3 - Auto; 2 - Burst; 1 - Single; Fire Modes.
-global.SCARFireMode2 = 1
-global.SCARFireMode3 = NaN
-global.SCARAmmoType = 556
-
-global.M1911MaxAmmo = 7
-global.M1911ReloadType = 3
-global.M1911Damage = 31
-global.M1911DamageDeviation = 6
-global.M1911FireDelay = 3
-global.M1911FireMode1 = 1
-global.M1911FireMode2 = NaN
-global.M1911FireMode3 = NaN
-global.M1911AmmoType = 45
+global.DSWeaponSCAR = ds_list_create();
+ds_list_add(global.DSWeaponSCAR, 30, 1, 26, 3, 4, 3, 1, 0, 556, 556)
+DSSCAR[1] = 30 //Max Ammo.
+DSSCAR[2] = 1 //Reload Type. 1 - FULL Reload.
+DSSCAR[3] = 26 //Damage.
+DSSCAR[4] = 3 //Damage Deviation. Randomized part.
+DSSCAR[5] = 10 //Fire Delay.
+DSSCAR[6] = 3 // Fire Mode 1. 3 - Auto; 2 - Burst; 1 - Single; 0 - NONE.
+DSSCAR[7] = 1 //Fire Mode 2.
+DSSCAR[8] = 0 //Fire Mode 3.
+DSSCAR[9] = 556 //Ammo Type.
+DSSCAR[10] = 556 //Mags Type.
+global.DSWeaponM1911 = ds_list_create();
+ds_list_add(global.DSWeaponM1911, 20, 1, 26, 3, 3, 1, 0, 0, 45, 45)
 
 //STATS
 HP = 100; //Player Health
-CurrentSpeed = 5; //Current speed
+CurrentSpeed = 6; //Current speed
 Stamina = 300;
 
 //WEAPONS AND EQUIPS
-Equip1 = "SCAR"
-Equip2 = "M9"
+Equip1 = global.DSWeaponSCAR
+Equip2 = global.DSWeaponM1911
 Equipped = Equip1
-FireMode = "global."+string(Equipped)+"FireMode1"
 
 //AMMO
 Ammo556 = 40
 Ammo45 = 40
 
-Mags556 = array_create(3, [30])
-Mags45 = array_create(2, [7])
+Mags556 = ds_list_create();
+ds_list_add(Mags556, 30, 30, 30)
+Mags45 = ds_list_create();
+ds_list_add(Mags45, 7, 7, 7)
 
-AmmoCurrentEquip = "global." + string(Equipped) + "AmmoType"
-MagsCurrentEquip = "global." + string(Equipped) + "Ammo556"
+//Equipped variables which need constant updates
+FireMode = Equipped[|3]
+
+AmmoLoaded = 0
+ToFire = 1
+ToFireCount = 0
+
+MagEquip1 = Mags556
+MagEquip1Current = 0
+
 //Stuff
 step = 0; //Timer until you take a step
 sc = 0; //
 
 //BLINKING
 Blinked = 0; //The state when you have blinked
-blk = 30; //The time you stay with closed eyes, while blinking
+blk = 6; //The time you stay with closed eyes, while blinking
 blink = 600; //Timer until you blink
 //HUD
 draw_set_font(fnt_default);
@@ -53,8 +57,8 @@ draw_set_color(c_black);
 
 Speed = 0.5
 HowSlowerToSlowDown = 1.5
-WalkingSpeed = 5
+WalkingSpeed = 6
 RunningSpeed = 12
-StepSoundSpeed = 7
+StepSoundSpeed = 11
 ToStepTimer = 25
 ActualSpeed = Speed + HowSlowerToSlowDown
