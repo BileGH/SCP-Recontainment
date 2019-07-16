@@ -1,6 +1,4 @@
-if HP<1 instance_destroy();
-	
-image_angle=direction
+if HP<=0 instance_destroy();
 
 if stop=0 && moving<1
 {

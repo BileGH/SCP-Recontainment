@@ -106,10 +106,10 @@ if mouse_check_button(mb_left) {
 			audio_play_sound(snd_hg_shot, 1, 0);
 			audio_play_sound(snd_bullet_drop, 1, 0);
 			ToFire = 0
-			ToFireCount = global.DSWeaponSCAR[| 4]
+			ToFireCount = Equipped[|4]
 			AmmoLoaded = 0
 			var Bullet = instance_create_layer(x, y, "BulletLayer", obj_bullet) with(Bullet) {
-				Damage = global.DSWeaponSCAR[| 2] + random_range(-global.DSWeaponSCAR[| 3], global.DSWeaponSCAR[| 4])
+				Damage = other.Equipped[|2] + random_range(-other.Equipped[|3],other.Equipped[|3])
 				image_angle = other.image_angle Owner = other.id
 			}
 		}
@@ -131,7 +131,7 @@ if keyboard_check_pressed(ord("R")) {
 }
 
 if keyboard_check_pressed(ord("T")) {
-	if Ammo556 > 0 and MagEquip1[| MagEquip1Current] < global.DSWeaponSCAR[| 0] {
+	if Ammo556 > 0 and MagEquip1[|MagEquip1Current] < Equipped[| 0] {
 		MagEquip1[| MagEquip1Current] += 1
 		Ammo556 -= 1
 	}
@@ -139,9 +139,9 @@ if keyboard_check_pressed(ord("T")) {
 if ToFireCount > 0 {
 	ToFireCount -= 1
 } else {
-	if AmmoLoaded = 0 and MagEquip1[| MagEquip1Current] > 0 {
+	if AmmoLoaded = 0 and MagEquip1[|MagEquip1Current] > 0 {
 		AmmoLoaded = 1
-		MagEquip1[| MagEquip1Current] -= 1
+		MagEquip1[|MagEquip1Current] -= 1
 	}
 }
 //Keycard

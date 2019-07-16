@@ -34,7 +34,7 @@ Mags45 = ds_list_create();
 ds_list_add(Mags45, 7, 7, 7)
 
 //Equipped variables which need constant updates
-FireMode = Equipped[|3]
+FireMode = Equipped[|5]
 
 AmmoLoaded = 0
 ToFire = 1

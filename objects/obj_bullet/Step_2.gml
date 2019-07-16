@@ -2,10 +2,11 @@ speed = 0
 HowManyTimes = HowAccurate
 
 do {
-	x += lengthdir_x(SpeedReal,image_angle)
-	y += lengthdir_y(SpeedReal,image_angle)
+	x += lengthdir_x(SpeedReal, image_angle)
+	y += lengthdir_y(SpeedReal, image_angle)
+
+	ToEffect = spr_effectsmoke ToSplatter = spr_effectsplatterconcrete Blood = 0
 	
-	ToEffect = spr_smokeeffect
 	with(obj_wall) {
 		MacroCollisionSolid
 	}
@@ -15,8 +16,9 @@ do {
 	with(obj_target_up) {
 		MacroCollision
 	}
+
+	ToEffect = spr_effectblood ToSplatter = spr_effectsplatterblood Blood = 1
 	
-	ToEffect = spr_bloodeffect
 	with(obj_player) {
 		MacroCollision
 	}
@@ -35,7 +37,7 @@ do {
 	with(npc_scp106) {
 		MacroCollision
 	}
-	
+
 	HowManyTimes -= 1
 }
 until(HowManyTimes = 0)

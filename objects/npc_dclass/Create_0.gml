@@ -1,9 +1,8 @@
-HP=10000
+HP=100
 spd=random_range(1,10);
 stop=0;
-move=0;
 moving=0;
 dir=0;
-direction=random_range(0,999);
+image_angle=random_range(0,360);
 wait=0;
 drag=0;

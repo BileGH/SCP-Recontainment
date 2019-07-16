@@ -10,4 +10,5 @@ if global.DebugInfo {
 	draw_text(x + 100, y + 400, MagEquip1[| MagEquip1Current])
 	draw_text(x + 100, y + 500, MagEquip1Current)
 	draw_text(x + 100, y + 600, ToFireCount)
+	draw_text(x + 100, y + 600, Equipped[|2])
 }
