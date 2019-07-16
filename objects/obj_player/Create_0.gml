@@ -1,6 +1,6 @@
 //WEAPONS
 global.DSWeaponSCAR = ds_list_create();
-ds_list_add(global.DSWeaponSCAR, 30, 1, 26, 3, 4, 3, 1, 0, 556, 556)
+ds_list_add(global.DSWeaponSCAR, 30, 1, 26, 3, 6, 3, 1, 0, 556, 556)
 DSSCAR[1] = 30 //Max Ammo.
 DSSCAR[2] = 1 //Reload Type. 1 - FULL Reload.
 DSSCAR[3] = 26 //Damage.

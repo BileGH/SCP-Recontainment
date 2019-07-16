@@ -110,7 +110,7 @@ if mouse_check_button(mb_left) {
 			AmmoLoaded = 0
 			var Bullet = instance_create_layer(x, y, "BulletLayer", obj_bullet) with(Bullet) {
 				Damage = global.DSWeaponSCAR[| 2] + random_range(-global.DSWeaponSCAR[| 3], global.DSWeaponSCAR[| 4])
-				direction = other.image_angle Owner = other.id
+				image_angle = other.image_angle Owner = other.id
 			}
 		}
 	}

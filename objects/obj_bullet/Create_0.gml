@@ -1,8 +1,15 @@
 //MOTION
-speed = 250;
-image_angle = direction;
 Damage = 0
 Owner = 0
+
+Speed = 250
+HowAccurate = 20
+
+SpeedReal = Speed / HowAccurate
+HowManyTimes = HowAccurate
+
+ToEffect = spr_smokeeffect
+HowManyEffectsCreate = 20
 
 //MACROS
 	//#macro MacroCollisionCheck if collision_line(other.x, other.y, other.x+other.hspeed, other.y+other.vspeed, self, 1, 0)
@@ -11,4 +18,4 @@ Owner = 0
 	//Alive. Has HP.
 #macro MacroCollision MacroCollisionCheck {MacroCollisionOutcome}
 	//Invincible or Solid or Not alive. Has no HP.
-#macro MacroCollisionSolid MacroCollisionCheck {instance_destroy(other)}
+#macro MacroCollisionSolid MacroCollisionCheck {instance_destroy(other)} 

@@ -1,1 +1,0 @@
-if hits<1 instance_destroy();
