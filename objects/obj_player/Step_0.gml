@@ -96,52 +96,82 @@ if keyboard_check_pressed(ord("1")) {
 
 if keyboard_check_pressed(ord("2")) {
 	Equipped = Equip2
+	
 }
 
 //SHOOTING AND RELOADING
 
 if mouse_check_button(mb_left) {
-	if FireMode = 3 {
+		if string(Equipped[|10]) = 3 {
+			if AmmoLoaded = 1 {
+				audio_play_sound(snd_hg_shot, 1, 0);
+				audio_play_sound(snd_bullet_drop, 1, 0);
+				ToFire = 0
+				ToFireCount = Equipped[| 4]
+				AmmoLoaded = 0
+				var Bullet = instance_create_layer(x, y, "BulletLayer", obj_bullet) with(Bullet) {
+					Damage = other.Equipped[| 2] + random_range(-other.Equipped[| 3], other.Equipped[| 3])
+					image_angle = other.image_angle Owner = other.id
+				}
+			}
+		}
+		if string(Equipped[|10]) = 2 {
+			for (i = 3; i > 0; i -= 1) {
+				if AmmoLoaded = 1 {
+					audio_play_sound(snd_hg_shot, 1, 0);
+					audio_play_sound(snd_bullet_drop, 1, 0);
+					ToFire = 0
+					ToFireCount = Equipped[| 4]
+					AmmoLoaded = 0
+					var Bullet = instance_create_layer(x, y, "BulletLayer", obj_bullet) with(Bullet) {
+						Damage = other.Equipped[| 2] + random_range(-other.Equipped[| 3], other.Equipped[| 3])
+						image_angle = other.image_angle Owner = other.id
+					}
+				}
+			}
+		}
+}
+
+if mouse_check_button_pressed(mb_left) {
+	if Equipped[| 10] = 1 {
 		if AmmoLoaded = 1 {
 			audio_play_sound(snd_hg_shot, 1, 0);
 			audio_play_sound(snd_bullet_drop, 1, 0);
 			ToFire = 0
-			ToFireCount = Equipped[|4]
+			ToFireCount = Equipped[| 4]
 			AmmoLoaded = 0
 			var Bullet = instance_create_layer(x, y, "BulletLayer", obj_bullet) with(Bullet) {
-				Damage = other.Equipped[|2] + random_range(-other.Equipped[|3],other.Equipped[|3])
+				Damage = other.Equipped[| 2] + random_range(-other.Equipped[| 3], other.Equipped[| 3])
 				image_angle = other.image_angle Owner = other.id
 			}
 		}
 	}
 }
 
-if mouse_check_button_pressed(mb_left) {
-
-}
-
+		
 if keyboard_check_pressed(ord("R")) {
-	if MagEquip1Current = ds_list_size(MagEquip1) - 1 {
-		MagEquip1Current = 0
+	if Equipped[|11] = ds_list_size(string(Equipped[|9])) - 1 {
+		Equipped[|11] = 0
 	}
 	else {
-		MagEquip1Current += 1
+		Equipped[|11] += 1
 		audio_play_sound(snd_hg_reload,1,0)
 	}
 }
 
 if keyboard_check_pressed(ord("T")) {
-	if Ammo556 > 0 and MagEquip1[|MagEquip1Current] < Equipped[| 0] {
-		MagEquip1[| MagEquip1Current] += 1
+	if Ammo556 > 0 and Equipped[|9]+"["|Equipped[|11]+"]" < Equipped[| 0] {
+		a += 1
 		Ammo556 -= 1
 	}
 }
 if ToFireCount > 0 {
 	ToFireCount -= 1
 } else {
-	if AmmoLoaded = 0 and MagEquip1[|MagEquip1Current] > 0 {
+	var i = Equipped[|9]
+	if AmmoLoaded = 0 and string(i[Equipped[|11]]) > 0 {
 		AmmoLoaded = 1
-		MagEquip1[|MagEquip1Current] -= 1
+		a -= 1
 	}
 }
 //Keycard
@@ -165,7 +195,7 @@ if collision_line(x, y, x + hspeed, y, obj_door, 1, 0) {
 	hspeed = 0 y = yprevious
 }
 
-if keyboard_check_pressed(ord("K"))
+if keyboard_check(ord("K"))
 and keyboard_check_pressed(ord("O")) {
 	if global.DebugInfo = 0 {
 		global.DebugInfo = 1
