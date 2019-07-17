@@ -1,6 +1,6 @@
 //WEAPONS
 global.DSWeaponSCAR = ds_list_create();
-ds_list_add(global.DSWeaponSCAR, 30, 1, 26, 3, 6, 3, 1, 0, 556, 556)
+ds_list_add(global.DSWeaponSCAR, 30, 1, 26, 3, 6, 3, 1, 0, "Ammo556", "Mags556", 3, 0)
 DSSCAR[1] = 30 //Max Ammo.
 DSSCAR[2] = 1 //Reload Type. 1 - FULL Reload.
 DSSCAR[3] = 26 //Damage.
@@ -12,7 +12,13 @@ DSSCAR[8] = 0 //Fire Mode 3.
 DSSCAR[9] = 556 //Ammo Type.
 DSSCAR[10] = 556 //Mags Type.
 global.DSWeaponM1911 = ds_list_create();
-ds_list_add(global.DSWeaponM1911, 20, 1, 26, 3, 3, 1, 0, 0, 45, 45)
+ds_list_add(global.DSWeaponM1911, 20, 1, 26, 3, 3, 1, 0, 0, "Ammo45", "Mags45", 1, 0)
+
+DSWeaponSCAR = ds_list_create();
+ds_list_copy(DSWeaponSCAR, global.DSWeaponSCAR)
+
+DSWeaponM1911 = ds_list_create();
+ds_list_copy(DSWeaponSCAR, global.DSWeaponM1911)
 
 //STATS
 HP = 100; //Player Health
@@ -20,8 +26,8 @@ CurrentSpeed = 6; //Current speed
 Stamina = 300;
 
 //WEAPONS AND EQUIPS
-Equip1 = global.DSWeaponSCAR
-Equip2 = global.DSWeaponM1911
+Equip1 = DSWeaponSCAR
+Equip2 = DSWeaponM1911
 Equipped = Equip1
 
 //AMMO
@@ -34,14 +40,10 @@ Mags45 = ds_list_create();
 ds_list_add(Mags45, 7, 7, 7)
 
 //Equipped variables which need constant updates
-FireMode = Equipped[|5]
 
 AmmoLoaded = 0
 ToFire = 1
 ToFireCount = 0
-
-MagEquip1 = Mags556
-MagEquip1Current = 0
 
 //Stuff
 step = 0; //Timer until you take a step
@@ -64,3 +66,7 @@ ToStepTimer = 25
 ActualSpeed = Speed + HowSlowerToSlowDown
 
 if debug_mode global.DebugInfo = 1
+
+//BLOOD PUDDLES
+HowManyBloodPuddles = 3
+HowFarOutBloodPuddles = 6

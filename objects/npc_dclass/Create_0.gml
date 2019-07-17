@@ -6,3 +6,7 @@ dir=0;
 image_angle=random_range(0,360);
 wait=0;
 drag=0;
+
+//BLOOD PUDDLES
+HowManyBloodPuddles = 3
+HowFarOutBloodPuddles = 6

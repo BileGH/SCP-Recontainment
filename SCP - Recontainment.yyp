@@ -95,14 +95,6 @@
             }
         },
         {
-            "Key": "10c9c75d-29b4-4f71-9a98-dfc060d7a05a",
-            "Value": {
-                "id": "531cfc62-d2dc-4bce-b7ef-7b6343e64ddc",
-                "resourcePath": "sprites\\txr_mtf1\\txr_mtf1.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "10f7f779-2d30-4fef-91f9-ed53f63ae0c8",
             "Value": {
                 "id": "ef11cf57-4003-4e55-9c6c-8c6a60ae1c9a",

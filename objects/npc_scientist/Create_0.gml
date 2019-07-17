@@ -3,4 +3,8 @@ spd=random_range(1,10);
 wait=60;
 follow=0;
 there=0;
-direction=random_range(0,999)
+image_angle=random_range(0,360)
+
+///BLOOD PUDDLES
+HowManyBloodPuddles = 3
+HowFarOutBloodPuddles = 6

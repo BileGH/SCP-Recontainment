@@ -7,3 +7,7 @@ follow=1;
 wait=60;
 
 Damage = global.DSWeaponSCAR[|2]
+
+//BLOOD PUDDLES
+HowManyBloodPuddles = 3
+HowFarOutBloodPuddles = 6
