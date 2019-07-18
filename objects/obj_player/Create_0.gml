@@ -1,47 +1,14 @@
-//WEAPONS
-global.DSWeaponSCAR = ds_list_create();
-ds_list_add(global.DSWeaponSCAR, 30, 1, 26, 3, 6, 3, 1, 0, "Ammo556", "Mags556", 3, 0)
-DSSCAR[1] = 30 //Max Ammo.
-DSSCAR[2] = 1 //Reload Type. 1 - FULL Reload.
-DSSCAR[3] = 26 //Damage.
-DSSCAR[4] = 3 //Damage Deviation. Randomized part.
-DSSCAR[5] = 10 //Fire Delay.
-DSSCAR[6] = 3 // Fire Mode 1. 3 - Auto; 2 - Burst; 1 - Single; 0 - NONE.
-DSSCAR[7] = 1 //Fire Mode 2.
-DSSCAR[8] = 0 //Fire Mode 3.
-DSSCAR[9] = 556 //Ammo Type.
-DSSCAR[10] = 556 //Mags Type.
-global.DSWeaponM1911 = ds_list_create();
-ds_list_add(global.DSWeaponM1911, 20, 1, 26, 3, 3, 1, 0, 0, "Ammo45", "Mags45", 1, 0)
-
-DSWeaponSCAR = ds_list_create();
-ds_list_copy(DSWeaponSCAR, global.DSWeaponSCAR)
-
-DSWeaponM1911 = ds_list_create();
-ds_list_copy(DSWeaponSCAR, global.DSWeaponM1911)
-
 //STATS
 HP = 100; //Player Health
 CurrentSpeed = 6; //Current speed
 Stamina = 300;
 
-//WEAPONS AND EQUIPS
-Equip1 = DSWeaponSCAR
-Equip2 = DSWeaponM1911
-Equipped = Equip1
-
 //AMMO
 Ammo556 = 40
 Ammo45 = 40
 
-Mags556 = ds_list_create();
-ds_list_add(Mags556, 30, 30, 30)
-Mags45 = ds_list_create();
-ds_list_add(Mags45, 7, 7, 7)
-
 //Equipped variables which need constant updates
 
-AmmoLoaded = 0
 ToFire = 1
 ToFireCount = 0
 
@@ -70,3 +37,54 @@ if debug_mode global.DebugInfo = 1
 //BLOOD PUDDLES
 HowManyBloodPuddles = 3
 HowFarOutBloodPuddles = 6
+
+
+//WEAPONS
+
+global.Mags556 = ds_list_create()
+global.Mags45 = ds_list_create()
+
+ds_list_add(global.Mags556, 30, 30, 30)
+ds_list_add(global.Mags45, 7, 7, 7)
+
+Mags556 = ds_list_create()
+Mags45 = ds_list_create()
+
+ds_list_copy(Mags556, global.Mags556)
+ds_list_copy(Mags45, global.Mags45)
+
+global.DSWeaponSCAR = ds_list_create();
+ds_list_add(global.DSWeaponSCAR, 30, 1, 26, 3, 6, 3, 1, 0, Ammo556, Mags556, 5, 0, 0)
+/* !!Top-To-Bottom explanation of numbers and variables Left-To-Right!!
+Max Ammo.
+Reload Type. 1 - FULL Reload.
+Damage.
+Damage Deviation. Randomized part.
+Fire Delay.
+Fire Mode 1. 3 - Auto; 2 - Burst; 1 - Single; 0 - NONE.
+Fire Mode 2.
+Fire Mode 3.
+Ammo Type.
+Mags Type.
+Current FireMode.
+Current Magazine.
+Current bullet in the chamber. 0 = None.
+*/
+
+global.DSWeaponM1911 = ds_list_create();
+ds_list_add(global.DSWeaponM1911, 7, 1, 26, 3, 8, 1, 0, 0, Ammo45, Mags45, 5, 0, 0)
+
+DSWeaponSCAR = ds_list_create();
+ds_list_copy(DSWeaponSCAR, global.DSWeaponSCAR)
+
+DSWeaponM1911 = ds_list_create();
+ds_list_copy(DSWeaponM1911, global.DSWeaponM1911)
+
+//WEAPONS AND EQUIPS
+Equip1 = DSWeaponSCAR
+Equip2 = DSWeaponM1911
+Equipped = Equip1
+
+CurrentMagazine = ds_list_create()
+ds_list_copy(CurrentMagazine, Equipped[|9])
+CurrentAmmoMagazine = CurrentMagazine[|Equipped[|11]]
