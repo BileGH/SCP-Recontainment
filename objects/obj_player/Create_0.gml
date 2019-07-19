@@ -41,17 +41,11 @@ HowFarOutBloodPuddles = 6
 
 //WEAPONS
 
-global.Mags556 = ds_list_create()
-global.Mags45 = ds_list_create()
-
-ds_list_add(global.Mags556, 30, 30, 30)
-ds_list_add(global.Mags45, 7, 7, 7)
-
 Mags556 = ds_list_create()
 Mags45 = ds_list_create()
 
-ds_list_copy(Mags556, global.Mags556)
-ds_list_copy(Mags45, global.Mags45)
+ds_list_add(Mags556, 30, 30, 30)
+ds_list_add(Mags45, 7, 7, 7)
 
 global.DSWeaponSCAR = ds_list_create();
 ds_list_add(global.DSWeaponSCAR, 30, 1, 26, 3, 6, 3, 1, 0, Ammo556, Mags556, 5, 0, 0)
@@ -85,6 +79,4 @@ Equip1 = DSWeaponSCAR
 Equip2 = DSWeaponM1911
 Equipped = Equip1
 
-CurrentMagazine = ds_list_create()
-ds_list_copy(CurrentMagazine, Equipped[|9])
-CurrentAmmoMagazine = CurrentMagazine[|Equipped[|11]]
+CurrentMagazine = string(Equipped[|9])

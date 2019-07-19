@@ -1,6 +1,6 @@
 draw_self()
 if global.DebugInfo {
-	draw_text(x - 500 + 100, y - 500 + 100, CurrentAmmoMagazine)
+	draw_text(x - 500 + 100, y - 500 + 100, CurrentMagazine[|Equipped[|11]])
 	draw_text(x - 500 + 200, y - 500 + 100, Equipped[|12])
 	draw_text(x - 500 + 100, y - 500 + 150, Equipped[|11])
 	draw_text(x - 500 + 100, y - 500 + 200, Equipped[|8])
@@ -11,5 +11,5 @@ if global.DebugInfo {
 	draw_text(x + 100, y + 400, Equipped[|11])
 	draw_text(x + 100, y + 475, ToFireCount)
 	draw_text(x + 100, y + 550, Equipped[|2])
-	draw_text(x + 100, y + 625, CurrentAmmoMagazine)
+	draw_text(x + 100, y + 625, CurrentMagazine[|Equipped[|11]])
 }

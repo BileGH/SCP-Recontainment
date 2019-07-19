@@ -95,6 +95,7 @@ if keyboard_check_pressed(ord("1")) {
 		audio_play_sound(snd_equip_hg, 1, 0)
 	}
 	Equipped = Equip1
+	CurrentMagazine = string(Equipped[|9])
 }
 
 
@@ -104,6 +105,7 @@ if keyboard_check_pressed(ord("2")) {
 		audio_play_sound(snd_equip_hg, 1, 0)
 	}
 	Equipped = Equip2
+	CurrentMagazine = string(Equipped[|9])
 }
 
 //SHOOTING AND RELOADING
@@ -157,7 +159,7 @@ if mouse_check_button_pressed(mb_left) {
 
 	//Reloading.
 if keyboard_check_pressed(ord("R")) {
-	if Equipped[| 11] = ds_list_size(CurrentMagazine) - 1 {
+	if Equipped[| 11] = ds_list_size(Equipped[|9]) - 1 {
 		Equipped[| 11] = 0
 		audio_stop_sound(snd_hg_reload)
 		audio_play_sound(snd_hg_reload, 1, 0)
@@ -171,8 +173,8 @@ if keyboard_check_pressed(ord("R")) {
 
 	//Loading Ammo into the Magazine.
 if keyboard_check(ord("T")) {
-	if Equipped[| 8] > 0 and CurrentAmmoMagazine < Equipped[| 0] {
-		CurrentAmmoMagazine += 1
+	if Equipped[| 8] > 0 and CurrentMagazine[|Equipped[|11]]< Equipped[| 0] {
+		CurrentMagazine[|Equipped[|11]] += 1
 		Equipped[| 8] -= 1
 	}
 }
@@ -185,9 +187,9 @@ if keyboard_check(ord("T")) {
 if ToFireCount > 0 {
 	ToFireCount -= 1
 } else {
-	if Equipped[| 12] = 0 and CurrentAmmoMagazine > 0 {
+	if Equipped[| 12] = 0 and CurrentMagazine[|Equipped[|11]]> 0 {
 		Equipped[| 12] = 1
-		CurrentAmmoMagazine -= 1
+		CurrentMagazine[|Equipped[|11]] -= 1
 	}
 }
 
