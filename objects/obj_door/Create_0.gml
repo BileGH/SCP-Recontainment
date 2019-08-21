@@ -10,3 +10,5 @@ Interactable = 0 //Unused. Will be used to highlight the door, if needed.
 HowFarInteractWithDoor = 180
 HowFarTeleportWhenStuckFront = 45 * image_xscale
 HowFarTeleportWhenStuckBack = 45 * image_xscale
+
+MTFTouchedTimer = 0
