@@ -1,4 +1,4 @@
-ShadowSize = 600000
+ShadowSize = 600000000
 Number = 10
 Number2 = 0
 if instance_exists(obj_player) {

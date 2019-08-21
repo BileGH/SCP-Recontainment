@@ -90,7 +90,7 @@ image_angle = point_direction(x, y, mouse_x, mouse_y);
 //INVENTORY
 
 if keyboard_check_pressed(ord("1")) {
-	if Equipped = Equip1 {
+	if Equipped != Equip1 {
 		audio_stop_sound(snd_equip_hg)
 		audio_play_sound(snd_equip_hg, 1, 0)
 	}
@@ -100,7 +100,7 @@ if keyboard_check_pressed(ord("1")) {
 
 
 if keyboard_check_pressed(ord("2")) {
-	if Equipped = Equip2 {
+	if Equipped != Equip2 {
 		audio_stop_sound(snd_equip_hg)
 		audio_play_sound(snd_equip_hg, 1, 0)
 	}
