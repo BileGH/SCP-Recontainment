@@ -8,8 +8,8 @@ ga=15;
 follow=1;
 wait=60;
 
-Damage = global.DSWeaponSCAR[|2]
+Damage = 26
 
+MacroBleedingStatus
 //BLOOD PUDDLES
-HowManyBloodPuddles = 3
-HowFarOutBloodPuddles = 6
+BloodPuddles

@@ -7,6 +7,6 @@ image_angle=random_range(0,360);
 wait=0;
 drag=0;
 
+MacroBleedingStatus
 //BLOOD PUDDLES
-HowManyBloodPuddles = 3
-HowFarOutBloodPuddles = 6
+BloodPuddles

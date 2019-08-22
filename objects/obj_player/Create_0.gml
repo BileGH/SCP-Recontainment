@@ -35,20 +35,23 @@ ActualSpeed = Speed + HowSlowerToSlowDown
 if debug_mode global.DebugInfo = 1
 
 //BLOOD PUDDLES
-HowManyBloodPuddles = 3
-HowFarOutBloodPuddles = 6
+#macro BloodPuddles HowManyBloodPuddles = 3 HowFarOutBloodPuddles = 6;
+BloodPuddles
 
-
+//BlEEDING
+#macro MacroBleedingStatus Bleeding = 0 BleedingNaturalHealing = 0.00001 ToBloodDrip = 0.5 ToReBloodDrip = 0.5
+MacroBleedingStatus
 //WEAPONS
+	//AMMO
+#macro SetMagsandAmmo Mags556 = ds_list_create() Mags45 = ds_list_create();
+SetMagsandAmmo
+ds_list_add(Mags556, 30, 30, 30) ds_list_add(Mags45, 7, 7, 7)
 
-Mags556 = ds_list_create()
-Mags45 = ds_list_create()
+DSWeaponM1911 = ds_list_create();
+ds_list_add(DSWeaponM1911, 7, 1, 26, 3, 8, 1, 0, 0, Ammo45, Mags45, 5, 0, 0, 0.1)
 
-ds_list_add(Mags556, 30, 30, 30)
-ds_list_add(Mags45, 7, 7, 7)
-
-global.DSWeaponSCAR = ds_list_create();
-ds_list_add(global.DSWeaponSCAR, 30, 1, 26, 3, 6, 3, 1, 0, Ammo556, Mags556, 5, 0, 0)
+DSWeaponSCAR = ds_list_create();
+ds_list_add(DSWeaponSCAR, 30, 1, 26, 3, 6, 3, 1, 0, Ammo556, Mags556, 5, 0, 0, 0.1)
 /* !!Top-To-Bottom explanation of numbers and variables Left-To-Right!!
 Max Ammo.
 Reload Type. 1 - FULL Reload.
@@ -63,16 +66,10 @@ Mags Type.
 Current FireMode.
 Current Magazine.
 Current bullet in the chamber. 0 = None.
+BleedingAmount 
 */
 
-global.DSWeaponM1911 = ds_list_create();
-ds_list_add(global.DSWeaponM1911, 7, 1, 26, 3, 8, 1, 0, 0, Ammo45, Mags45, 5, 0, 0)
 
-DSWeaponSCAR = ds_list_create();
-ds_list_copy(DSWeaponSCAR, global.DSWeaponSCAR)
-
-DSWeaponM1911 = ds_list_create();
-ds_list_copy(DSWeaponM1911, global.DSWeaponM1911)
 
 //WEAPONS AND EQUIPS
 Equip1 = DSWeaponSCAR

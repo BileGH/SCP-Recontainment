@@ -1,4 +1,5 @@
 if HP<1 instance_destroy();
+MacroBleeding
 
 speed=0
 

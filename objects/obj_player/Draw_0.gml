@@ -12,4 +12,5 @@ if global.DebugInfo {
 	draw_text(x + 100, y + 475, ToFireCount)
 	draw_text(x + 100, y + 550, Equipped[|2])
 	draw_text(x + 100, y + 625, CurrentMagazine[|Equipped[|11]])
+	draw_text(x, y+80, HP)
 }

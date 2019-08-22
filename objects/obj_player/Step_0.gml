@@ -10,7 +10,7 @@ if keyboard_check(vk_escape) {
 
 //DEATH
 
-if HP < 1 instance_destroy();
+if HP <= 0 instance_destroy();
 
 //BLINKING
 
@@ -107,6 +107,7 @@ if keyboard_check_pressed(ord("2")) {
 	Equipped = Equip2
 	CurrentMagazine = string(Equipped[|9])
 }
+
 
 //SHOOTING AND RELOADING
 	//Auto and Burst Firing.
@@ -214,6 +215,10 @@ if collision_line(x, y, x, y + vspeed, obj_door, 1, 0) {
 if collision_line(x, y, x + hspeed, y, obj_door, 1, 0) {
 	hspeed = 0 y = yprevious
 }
+
+//BLEEDING
+#macro MacroBleeding if Bleeding>0 {Bleeding -= BleedingNaturalHealing ToBloodDrip-=Bleeding HP-=Bleeding  if ToBloodDrip<=0 {var Blood = instance_create_layer(x+random_range(-10,10), y+random_range(-10,10), "Bottom_Layer" , obj_blood_drip) ToBloodDrip=ToReBloodDrip with (Blood) {image_xscale=1+(other.Bleeding*32) image_yscale=1+(other.Bleeding*32)}}};
+MacroBleeding
 
 //DEBUG
 if keyboard_check(ord("K"))
