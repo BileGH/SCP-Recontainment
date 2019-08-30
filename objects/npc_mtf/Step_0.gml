@@ -22,7 +22,7 @@ if mouse_check_button(mb_left) && (gc<1) && (ga>0) && (instance_exists(obj_playe
 		audio_play_sound(snd_hg_shot,1,0);
 		audio_play_sound(snd_bullet_drop,1,0);
 		var Bullet = instance_create_layer(x,y,"BulletLayer",obj_bullet);
-		with (Bullet) {direction = other.image_angle Damage = other.Damage Owner = other.id}
+		with (Bullet) {image_angle = other.image_angle Damage = other.Damage Owner = other.id}
 		gc=10;
 		ga=ga-1;
 	}
