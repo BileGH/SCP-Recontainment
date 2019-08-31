@@ -32,7 +32,7 @@ StepSoundSpeed = 11
 ToStepTimer = 25
 ActualSpeed = Speed + HowSlowerToSlowDown
 
-if debug_mode global.DebugInfo = 1
+global.DebugInfo=debug_mode
 
 //BLOOD PUDDLES
 #macro BloodPuddles HowManyBloodPuddles = 3 HowFarOutBloodPuddles = 6;
