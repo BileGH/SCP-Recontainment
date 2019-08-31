@@ -1,4 +1,5 @@
 //SAVING
+
 if keyboard_check(vk_f8) game_save("save")
 
 if keyboard_check(vk_f9) game_load("save")
