@@ -1,1 +1,0 @@
-if global.femur_broken=1 instance_destroy()

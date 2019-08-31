@@ -2,6 +2,7 @@
 HP = 100; //Player Health
 CurrentSpeed = 6; //Current speed
 Stamina = 300;
+global.femur_broken=0
 
 //AMMO
 Ammo556 = 40
