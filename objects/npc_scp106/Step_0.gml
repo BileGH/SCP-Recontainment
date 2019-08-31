@@ -4,4 +4,6 @@ image_angle=direction;
 
 spd=6;
 
+HP=99999
+
 if global.femur_broken=1 instance_destroy()
