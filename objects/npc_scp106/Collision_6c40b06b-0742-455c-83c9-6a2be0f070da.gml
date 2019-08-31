@@ -8,3 +8,5 @@ with (other)
 		y=obj_106_dimension.y
 	}
 }
+
+instance_destroy()
