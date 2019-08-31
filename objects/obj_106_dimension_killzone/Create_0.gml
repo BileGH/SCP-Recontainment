@@ -1,1 +1,1 @@
-kill=random_range(0,1)
+kill=irandom_range(0,1)
