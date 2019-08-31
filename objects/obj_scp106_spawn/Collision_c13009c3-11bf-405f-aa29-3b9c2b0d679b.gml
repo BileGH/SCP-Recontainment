@@ -1,0 +1,1 @@
+if global.femur_broken=0 && nospawn=0 instance_create_layer(x,y,"Instances",npc_scp106)

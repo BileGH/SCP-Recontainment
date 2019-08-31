@@ -5,17 +5,17 @@
     "name": "obj_scp106_spawn",
     "eventList": [
         {
-            "id": "dfa53adb-3bbd-45e7-b456-b61bef89226f",
+            "id": "c13009c3-11bf-405f-aa29-3b9c2b0d679b",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "collisionObjectId": "1933cf1c-2e31-46c3-83b4-96784e587af3",
             "enumb": 0,
-            "eventtype": 0,
+            "eventtype": 4,
             "m_owner": "e7c8d122-5446-4ec8-b730-7588eba1a974"
         },
         {
-            "id": "50815a98-2eb6-4920-8baf-d43b194dd5e7",
+            "id": "31f67889-6f2a-45ef-b024-dffdacf0c6f4",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
