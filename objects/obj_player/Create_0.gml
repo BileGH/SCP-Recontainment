@@ -18,7 +18,7 @@ step = 0; //Timer until you take a step
 sc = 0; //
 
 //BLINKING
-Blinked = 0; //The state when you have blinked
+global.blinked = 0; //The state when you have blinked
 blk = 6; //The time you stay with closed eyes, while blinking
 blink = 600; //Timer until you blink
 //HUD

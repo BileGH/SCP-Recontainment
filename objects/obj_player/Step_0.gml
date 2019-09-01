@@ -23,12 +23,12 @@ blink = blink - 1;
 
 if blink < 1 {
 	instance_create_layer(x, y, "Top_Layer", obj_blink)
-	Blinked = 1;
+	global.blinked = 1;
 };
-if Blinked = 1 blk = blk - 1;
+if global.blinked = 1 blk = blk - 1;
 
 if blk < 1 {
-	Blinked = 0;
+	global.blinked = 0;
 	blk = 10;
 	blink = 600;
 	instance_destroy(obj_blink, true)
