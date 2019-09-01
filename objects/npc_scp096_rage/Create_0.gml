@@ -1,0 +1,1 @@
+audio_play_sound(snd_scp096_scream_1,1,1)
