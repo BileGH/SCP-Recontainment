@@ -15,7 +15,10 @@
         "8929adef-0c61-48a0-83c4-b231df48e018",
         "d98e23c8-afc7-44b2-a29c-48362d924df1",
         "189045ea-6313-4ba7-9178-d7d31630972f",
-        "7b4f96de-225c-441c-a499-1af7007a497d"
+        "7b4f96de-225c-441c-a499-1af7007a497d",
+        "7abbceaf-a7c7-415c-80c8-f95a06d04ba5",
+        "04354621-a33e-4b56-9e93-04b4968acb12",
+        "f41ac7d0-caff-4bf3-bff3-45dcabd33d65"
     ],
     "filterType": "GMSprite",
     "folderName": "All NPC\/PCs",
