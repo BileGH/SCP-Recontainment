@@ -1,12 +1,19 @@
+instance_destroy()
+
 with (other)
 {
-	if obj_player.HP<51 instance_destroy()
-	if obj_player.HP>49
+	if HP<50 instance_destroy()
+	if HP>50
 	{
-		obj_player.HP=obj_player.HP-50
 		x=obj_106_dimension.x
 		y=obj_106_dimension.y
+		HP=HP-50
+	}
+	
+	if HP=50
+	{
+		x=obj_106_dimension.x
+		y=obj_106_dimension.y
+		HP=1
 	}
 }
-
-instance_destroy()

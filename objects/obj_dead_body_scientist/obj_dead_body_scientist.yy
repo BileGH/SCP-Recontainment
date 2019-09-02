@@ -5,16 +5,6 @@
     "name": "obj_dead_body_scientist",
     "eventList": [
         {
-            "id": "3e360205-e7ba-4f0f-83c5-364bd11e3fe9",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "71cc71b0-8fa0-4d85-834c-aa13a421bfa3"
-        },
-        {
             "id": "4b70715d-d7b4-486f-a18c-6953482640fc",
             "modelName": "GMEvent",
             "mvc": "1.0",

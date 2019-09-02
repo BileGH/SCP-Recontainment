@@ -5,16 +5,6 @@
     "name": "obj_dead_body_dclass",
     "eventList": [
         {
-            "id": "d7cc8b2d-d1fe-49be-a96a-840b699ca5af",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "7f6c2725-1b4c-4b39-84b9-3dcc75e91e96"
-        },
-        {
             "id": "d410e324-bb8b-454f-a15e-947ad77953c3",
             "modelName": "GMEvent",
             "mvc": "1.0",

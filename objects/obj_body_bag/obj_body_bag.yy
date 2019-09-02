@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "obj_body_bag",
     "eventList": [
-        {
-            "id": "4db7fd67-ad08-4a90-a756-1a4286d356a6",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "84b133d5-259f-47da-8693-525764c6af80"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
