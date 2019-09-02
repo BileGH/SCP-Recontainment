@@ -719,6 +719,14 @@
             }
         },
         {
+            "Key": "81639e72-7a1e-462f-a6e9-ac37fb675d67",
+            "Value": {
+                "id": "7808bbcc-74fd-456b-91ec-1196b9c5420b",
+                "resourcePath": "objects\\obj_dead_body_mtf\\obj_dead_body_mtf.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "82b0b1fa-379e-4552-8ff8-cd6b75680eb4",
             "Value": {
                 "id": "e9d40930-0384-4b93-b522-0867918fc98c",
