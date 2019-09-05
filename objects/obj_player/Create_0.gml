@@ -33,15 +33,26 @@ StepSoundSpeed = 11
 ToStepTimer = 25
 ActualSpeed = Speed + HowSlowerToSlowDown
 
-global.DebugInfo=debug_mode
+//MACROS
+#macro MacroBloodPuddles HowManyBloodPuddles = 3 HowFarOutBloodPuddles = 6;
 
-//BLOOD PUDDLES
-#macro BloodPuddles HowManyBloodPuddles = 3 HowFarOutBloodPuddles = 6;
-BloodPuddles
-
-//BlEEDING
 #macro MacroBleedingStatus Bleeding = 0 BleedingNaturalHealing = 0.00001 ToBloodDrip = 0.5 ToReBloodDrip = 0.5
-MacroBleedingStatus
+
+#macro MacroSoundEmitters SoundEmitter = audio_emitter_create(); audio_emitter_position(SoundEmitter, x, y, 0) audio_emitter_pitch(SoundEmitter, random_range(0.8, 1.2)); SoundEmitter2 = audio_emitter_create(); audio_emitter_position(SoundEmitter2, x, y, 0) audio_emitter_pitch(SoundEmitter2, random_range(0.8, 1.2)); SoundEmitter3 = audio_emitter_create(); audio_emitter_position(SoundEmitter3, x, y, 0) audio_emitter_pitch(SoundEmitter3, random_range(0.8, 1.2)); SoundEmitter4 = audio_emitter_create(); audio_emitter_position(SoundEmitter4, x, y, 0) audio_emitter_pitch(SoundEmitter4, random_range(0.8, 1.2)); audio_stop_all()
+
+#macro MacroSoundEmittersPositionSet audio_emitter_position(SoundEmitter, x, y, 0) audio_emitter_position(SoundEmitter2, x, y, 0) audio_emitter_position(SoundEmitter3, x, y, 0) audio_emitter_position(SoundEmitter4, x, y, 0)
+//MACRO OF ALL MACROS
+#macro MacroPlayerNPCMaster MacroSoundEmitters MacroBleedingStatus MacroBloodPuddles
+MacroPlayerNPCMaster
+
+//AUDIO SYSTEM
+audio_falloff_set_model(audio_falloff_linear_distance);
+audio_listener_position(x,y,0)
+audio_listener_orientation(0, 0, 10, 0, 1, 0);
+
+//DEBUG
+global.Debug_Mode=debug_mode
+
 //WEAPONS
 	//AMMO
 #macro SetMagsandAmmo Mags556 = ds_list_create() Mags45 = ds_list_create();

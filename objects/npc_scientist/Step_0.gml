@@ -1,5 +1,6 @@
 if HP<1 instance_destroy();
 MacroBleeding
+MacroSoundEmittersPositionSet
 
 if instance_exists(obj_player) && follow=1
 {

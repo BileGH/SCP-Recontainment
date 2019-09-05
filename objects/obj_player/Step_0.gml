@@ -115,8 +115,10 @@ if keyboard_check_pressed(ord("2")) {
 if mouse_check_button(mb_left) {
 	if Equipped[| Equipped[| 10]] = 3 {
 		if Equipped[| 12] = 1 {
-			audio_play_sound(snd_hg_shot, 1, 0);
-			audio_play_sound(snd_bullet_drop, 1, 0);
+			audio_emitter_falloff(SoundEmitter2, 1500, 4000, 1);
+			audio_play_sound_on(SoundEmitter2,snd_hg_shot,0,1)
+			audio_emitter_falloff(SoundEmitter, 150, 750, 1);
+			audio_play_sound_on(SoundEmitter,snd_bullet_drop,0,1)
 			ToFire = 0
 			ToFireCount = Equipped[| 4]
 			Equipped[| 12] = 0
@@ -129,8 +131,10 @@ if mouse_check_button(mb_left) {
 	if Equipped[| Equipped[| 10]] = 2 {
 		for (i = 3; i > 0; i -= 1) {
 			if Equipped[| 12] = 1 {
-				audio_play_sound(snd_hg_shot, 1, 0);
-				audio_play_sound(snd_bullet_drop, 1, 0);
+				audio_emitter_falloff(SoundEmitter2, 1500, 4000, 1);
+				audio_play_sound_on(SoundEmitter2,snd_hg_shot,0,1)
+				audio_emitter_falloff(SoundEmitter, 150, 750, 1);
+				audio_play_sound_on(SoundEmitter,snd_bullet_drop,0,1)
 				ToFire = 0
 				ToFireCount = Equipped[| 4]
 				Equipped[| 12] = 0
@@ -146,8 +150,10 @@ if mouse_check_button(mb_left) {
 if mouse_check_button_pressed(mb_left) {
 	if Equipped[| Equipped[| 10]] = 1 {
 		if Equipped[| 12] = 1 {
-			audio_play_sound(snd_hg_shot, 1, 0);
-			audio_play_sound(snd_bullet_drop, 1, 0);
+			audio_emitter_falloff(SoundEmitter2, 1500, 4000, 1);
+			audio_play_sound_on(SoundEmitter2,snd_hg_shot,0,1)
+			audio_emitter_falloff(SoundEmitter, 150, 750, 1);
+			audio_play_sound_on(SoundEmitter,snd_bullet_drop,0,1)
 			ToFire = 0
 			ToFireCount = Equipped[| 4]
 			Equipped[| 12] = 0
@@ -221,12 +227,21 @@ if collision_line(x, y, x + hspeed, y, obj_door, 1, 0) {
 #macro MacroBleeding if Bleeding>0 {Bleeding -= BleedingNaturalHealing ToBloodDrip-=Bleeding HP-=Bleeding  if ToBloodDrip<=0 {var Blood = instance_create_layer(x+random_range(-10,10), y+random_range(-10,10), "Bottom_Layer" , obj_blood_drip) ToBloodDrip=ToReBloodDrip with (Blood) {image_xscale=1+(other.Bleeding*32) image_yscale=1+(other.Bleeding*32)}}};
 MacroBleeding
 
+//AUDIO SYSTEM
+if speed > 0
+   {
+	audio_listener_position(x,y,0)
+   }
+audio_listener_velocity(abs(hspeed),abs(vspeed),0)
+
+MacroSoundEmittersPositionSet
+
 //DEBUG
 if keyboard_check(ord("K"))
 and keyboard_check_pressed(ord("O")) {
-	if global.DebugInfo = 0 {
-		global.DebugInfo = 1
+	if global.Debug_Mode = 0 {
+		global.Debug_Mode = 1
 	} else {
-		global.DebugInfo = 0
+		global.Debug_Mode = 0
 	}
 }

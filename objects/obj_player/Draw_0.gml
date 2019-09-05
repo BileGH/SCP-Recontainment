@@ -1,5 +1,5 @@
 draw_self()
-if global.DebugInfo {
+if global.Debug_Mode {
 	draw_text(x - 500 + 100, y - 500 + 100, CurrentMagazine[|Equipped[|11]])
 	draw_text(x - 500 + 200, y - 500 + 100, Equipped[|12])
 	draw_text(x - 500 + 100, y - 500 + 150, Equipped[|11])

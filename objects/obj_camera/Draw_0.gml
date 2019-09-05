@@ -1,4 +1,4 @@
-if global.DebugInfo {draw_self()}
+if global.Debug_Mode {draw_self()}
 
 #macro DRAWSHADOWSPRITE {draw_sprite_ext(sprite_index,image_index,x,y+36,1,1,image_angle,c_black,0.25)}
 #macro DRAWSHADOWCORPSE {draw_sprite_ext(sprite_index,image_index,x,y+16,1,1,image_angle,c_black,0.3)}

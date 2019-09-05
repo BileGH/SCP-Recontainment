@@ -10,6 +10,4 @@ wait=60;
 
 Damage = 26
 
-MacroBleedingStatus
-//BLOOD PUDDLES
-BloodPuddles
+MacroPlayerNPCMaster

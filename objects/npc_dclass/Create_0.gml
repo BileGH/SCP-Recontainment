@@ -7,6 +7,4 @@ image_angle=random_range(0,360);
 wait=0;
 drag=0;
 
-MacroBleedingStatus
-//BLOOD PUDDLES
-BloodPuddles
+MacroPlayerNPCMaster

@@ -1,5 +1,6 @@
 if HP<=0 instance_destroy();
 MacroBleeding
+MacroSoundEmittersPositionSet
 
 if stop=0 && moving<1
 {
