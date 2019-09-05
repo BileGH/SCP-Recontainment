@@ -39,7 +39,7 @@ if blk < 1 {
 CurrentSpeed = WalkingSpeed
 if keyboard_check(vk_lshift) && Stamina > 0 {
 	CurrentSpeed = RunningSpeed;
-	Stamina = Stamina - 1;
+	Stamina -= 1;
 	sc = 60;
 	StepSoundSpeed = 10
 } else {
@@ -48,7 +48,7 @@ if keyboard_check(vk_lshift) && Stamina > 0 {
 
 sc = sc - 1;
 
-if sc < 1 && Stamina < 301 Stamina = Stamina + 1;
+if sc < 1 && Stamina < 300 {Stamina = Stamina + 1};
 
 MOVING = 0
 if keyboard_check(ord("W")) {
