@@ -10,11 +10,18 @@ if follow=0 speed=0
 
 if instance_exists(obj_player) && follow=1 && CalculatePath<=0 && point_distance(x,y,obj_player.x,obj_player.y)
 {
-	if mp_grid_path(global.MPGrid, Path, x, y, obj_player.x, obj_player.y, 1)
+	if mp_grid_path(global.MPGrid, Path, x, y, obj_player.x+SetX, obj_player.y+SetY, 1)
         {
         path_start(Path, spd, 0, 0);
         }
-	CalculatePath=irandom_range(80,120)
+		else
+		{
+		mp_grid_path(global.MPGrid, Path, x, y, obj_player.x+irandom_range(-Numbers,Numbers), obj_player.y+irandom_range(-Numbers,Numbers), 1)
+        {
+        path_start(Path, spd, 0, 0);
+        }
+		}
+	CalculatePath=irandom_range(20,30)
 }
 else
 {

@@ -18,3 +18,6 @@ Path = path_add();
         path_start(Path, 2, 0, 0);
         }
 CalculatePath = 10
+Numbers=75
+SetX = irandom_range(-150,150)
+SetY = irandom_range(-150,150)
