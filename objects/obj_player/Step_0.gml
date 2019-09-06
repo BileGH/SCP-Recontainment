@@ -69,8 +69,8 @@ if keyboard_check(ord("D")) {
 }
 
 if step < 1 {
-	audio_sound_pitch(snd_mtf_walk, random_range(0.8, 1.2))
-	audio_play_sound(snd_mtf_walk, 1, false)
+			audio_emitter_falloff(SoundEmitter, 300, 750, 1);
+			audio_play_sound_on(SoundEmitter,snd_mtf_walk,0,1)
 	step = ToStepTimer
 }
 
@@ -117,9 +117,9 @@ if keyboard_check_pressed(ord("2")) {
 if mouse_check_button(mb_left) {
 	if Equipped[| Equipped[| 10]] = 3 {
 		if Equipped[| 12] = 1 {
-			audio_emitter_falloff(SoundEmitter2, 1500, 4000, 1);
+			audio_emitter_falloff(SoundEmitter2, 2500, 8000, 1);
 			audio_play_sound_on(SoundEmitter2,snd_hg_shot,0,1)
-			audio_emitter_falloff(SoundEmitter, 150, 750, 1);
+			audio_emitter_falloff(SoundEmitter, 300, 750, 1);
 			audio_play_sound_on(SoundEmitter,snd_bullet_drop,0,1)
 			ToFire = 0
 			ToFireCount = Equipped[| 4]
@@ -130,9 +130,9 @@ if mouse_check_button(mb_left) {
 	if Equipped[| Equipped[| 10]] = 2 {
 		for (i = 3; i > 0; i -= 1) {
 			if Equipped[| 12] = 1 {
-				audio_emitter_falloff(SoundEmitter2, 1500, 4000, 1);
+				audio_emitter_falloff(SoundEmitter2, 2500, 8000, 1);
 				audio_play_sound_on(SoundEmitter2,snd_hg_shot,0,1)
-				audio_emitter_falloff(SoundEmitter, 150, 750, 1);
+				audio_emitter_falloff(SoundEmitter, 300, 750, 1);
 				audio_play_sound_on(SoundEmitter,snd_bullet_drop,0,1)
 				ToFire = 0
 				ToFireCount = Equipped[| 4]
@@ -146,9 +146,9 @@ if mouse_check_button(mb_left) {
 if mouse_check_button_pressed(mb_left) {
 	if Equipped[| Equipped[| 10]] = 1 {
 		if Equipped[| 12] = 1 {
-			audio_emitter_falloff(SoundEmitter2, 1500, 4000, 1);
+			audio_emitter_falloff(SoundEmitter2, 2500, 8000, 1);
 			audio_play_sound_on(SoundEmitter2,snd_hg_shot,0,1)
-			audio_emitter_falloff(SoundEmitter, 150, 750, 1);
+			audio_emitter_falloff(SoundEmitter, 300, 750, 1);
 			audio_play_sound_on(SoundEmitter,snd_bullet_drop,0,1)
 			ToFire = 0
 			ToFireCount = Equipped[| 4]

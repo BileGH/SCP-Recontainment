@@ -20,8 +20,10 @@ else
 
 if mouse_check_button(mb_left) && (gc<1) && (ga>0) && (instance_exists(obj_player))
 	{
-		audio_play_sound(snd_hg_shot,1,0);
-		audio_play_sound(snd_bullet_drop,1,0);
+	audio_emitter_falloff(SoundEmitter2, 2500, 8000, 1);
+	audio_play_sound_on(SoundEmitter2,snd_hg_shot,0,1)
+	audio_emitter_falloff(SoundEmitter, 300, 750, 1);
+	audio_play_sound_on(SoundEmitter,snd_bullet_drop,0,1)
 		var Bullet = instance_create_layer(x,y,"BulletLayer",obj_bullet);
 		with (Bullet) {image_angle = other.image_angle Damage = other.Damage Owner = other.id}
 		gc=10;
@@ -38,3 +40,5 @@ if (ga<1)
 }
 
 wait=wait-1
+
+MacroSoundEmittersPositionSet

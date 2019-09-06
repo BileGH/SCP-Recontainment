@@ -50,7 +50,7 @@ MacroPlayerNPCMaster
 //AUDIO SYSTEM
 audio_falloff_set_model(audio_falloff_linear_distance);
 audio_listener_position(x,y,0)
-audio_listener_orientation(0, 0, 10, 0, 1, 0);
+audio_listener_orientation(0, 0, 10, 0, -1, 0);
 
 //DEBUG
 global.Debug_Mode=debug_mode
@@ -62,7 +62,7 @@ SetMagsandAmmo
 ds_list_add(Mags556, 30, 30, 30) ds_list_add(Mags45, 7, 7, 7)
 
 DSWeaponM1911 = ds_list_create();
-ds_list_add(DSWeaponM1911, 7, 1, 26, 3, 8, 1, 0, 0, Ammo45, Mags45, 5, 0, 0, 0.1, txr_player_hg, 150, 0, snd_hg_shot, snd_equip_hg, snd_hg_reload)
+ds_list_add(DSWeaponM1911, 7, 1, 26, 3, 8, 1, 0, 0, Ammo45, Mags45, 5, 0, 0, 0.1, txr_player_hg, 300, 0, snd_hg_shot, snd_equip_hg, snd_hg_reload)
 
 DSWeaponSCAR = ds_list_create();
 ds_list_add(DSWeaponSCAR, 30, 1, 26, 3, 6, 3, 1, 0, Ammo556, Mags556, 5, 0, 0, 0.1, txr_player_ScarL, 154, -12.6, snd_hg_shot, snd_equip_hg, snd_hg_reload)
