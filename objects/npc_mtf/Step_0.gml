@@ -8,14 +8,18 @@ if instance_exists(obj_player) image_angle=point_direction(x,y,mouse_x,mouse_y);
 
 if follow=0 speed=0
 
-if instance_exists(obj_player) && follow=1 && point_distance(x,y,obj_player.x+100,obj_player.y+210)>15
+if instance_exists(obj_player) && follow=1 && CalculatePath<=0 && point_distance(x,y,obj_player.x,obj_player.y)
 {
-	if spd<maxspd {spd+=Accelerate}
-	move_towards_point(obj_player.x+100,obj_player.y+210,spd);
+	if mp_grid_path(global.MPGrid, Path, x, y, obj_player.x, obj_player.y, 1)
+        {
+        path_start(Path, spd, 0, 0);
+        }
+	CalculatePath=irandom_range(80,120)
 }
 else
 {
-	spd = 0
+	spd = 9
+	CalculatePath-=1
 }
 
 if mouse_check_button(mb_left) && (gc<1) && (ga>0) && (instance_exists(obj_player))

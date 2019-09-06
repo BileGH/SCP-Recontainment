@@ -11,3 +11,10 @@ wait=60;
 Damage = 26
 
 MacroPlayerNPCMaster
+
+Path = path_add();
+    if mp_grid_path(global.MPGrid, Path, x, y, obj_player.x, obj_player.y, 1)
+        {
+        path_start(Path, 2, 0, 0);
+        }
+CalculatePath = 10
