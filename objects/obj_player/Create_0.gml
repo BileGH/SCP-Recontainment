@@ -34,6 +34,8 @@ ToStepTimer = 25
 ActualSpeed = Speed + HowSlowerToSlowDown
 
 //MACROS
+#macro MacroFireEquippedWeapon var Bullet = instance_create_layer(x+lengthdir_x(Equipped[|15],image_angle+Equipped[|16]), y+lengthdir_y(Equipped[|15],image_angle+Equipped[|16]), "BulletLayer", obj_bullet) with(Bullet) {Damage = other.Equipped[| 2] + random_range(-other.Equipped[| 3], other.Equipped[| 3]) image_angle = other.image_angle Owner = other.id }
+
 #macro MacroBloodPuddles HowManyBloodPuddles = 3 HowFarOutBloodPuddles = 6;
 
 #macro MacroBleedingStatus Bleeding = 0 BleedingNaturalHealing = 0.00001 ToBloodDrip = 0.5 ToReBloodDrip = 0.5
@@ -48,7 +50,7 @@ MacroPlayerNPCMaster
 //AUDIO SYSTEM
 audio_falloff_set_model(audio_falloff_linear_distance);
 audio_listener_position(x,y,0)
-audio_listener_orientation(0, 0, 10, 0, 1, 0);
+audio_listener_orientation(0, 0, 10, 0, -1, 0);
 
 //DEBUG
 global.Debug_Mode=debug_mode
@@ -60,25 +62,31 @@ SetMagsandAmmo
 ds_list_add(Mags556, 30, 30, 30) ds_list_add(Mags45, 7, 7, 7)
 
 DSWeaponM1911 = ds_list_create();
-ds_list_add(DSWeaponM1911, 7, 1, 26, 3, 8, 1, 0, 0, Ammo45, Mags45, 5, 0, 0, 0.1)
+ds_list_add(DSWeaponM1911, 7, 1, 26, 3, 8, 1, 0, 0, Ammo45, Mags45, 5, 0, 0, 0.1, txr_player_hg, 300, 0, snd_hg_shot, snd_equip_hg, snd_hg_reload)
 
 DSWeaponSCAR = ds_list_create();
-ds_list_add(DSWeaponSCAR, 30, 1, 26, 3, 6, 3, 1, 0, Ammo556, Mags556, 5, 0, 0, 0.1)
+ds_list_add(DSWeaponSCAR, 30, 1, 26, 3, 6, 3, 1, 0, Ammo556, Mags556, 5, 0, 0, 0.1, txr_player_ScarL, 154, -12.6, snd_hg_shot, snd_equip_hg, snd_hg_reload)
 /* !!Top-To-Bottom explanation of numbers and variables Left-To-Right!!
-Max Ammo.
-Reload Type. 1 - FULL Reload.
-Damage.
-Damage Deviation. Randomized part.
-Fire Delay.
-Fire Mode 1. 3 - Auto; 2 - Burst; 1 - Single; 0 - NONE.
-Fire Mode 2.
-Fire Mode 3.
-Ammo Type.
-Mags Type.
-Current FireMode.
-Current Magazine.
-Current bullet in the chamber. 0 = None.
-BleedingAmount 
+0 Max Ammo.
+1 Reload Type. 1 - FULL Reload.
+2 Damage.
+3 Damage Deviation. Randomized part.
+4 Fire Delay.
+5 Fire Mode 1. 3 - Auto; 2 - Burst; 1 - Single; 0 - NONE.
+6 Fire Mode 2.
+7 Fire Mode 3.
+8 Ammo Type.
+9 Mags Type.
+10 Current FireMode.
+11 Current Magazine.
+12 Current bullet in the chamber. 0 = None.
+13 BleedingAmount 
+14 What texture should be the player, when swapped to
+15 X&Y Offset to the gun
+16 Angle Offset to the gun
+17 Sound for firing
+18 Sound for Equipping
+19 Sound for Reloading
 */
 
 
