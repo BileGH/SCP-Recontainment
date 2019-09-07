@@ -234,7 +234,7 @@ if speed > 0
    }
 audio_listener_velocity(abs(hspeed),abs(vspeed),0)
 
-MacroSoundEmittersPositionSet
+// THIS LINE NEEDS GETTING DONE, I think MacroSoundEmittersPositionSet
 
 //DEBUG
 if keyboard_check(ord("K"))
