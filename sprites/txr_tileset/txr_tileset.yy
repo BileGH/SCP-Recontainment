@@ -2,11 +2,11 @@
     "id": "76df6583-e40f-42f8-8403-1a5de72aa56f",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "txr_tileset1",
+    "name": "txr_tileset",
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 2999,
+    "bbox_bottom": 5999,
     "bbox_left": 0,
     "bbox_right": 3999,
     "bbox_top": 0,
@@ -16,34 +16,34 @@
     "edgeFiltering": false,
     "frames": [
         {
-            "id": "922466f4-cd35-450b-a9a9-00a5ccb32a67",
+            "id": "5fd3d3e0-f308-4cda-ab72-7b7a2a232469",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
             "SpriteId": "76df6583-e40f-42f8-8403-1a5de72aa56f",
             "compositeImage": {
-                "id": "fdf4a263-c8c5-4995-82f7-5377303bb1b0",
+                "id": "f74dacd1-cde0-495f-a944-7018db11fa0c",
                 "modelName": "GMSpriteImage",
                 "mvc": "1.0",
-                "FrameId": "922466f4-cd35-450b-a9a9-00a5ccb32a67",
+                "FrameId": "5fd3d3e0-f308-4cda-ab72-7b7a2a232469",
                 "LayerId": "00000000-0000-0000-0000-000000000000"
             },
             "images": [
                 {
-                    "id": "febeeea4-b27e-4d27-bb2a-540d0ca5abf5",
+                    "id": "822b794e-975d-47af-8125-f1d092deba78",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
-                    "FrameId": "922466f4-cd35-450b-a9a9-00a5ccb32a67",
-                    "LayerId": "bdfa1aa6-3b52-4532-ae67-68983bbcea8b"
+                    "FrameId": "5fd3d3e0-f308-4cda-ab72-7b7a2a232469",
+                    "LayerId": "0125bc5c-ef26-40ff-8652-fdc9c3914ccd"
                 }
             ]
         }
     ],
     "gridX": 0,
     "gridY": 0,
-    "height": 3000,
+    "height": 6000,
     "layers": [
         {
-            "id": "bdfa1aa6-3b52-4532-ae67-68983bbcea8b",
+            "id": "0125bc5c-ef26-40ff-8652-fdc9c3914ccd",
             "modelName": "GMImageLayer",
             "mvc": "1.0",
             "SpriteId": "76df6583-e40f-42f8-8403-1a5de72aa56f",
@@ -66,5 +66,5 @@
     "type": 0,
     "width": 4000,
     "xorig": 2000,
-    "yorig": 1500
+    "yorig": 3000
 }
