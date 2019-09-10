@@ -13,7 +13,8 @@
         "e6ad532d-e5f4-4a67-85a0-7555cfb391a3",
         "d5e6dd51-d265-4799-8dad-2ee3dc5679b2",
         "35ec5aba-48df-4272-91bb-d0f4aec8a7f8",
-        "b181523e-a50b-4e3b-9aa1-cd17d22c75f7"
+        "b181523e-a50b-4e3b-9aa1-cd17d22c75f7",
+        "0354c2b7-b292-44c7-afd0-8beee4906310"
     ],
     "filterType": "GMObject",
     "folderName": "SCPs",

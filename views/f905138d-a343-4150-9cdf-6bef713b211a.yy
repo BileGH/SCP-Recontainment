@@ -13,7 +13,8 @@
         "1564f23a-8e86-498f-8563-9ca86044ec03",
         "8b5614ce-ccc0-4653-b260-93fb46444d5d",
         "7d12f11a-ee1d-4b48-8780-8eaa92394678",
-        "5c75c286-3c51-4bad-89a5-26872874b363"
+        "5c75c286-3c51-4bad-89a5-26872874b363",
+        "d785d054-b009-4f8b-acb3-c363db4aa784"
     ],
     "filterType": "GMSprite",
     "folderName": "Props",
