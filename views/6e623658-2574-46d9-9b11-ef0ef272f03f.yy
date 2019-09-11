@@ -13,7 +13,8 @@
         "36d3e500-742c-4f2d-b3c0-12425bcc461a",
         "478a88a1-2fcf-419c-a0fe-3505293ea431",
         "286e6b86-0042-4ef2-b10e-a72bcf4dce5a",
-        "32c835ea-0ea6-46d7-9adc-2080906d21bc"
+        "32c835ea-0ea6-46d7-9adc-2080906d21bc",
+        "0d1a5083-ec62-4c37-9a77-73c7ad990dfc"
     ],
     "filterType": "GMObject",
     "folderName": "Props",
