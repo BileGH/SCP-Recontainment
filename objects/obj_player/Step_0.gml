@@ -227,7 +227,7 @@ if speed > 0
    }
 audio_listener_velocity(abs(hspeed),abs(vspeed),0)
 
-// THIS LINE NEEDS GETTING DONE, I think MacroSoundEmittersPositionSet
+MacroSoundEmittersPositionSet
 
 //DEBUG
 if keyboard_check(ord("K"))
@@ -238,3 +238,5 @@ and keyboard_check_pressed(ord("O")) {
 		global.Debug_Mode = 0
 	}
 }
+
+if keyboard_check(ord("P")) and global.Debug_Mode {instance_place(mouse_x,mouse_y,self)}

@@ -13,7 +13,7 @@ do {
 	with(obj_door) {
 		MacroCollisionSolid
 	}
-	with(obj_target_up) {
+	with(prop_target_up) {
 		MacroCollision
 	}
 

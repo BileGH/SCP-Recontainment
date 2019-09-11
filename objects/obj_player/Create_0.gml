@@ -97,3 +97,6 @@ Equip2 = DSWeaponM1911
 Equipped = Equip1
 
 CurrentMagazine = string(Equipped[|9])
+
+//AI
+Followed = 1
