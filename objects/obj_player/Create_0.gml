@@ -37,13 +37,14 @@ ActualSpeed = Speed + HowSlowerToSlowDown
 #macro MacroFireEquippedWeapon var Bullet = instance_create_layer(x+lengthdir_x(Equipped[|15],image_angle+Equipped[|16]), y+lengthdir_y(Equipped[|15],image_angle+Equipped[|16]), "BulletLayer", obj_bullet) with(Bullet) {Damage = other.Equipped[| 2] + random_range(-other.Equipped[| 3], other.Equipped[| 3]) image_angle = other.image_angle Owner = other.id }
 
 #macro MacroBloodPuddles HowManyBloodPuddles = 3 HowFarOutBloodPuddles = 6;
+#macro MacroMakeBloodPuddlesAndCorpse var Corpse = instance_create_layer(x,y,"BulletLayer",CorpseName) with Corpse {image_angle=random_range(other.image_angle-10,other.image_angle+10)}for (i = HowManyBloodPuddles; i > 1; i -= 1) {instance_create_layer(x + random_range(-HowFarOutBloodPuddles, HowFarOutBloodPuddles), y + random_range(-HowFarOutBloodPuddles, HowFarOutBloodPuddles), "Bottom_Layer", obj_blood_puddle);}
 
 #macro MacroBleedingStatus Bleeding = 0 BleedingNaturalHealing = 0.00001 ToBloodDrip = 0.5 ToReBloodDrip = 0.5
 
 #macro MacroSoundEmitters SoundEmitter = audio_emitter_create(); audio_emitter_position(SoundEmitter, x, y, 0) audio_emitter_pitch(SoundEmitter, random_range(0.8, 1.2)); SoundEmitter2 = audio_emitter_create(); audio_emitter_position(SoundEmitter2, x, y, 0) audio_emitter_pitch(SoundEmitter2, random_range(0.8, 1.2)); SoundEmitter3 = audio_emitter_create(); audio_emitter_position(SoundEmitter3, x, y, 0) audio_emitter_pitch(SoundEmitter3, random_range(0.8, 1.2)); SoundEmitter4 = audio_emitter_create(); audio_emitter_position(SoundEmitter4, x, y, 0) audio_emitter_pitch(SoundEmitter4, random_range(0.8, 1.2)); audio_stop_all()
 
 #macro MacroSoundEmittersPositionSet audio_emitter_position(SoundEmitter, x, y, 0) audio_emitter_position(SoundEmitter2, x, y, 0) audio_emitter_position(SoundEmitter3, x, y, 0) audio_emitter_position(SoundEmitter4, x, y, 0)
-//MACRO OF ALL MACROS
+//MARO OF ALL MACROS
 #macro MacroPlayerNPCMaster MacroSoundEmitters MacroBleedingStatus MacroBloodPuddles
 MacroPlayerNPCMaster
 
