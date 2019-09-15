@@ -12,3 +12,5 @@ HowFarTeleportWhenStuckFront = 45 * image_xscale
 HowFarTeleportWhenStuckBack = 45 * image_xscale
 
 MTFTouchedTimer = 0
+
+Locked = 0
