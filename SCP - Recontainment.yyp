@@ -415,6 +415,14 @@
             }
         },
         {
+            "Key": "2a6a6839-5ca8-4b09-a99a-188de2ba75e7",
+            "Value": {
+                "id": "82cf42c0-1507-42ed-901a-a25177491f5d",
+                "resourcePath": "sprites\\txr_teslagate\\txr_teslagate.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2a878274-c9eb-4b10-bed1-ecdd88362e14",
             "Value": {
                 "id": "309698eb-c85a-4f9b-916a-0310d6d5d1b3",
@@ -775,6 +783,14 @@
             }
         },
         {
+            "Key": "538cba26-5096-4259-b1ea-0ea6bc950af5",
+            "Value": {
+                "id": "e0587c92-a0e5-4d9e-902b-1b1e404d6892",
+                "resourcePath": "objects\\obj_teslagate\\obj_teslagate.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "546fc5f1-4b8e-4fcb-93a1-6bed2b0ef9d6",
             "Value": {
                 "id": "63026faa-7d32-45f4-be25-07ce99b641cf",
@@ -791,6 +807,14 @@
             }
         },
         {
+            "Key": "556af957-16e0-4857-9d46-536b6ee55143",
+            "Value": {
+                "id": "b0e7b816-91d7-4229-9259-ce96855dae33",
+                "resourcePath": "views\\556af957-16e0-4857-9d46-536b6ee55143.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "568e3f9b-2e23-431a-bfcd-6a529c55d001",
             "Value": {
                 "id": "8647a346-1a9c-41cd-b257-88c668076552",
@@ -804,6 +828,14 @@
                 "id": "9425edc1-7b1b-425a-8c0f-2a304ef2646b",
                 "resourcePath": "sprites\\txr_toilet\\txr_toilet.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5c8ce1de-7eb5-4489-9c1d-8ec5662ce87c",
+            "Value": {
+                "id": "a564ad71-bc00-44d7-8645-613f237c2793",
+                "resourcePath": "sounds\\snd_tesla_windup\\snd_tesla_windup.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -828,6 +860,14 @@
                 "id": "a80e083a-0e93-4982-ac3f-6e42579450b8",
                 "resourcePath": "sprites\\im_already_treser\\im_already_treser.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "60b32ff8-10a2-422f-8c68-6a9ff412bc94",
+            "Value": {
+                "id": "a070f8bf-7cca-45bb-a987-ac53c18b3fa2",
+                "resourcePath": "sounds\\snd_tesla_shock\\snd_tesla_shock.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -1127,6 +1167,14 @@
             }
         },
         {
+            "Key": "7ef53361-de4b-40e5-9522-e28cf7932929",
+            "Value": {
+                "id": "b92cdf40-96af-46ac-9719-ea91eb77510c",
+                "resourcePath": "views\\7ef53361-de4b-40e5-9522-e28cf7932929.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "7f6c2725-1b4c-4b39-84b9-3dcc75e91e96",
             "Value": {
                 "id": "92722a36-1bf9-465e-9808-923eb3257f7c",
@@ -1259,6 +1307,14 @@
             "Value": {
                 "id": "1614e63a-00c8-4a6d-b9af-55d4ee303be7",
                 "resourcePath": "sprites\\bed\\bed.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8c6b52fd-1862-45cb-a777-e2cc1c5f579d",
+            "Value": {
+                "id": "8a51c8d6-84d7-4237-9b4f-77fa9a983888",
+                "resourcePath": "sprites\\txr_teslafield\\txr_teslafield.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1455,6 +1511,14 @@
             }
         },
         {
+            "Key": "a9ec7f71-c6f0-4f11-8b24-df3a49bc2704",
+            "Value": {
+                "id": "8b440fa5-decf-4b38-a44c-a4634143d5f8",
+                "resourcePath": "sprites\\txr_tesla_caution\\txr_tesla_caution.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ab800c29-4ea8-4119-a7e1-364af7ec12a1",
             "Value": {
                 "id": "a50973a4-9a80-49fb-9d14-4fe8a1a12520",
@@ -1615,6 +1679,14 @@
             }
         },
         {
+            "Key": "bc55c006-4ea2-42b8-ae23-0aba42e21c0b",
+            "Value": {
+                "id": "ed6b4fcb-846b-40d4-a4c4-f65a5224725b",
+                "resourcePath": "views\\bc55c006-4ea2-42b8-ae23-0aba42e21c0b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "bd7e23e4-b531-427f-98ff-128ecd3359cd",
             "Value": {
                 "id": "e8d35018-a5e3-4058-bb3e-06aaa938c69c",
@@ -1767,6 +1839,14 @@
             }
         },
         {
+            "Key": "d05c98f4-5afd-40d9-b3cc-da557958c357",
+            "Value": {
+                "id": "3cbb529f-dcbe-4f77-8292-57559a6853e6",
+                "resourcePath": "sounds\\snd_tesla_powerup\\snd_tesla_powerup.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "d115a3e2-c7d1-41cb-8a2d-b545afabdbae",
             "Value": {
                 "id": "d571baba-0e96-4bbe-a693-f7acb4f6c6a8",
@@ -1804,6 +1884,14 @@
                 "id": "a3607e07-78d3-4102-902b-8836dc104ec6",
                 "resourcePath": "sprites\\sCheck\\sCheck.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d3eab294-142b-4f20-a2ef-9371d7dda823",
+            "Value": {
+                "id": "c4fcb6e6-3695-41fb-b095-2161a4647526",
+                "resourcePath": "views\\d3eab294-142b-4f20-a2ef-9371d7dda823.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1943,6 +2031,14 @@
             }
         },
         {
+            "Key": "e2777baa-4183-4bd1-9859-afe035bf6309",
+            "Value": {
+                "id": "bd5a94b0-7cdd-43fc-b010-c72d2c562627",
+                "resourcePath": "sounds\\snd_tesla_idle\\snd_tesla_idle.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "e38315ed-1bcd-4369-985f-f91fd1a086f1",
             "Value": {
                 "id": "6a2b4738-ca3a-4845-b20d-6f7b11167b3d",
@@ -2076,6 +2172,14 @@
                 "id": "e4da8431-0347-43b2-9274-ee84971aef1c",
                 "resourcePath": "views\\fa2c47a1-ee4c-45e8-9d35-8df4048e34e6.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "fcc48446-31f6-41a3-98db-7c64aba183af",
+            "Value": {
+                "id": "067a8e5b-837d-4802-ac76-d354b50a0997",
+                "resourcePath": "sprites\\txr_tesla\\txr_tesla.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
