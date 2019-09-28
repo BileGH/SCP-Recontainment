@@ -5,10 +5,10 @@
     "name": "d5b87b61-adb6-4f13-9d66-a77064d766ce",
     "children": [
         "8c6b52fd-1862-45cb-a777-e2cc1c5f579d",
-        "b556ff01-35a1-4b25-aab9-731c1310ad02",
-        "02367330-789f-4c72-8117-385d9cb63be5",
-        "aeb6dfc6-d87e-4abc-9479-747369c1c5b9",
-        "3cd288c0-a107-4837-a1ac-8b3907b4c9d2"
+        "96856de8-5405-4ceb-a761-6760a76c1ab8",
+        "c8443bea-8830-4889-9e3f-970dec6219ff",
+        "2951457d-c5c6-4766-8aba-0cf228fe3dd0",
+        "589b54c9-d4e2-4aa3-bf04-b768716b6c88"
     ],
     "filterType": "GMSprite",
     "folderName": "Tesla Gate",

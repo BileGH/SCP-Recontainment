@@ -1,13 +1,13 @@
 {
-    "id": "3cd288c0-a107-4837-a1ac-8b3907b4c9d2",
+    "id": "2951457d-c5c6-4766-8aba-0cf228fe3dd0",
     "modelName": "GMSprite",
     "mvc": "1.12",
     "name": "txr_tesla_gate_1",
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 383,
-    "bbox_left": 57,
+    "bbox_bottom": 749,
+    "bbox_left": 56,
     "bbox_right": 199,
     "bbox_top": 0,
     "bboxmode": 0,
@@ -16,37 +16,37 @@
     "edgeFiltering": false,
     "frames": [
         {
-            "id": "a090f622-38d1-4ca7-ade7-dd6ca40cee9c",
+            "id": "87c9d7bc-4163-4816-8445-c26a9894dca0",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
-            "SpriteId": "3cd288c0-a107-4837-a1ac-8b3907b4c9d2",
+            "SpriteId": "2951457d-c5c6-4766-8aba-0cf228fe3dd0",
             "compositeImage": {
-                "id": "56aeffd0-aaa1-4cb5-aa9a-21255a3b68bf",
+                "id": "321f1a68-6a53-4804-8bc0-34858550e9fc",
                 "modelName": "GMSpriteImage",
                 "mvc": "1.0",
-                "FrameId": "a090f622-38d1-4ca7-ade7-dd6ca40cee9c",
+                "FrameId": "87c9d7bc-4163-4816-8445-c26a9894dca0",
                 "LayerId": "00000000-0000-0000-0000-000000000000"
             },
             "images": [
                 {
-                    "id": "99a9ded2-6b59-4c78-bd0a-4f6407f12bc9",
+                    "id": "908fb2aa-5649-4d91-9718-6f2a16cce760",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
-                    "FrameId": "a090f622-38d1-4ca7-ade7-dd6ca40cee9c",
-                    "LayerId": "3fb05a44-b743-44fe-a990-807df9f6cd35"
+                    "FrameId": "87c9d7bc-4163-4816-8445-c26a9894dca0",
+                    "LayerId": "0cdb1ed7-cbbd-4a15-81ef-66027538efd7"
                 }
             ]
         }
     ],
     "gridX": 0,
     "gridY": 0,
-    "height": 384,
+    "height": 750,
     "layers": [
         {
-            "id": "3fb05a44-b743-44fe-a990-807df9f6cd35",
+            "id": "0cdb1ed7-cbbd-4a15-81ef-66027538efd7",
             "modelName": "GMImageLayer",
             "mvc": "1.0",
-            "SpriteId": "3cd288c0-a107-4837-a1ac-8b3907b4c9d2",
+            "SpriteId": "2951457d-c5c6-4766-8aba-0cf228fe3dd0",
             "blendMode": 0,
             "isLocked": false,
             "name": "default",
@@ -66,5 +66,5 @@
     "type": 0,
     "width": 256,
     "xorig": 128,
-    "yorig": 192
+    "yorig": 375
 }

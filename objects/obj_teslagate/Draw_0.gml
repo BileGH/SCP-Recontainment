@@ -28,6 +28,6 @@ if (firing) {
 	}
 	
 	if (orientation == 1) {
-		draw_sprite_pos(txr_teslafield,irandom_range(0,8),x-amountX,y-amountY,x+amountX,y-amountY,x+amountX,y+amountY,x-amountX,y+amountY,1)
+		draw_sprite_pos(txr_teslafield,irandom_range(0,8),x-amountY,y-amountX,x+amountY,y-amountX,x+amountY,y+amountX,x-amountY,y+amountX,1)
 	}
 }
