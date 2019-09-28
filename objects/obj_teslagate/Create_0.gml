@@ -15,10 +15,10 @@ state = 0
 changeStateTimer = 0
 
 // Distance from wich tesla starts buzzing.
-buzzDistance = 360
+buzzDistance = 480
 
 // Distance at wich it begins to charge and enter state 2.
-chargeDistance = 240
+chargeDistance = 380
 
 // Sound "loops" based on timers.
 buzzSoundTimer = 0
@@ -32,17 +32,37 @@ fireTimer = 0
 // Timer for cooling down.
 coolTimer = 0
 
+// Timer for activating or deactivating tesla gate.
+activationTimer = 0
+
+// State for activation or deactivation
+// 0: Idle 1: In-Transition.
+activationState = 0
+
 // Lethal distance of the tesla gate.
-killDistance = 40
+killDistance = 60
 
 // Is this Tesla firing?
 firing = false
 
+// The interaction range of this object.
+interactionRange = buzzDistance - 20
+
+// Timer for the tesla gate to reactivate itself
+reactivationTimer = 0
+
+// Time it takes (in seconds) for the tesla to come back online wen the above timer expires.
+timeToReactivate = 60
+
 // "Self-Explanatory" Macros
+
+#macro plyExists (instance_exists(obj_player))
 #macro plyIsWithinChargeDistance (distance_to_point(obj_player.x,obj_player.y)<chargeDistance)
 #macro plyIsWithinBuzzDistance (distance_to_point(obj_player.x,obj_player.y)<buzzDistance)
-#macro resetTimers changeStateTimer = 0 buzzSoundTimer = 0 fireTimer = 0 windTimer = 0 coolTimer = 0 
+#macro plyIsWithinKillDistance (distance_to_point(obj_player.x,obj_player.y)<killDistance)
+#macro plyIsWithinInteractionDistance (distance_to_point(obj_player.x, obj_player.y)<interactionRange)
+#macro resetTimers changeStateTimer = 0 buzzSoundTimer = 0 fireTimer = 0 windTimer = 0 coolTimer = 0
 
 #macro setWindTimer resetTimers windTimer = floor(room_speed * 1.22)
 #macro setBuzzSoundTimer resetTimers buzzSoundTimer = floor(room_speed * 1.8)
-#macro setCoolTimer resetTimers coolTimer = floor(room_speed * 0.25)
+#macro setCoolTimer resetTimers coolTimer = floor(room_speed * 1)

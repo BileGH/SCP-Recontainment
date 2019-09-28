@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "02367330-789f-4c72-8117-385d9cb63be5",
+            "Value": {
+                "id": "4f557789-177f-46ce-9803-3a817ace82bf",
+                "resourcePath": "sprites\\txr_tesla_gate_0\\txr_tesla_gate_0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0346bb10-10b4-479f-8c98-af480926af87",
             "Value": {
                 "id": "b6efb904-4d44-47a7-8879-365209f2cf75",
@@ -100,6 +108,22 @@
                 "id": "d5370a7e-cbba-45f7-a234-89e2af2196a9",
                 "resourcePath": "rooms\\map_tutorial\\map_tutorial.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "0b3ff055-c771-4306-97b0-11dce9fa96ca",
+            "Value": {
+                "id": "1f15a184-f5c6-4cb0-a2c8-09fd88ef9089",
+                "resourcePath": "datafiles_yy\\Image Source\\tesla.pdn.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "0b84ec1f-ef3e-4118-be56-1b2a6e9e5eb1",
+            "Value": {
+                "id": "1e63759d-fac7-4b99-8a94-d535bc637fd9",
+                "resourcePath": "views\\0b84ec1f-ef3e-4118-be56-1b2a6e9e5eb1.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -287,6 +311,14 @@
             }
         },
         {
+            "Key": "1be6c218-c8f6-4e7c-9813-bcb500e2dd6e",
+            "Value": {
+                "id": "6f8517fd-a8bc-4014-9e0e-b300d684f1fb",
+                "resourcePath": "sprites\\handsymbol\\handsymbol.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1c180b64-a649-48f5-8d65-9789604f36d4",
             "Value": {
                 "id": "f6adcb1d-9888-46c4-a086-575d4b404abb",
@@ -351,6 +383,14 @@
             }
         },
         {
+            "Key": "2454e975-d8b6-47a4-9083-f128c4878dc3",
+            "Value": {
+                "id": "66ea6a18-d9ea-4d13-986b-f66b0b7e05af",
+                "resourcePath": "sounds\\q_intercom_tesla3\\q_intercom_tesla3.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "249f9ba5-3dea-499e-a1a9-090540e129f3",
             "Value": {
                 "id": "761e10f9-e224-4675-b533-5ea4f190b374",
@@ -412,14 +452,6 @@
                 "id": "b4e40c31-67a3-4dbe-a328-a119e177f0cf",
                 "resourcePath": "views\\28fa148d-d4b2-438f-a843-c1f7f10df826.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "2a6a6839-5ca8-4b09-a99a-188de2ba75e7",
-            "Value": {
-                "id": "82cf42c0-1507-42ed-901a-a25177491f5d",
-                "resourcePath": "sprites\\txr_teslagate\\txr_teslagate.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -607,6 +639,14 @@
             }
         },
         {
+            "Key": "3cd288c0-a107-4837-a1ac-8b3907b4c9d2",
+            "Value": {
+                "id": "facb60c5-30e4-4eaf-8659-ecd82a94a3a7",
+                "resourcePath": "sprites\\txr_tesla_gate_1\\txr_tesla_gate_1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3cf3db64-dfd0-483c-b9c9-72ee43bfc5a4",
             "Value": {
                 "id": "1155043f-7924-4113-b052-f1b6771a0855",
@@ -727,6 +767,14 @@
             }
         },
         {
+            "Key": "499c458c-bf24-47a1-ae7c-454ac563ebc0",
+            "Value": {
+                "id": "33d75f32-8473-4f51-bbb2-1668b47ddced",
+                "resourcePath": "views\\499c458c-bf24-47a1-ae7c-454ac563ebc0.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "4ab10773-b380-4df0-bb49-c93152b4c6d0",
             "Value": {
                 "id": "d7927aab-ed92-4811-b130-0598a625b783",
@@ -740,6 +788,14 @@
                 "id": "b52dbc9b-775a-4ad9-8896-8eeca2c0dafe",
                 "resourcePath": "objects\\obj_cursor\\obj_cursor.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4b11411a-1ce0-4b35-9fdf-3d8920291870",
+            "Value": {
+                "id": "23842d91-d7c1-4be1-aca8-658661f34b9e",
+                "resourcePath": "sprites\\txr_teslanode\\txr_teslanode.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1183,6 +1239,30 @@
             }
         },
         {
+            "Key": "7f71de99-83d7-45c9-9164-8f600bfecae8",
+            "Value": {
+                "id": "c708b51a-2411-4f68-8d3a-bd619218a26c",
+                "resourcePath": "sounds\\q_player_tesla0\\q_player_tesla0.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "8013cbf2-6961-4c61-ba6a-d414f1a710ec",
+            "Value": {
+                "id": "67f37e23-784c-4449-9054-f28b65f8d4e6",
+                "resourcePath": "views\\8013cbf2-6961-4c61-ba6a-d414f1a710ec.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "8141703e-6798-4f50-b50f-4d2cdf54840d",
+            "Value": {
+                "id": "6076daa7-3175-46a2-ad6c-4f6981d14333",
+                "resourcePath": "sprites\\handsymbol2\\handsymbol2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "815d12d9-b50c-44df-95bc-3a6edc7a273b",
             "Value": {
                 "id": "13528c2b-7d25-47f5-bed2-ab022f56d10d",
@@ -1415,6 +1495,14 @@
             }
         },
         {
+            "Key": "9aeae089-ae71-4916-91cb-bc01064b2a74",
+            "Value": {
+                "id": "7bca5e5e-8d55-4ff0-bc4b-12cc644e934f",
+                "resourcePath": "views\\9aeae089-ae71-4916-91cb-bc01064b2a74.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "9be0b364-3f3b-49ab-94f4-8cd31e1c956b",
             "Value": {
                 "id": "012e0fc2-264f-4df5-9737-15649a97d925",
@@ -1511,14 +1599,6 @@
             }
         },
         {
-            "Key": "a9ec7f71-c6f0-4f11-8b24-df3a49bc2704",
-            "Value": {
-                "id": "8b440fa5-decf-4b38-a44c-a4634143d5f8",
-                "resourcePath": "sprites\\txr_tesla_caution\\txr_tesla_caution.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "ab800c29-4ea8-4119-a7e1-364af7ec12a1",
             "Value": {
                 "id": "a50973a4-9a80-49fb-9d14-4fe8a1a12520",
@@ -1555,6 +1635,14 @@
             "Value": {
                 "id": "2e07200e-6f97-4578-824c-4d02f87d2998",
                 "resourcePath": "sprites\\spr_GridHandlerA\\spr_GridHandlerA.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "aeb6dfc6-d87e-4abc-9479-747369c1c5b9",
+            "Value": {
+                "id": "1efbd4a9-a8c6-46bd-b954-a4e2beb2836d",
+                "resourcePath": "sprites\\txr_tesla_floor_1\\txr_tesla_floor_1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1620,6 +1708,14 @@
                 "id": "039e7c7d-5952-4e5b-a4ad-93a2291f8173",
                 "resourcePath": "objects\\extraction_zone\\extraction_zone.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b556ff01-35a1-4b25-aab9-731c1310ad02",
+            "Value": {
+                "id": "cd43c449-98ed-4ae4-b05a-313719877e0c",
+                "resourcePath": "sprites\\txr_tesla_floor_0\\txr_tesla_floor_0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1783,6 +1879,14 @@
             }
         },
         {
+            "Key": "ca6d7460-5748-4595-93bf-f7838fc6fc54",
+            "Value": {
+                "id": "b55eddf1-62c5-4bbd-9a97-cc5c952e5735",
+                "resourcePath": "sounds\\q_intercom_tesla2\\q_intercom_tesla2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "ca94ed69-1a40-4c5a-ab2d-09e87a088f9e",
             "Value": {
                 "id": "3b2d056c-6483-409d-b9f6-2b9504122f47",
@@ -1923,6 +2027,14 @@
             "Value": {
                 "id": "86a71aa3-cae6-4de2-8cd4-7a86f4d334c7",
                 "resourcePath": "views\\d5afd603-3617-4dcf-99a9-29da55919a46.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d5b87b61-adb6-4f13-9d66-a77064d766ce",
+            "Value": {
+                "id": "28325091-0606-425f-853d-d3cef6169dac",
+                "resourcePath": "views\\d5b87b61-adb6-4f13-9d66-a77064d766ce.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -2103,6 +2215,14 @@
             }
         },
         {
+            "Key": "ed142c8f-1b81-48f9-83f5-d02215c6c27d",
+            "Value": {
+                "id": "d06f33c5-c2bd-4653-ba7b-72160e36c636",
+                "resourcePath": "sounds\\q_intercom_tesla1\\q_intercom_tesla1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "f0f03b40-479d-4988-b4bd-72f445f07a2d",
             "Value": {
                 "id": "b27728c9-d066-431a-801d-4896f7e1297e",
@@ -2172,14 +2292,6 @@
                 "id": "e4da8431-0347-43b2-9274-ee84971aef1c",
                 "resourcePath": "views\\fa2c47a1-ee4c-45e8-9d35-8df4048e34e6.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "fcc48446-31f6-41a3-98db-7c64aba183af",
-            "Value": {
-                "id": "067a8e5b-837d-4802-ac76-d354b50a0997",
-                "resourcePath": "sprites\\txr_tesla\\txr_tesla.yy",
-                "resourceType": "GMSprite"
             }
         },
         {

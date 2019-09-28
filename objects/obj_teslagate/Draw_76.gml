@@ -1,0 +1,1 @@
+draw_sprite(txr_scp173,0,x,y)

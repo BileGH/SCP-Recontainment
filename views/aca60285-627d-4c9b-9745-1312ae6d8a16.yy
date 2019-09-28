@@ -12,7 +12,7 @@
         "70f76280-2520-4712-9b82-4a1f6f4ac78b",
         "ac59db2c-ea4c-436e-bd4d-64a16a4a8008",
         "ae23f778-a269-4b24-aafc-67e1808e7224",
-        "fcc48446-31f6-41a3-98db-7c64aba183af"
+        "4b11411a-1ce0-4b35-9fdf-3d8920291870"
     ],
     "filterType": "GMSprite",
     "folderName": "Technical",
