@@ -1,5 +1,6 @@
-//SAVING
+if (flashTimer > 0) {--flashTimer}
 
+//SAVING
 if keyboard_check(vk_f8) game_save("save")
 
 if keyboard_check(vk_f9) game_load("save")
@@ -125,6 +126,8 @@ if mouse_check_button(mb_left) {
 			ToFireCount = Equipped[| 4]
 			Equipped[| 12] = 0
 			MacroFireEquippedWeapon
+			flashTimer = 5
+			
 		}
 	}
 	if Equipped[| Equipped[| 10]] = 2 {
@@ -138,6 +141,7 @@ if mouse_check_button(mb_left) {
 				ToFireCount = Equipped[| 4]
 				Equipped[| 12] = 0
 				MacroFireEquippedWeapon
+				flashTimer = 5
 			}
 		}
 	}
@@ -154,6 +158,7 @@ if mouse_check_button_pressed(mb_left) {
 			ToFireCount = Equipped[| 4]
 			Equipped[| 12] = 0
 			MacroFireEquippedWeapon
+			flashTimer = 5
 		}
 	}
 }

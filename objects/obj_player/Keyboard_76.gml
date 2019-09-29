@@ -1,0 +1,1 @@
+if (room == map_test_room) {room = map_lightingtest}

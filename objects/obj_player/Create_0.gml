@@ -101,3 +101,6 @@ CurrentMagazine = string(Equipped[|9])
 
 //AI
 Followed = 1
+
+// Flash
+flashTimer = 0;

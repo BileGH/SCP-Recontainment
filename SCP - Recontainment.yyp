@@ -183,6 +183,14 @@
             }
         },
         {
+            "Key": "0bf297be-933c-40c3-a413-d2087e8e0f41",
+            "Value": {
+                "id": "07cb0684-1345-4cc0-8f55-6ac4c2476a98",
+                "resourcePath": "objects\\light_muzzleflash\\light_muzzleflash.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0ca28956-a586-4a3c-a13b-985f18c88e52",
             "Value": {
                 "id": "9cfb6a18-b93a-4bde-bfc5-fa846205cb98",
@@ -450,7 +458,7 @@
             "Key": "1c1b5da1-f0d9-44b9-992a-286e59aa1863",
             "Value": {
                 "id": "c8e69418-bb45-4329-aec1-f8c919c81867",
-                "resourcePath": "rooms\\rm_lighting_demo_many\\rm_lighting_demo_many.yy",
+                "resourcePath": "rooms\\map_lightingtest\\map_lightingtest.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -1135,6 +1143,14 @@
             }
         },
         {
+            "Key": "53b779f1-12b4-469c-bfc0-beb48d24ac0f",
+            "Value": {
+                "id": "c3a30617-d199-46ad-8bb2-e5d2e243e07e",
+                "resourcePath": "objects\\light_player\\light_player.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "546fc5f1-4b8e-4fcb-93a1-6bed2b0ef9d6",
             "Value": {
                 "id": "63026faa-7d32-45f4-be25-07ce99b641cf",
@@ -1179,6 +1195,14 @@
             "Value": {
                 "id": "dcbff57c-e534-48b4-a8e8-579c893b5672",
                 "resourcePath": "views\\56bdf100-003e-456d-927e-5123650f34e7.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "576c90ac-318c-4d5b-8272-8c3e6a185572",
+            "Value": {
+                "id": "0a9856e9-b571-4b87-acf5-5d8375ef3c7c",
+                "resourcePath": "views\\576c90ac-318c-4d5b-8272-8c3e6a185572.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -2988,6 +3012,14 @@
                 "id": "d06f33c5-c2bd-4653-ba7b-72160e36c636",
                 "resourcePath": "sounds\\q_intercom_tesla1\\q_intercom_tesla1.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "f053f5fc-4854-4d15-b9aa-4071d464989b",
+            "Value": {
+                "id": "8488ded8-1758-44e1-8b4e-f067b3acdb5c",
+                "resourcePath": "objects\\light_enviroment\\light_enviroment.yy",
+                "resourceType": "GMObject"
             }
         },
         {
