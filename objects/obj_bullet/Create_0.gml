@@ -25,3 +25,6 @@ IDToDamage = NaN
 
 //Invincible or Solid or Not alive. Has no HP.
 #macro MacroCollisionSolid MacroCollisionCheck {HowManyTimes = 0 instance_destroy(other)}
+
+attachedLight = instance_create_layer(x,y,"Lights",light_bullet)
+attachedLight.target = self

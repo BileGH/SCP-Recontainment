@@ -4,11 +4,20 @@
     "mvc": "1.0",
     "name": "prop_pc_desk",
     "eventList": [
-        
+        {
+            "id": "4e2787cf-a2d3-4fa4-88f6-43d848639f3a",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "3ff152be-a835-4ea6-9369-38f99eec88e3"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "da7d6452-4ca5-441f-aa36-51319e05876a",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

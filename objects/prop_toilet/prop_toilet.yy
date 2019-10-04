@@ -5,7 +5,7 @@
     "name": "prop_toilet",
     "eventList": [
         {
-            "id": "5bf6cb11-d7e0-44a0-80a3-25d837d5df61",
+            "id": "90aced5a-3e3e-4996-b9ea-22ee1964aec3",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -17,7 +17,7 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "659c1ed8-6be9-4c9b-9a9a-5d0762ca1f13",
+    "parentObjectId": "da7d6452-4ca5-441f-aa36-51319e05876a",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

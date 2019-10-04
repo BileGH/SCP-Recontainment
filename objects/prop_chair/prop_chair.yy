@@ -4,11 +4,20 @@
     "mvc": "1.0",
     "name": "prop_chair",
     "eventList": [
-        
+        {
+            "id": "d82efb1e-5391-4791-b5e9-04aea02298a3",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "286e6b86-0042-4ef2-b10e-a72bcf4dce5a"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "da7d6452-4ca5-441f-aa36-51319e05876a",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "light_enviroment",
     "eventList": [
-        
+        {
+            "id": "405e4185-a329-401f-8894-8523bd330200",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "f053f5fc-4854-4d15-b9aa-4071d464989b"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [

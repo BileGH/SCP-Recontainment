@@ -4,17 +4,9 @@
     "mvc": "1.1",
     "name": "6e623658-2574-46d9-9b11-ef0ef272f03f",
     "children": [
-        "67896633-a498-4b7c-8c1a-6b4da5ba76f2",
-        "ba90ed29-fe8b-4d76-8ab5-b4fb2cfcdb3f",
-        "bb9a0ee6-1315-455e-a30a-5795da9ddcff",
-        "3cf3db64-dfd0-483c-b9c9-72ee43bfc5a4",
-        "3ff152be-a835-4ea6-9369-38f99eec88e3",
-        "4606d24d-a3d6-4184-86dd-791f3f9d0dc1",
-        "36d3e500-742c-4f2d-b3c0-12425bcc461a",
-        "478a88a1-2fcf-419c-a0fe-3505293ea431",
-        "286e6b86-0042-4ef2-b10e-a72bcf4dce5a",
-        "32c835ea-0ea6-46d7-9adc-2080906d21bc",
-        "0d1a5083-ec62-4c37-9a77-73c7ad990dfc"
+        "89015819-744c-4c4b-afb8-4818a7503a2d",
+        "0d5d904a-47da-4a36-a8be-d07fb2e09159",
+        "aebb044a-03fe-4e0e-89af-4ea8a13466c3"
     ],
     "filterType": "GMObject",
     "folderName": "Props",
