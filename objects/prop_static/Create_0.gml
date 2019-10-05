@@ -9,4 +9,6 @@ event_inherited();
 
 // This is a static shadow caster (it never changes its polygon)
 flags |= eShadowCasterFlags.Static;
+
 ignored = false;
+

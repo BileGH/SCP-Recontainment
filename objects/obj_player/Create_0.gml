@@ -57,7 +57,7 @@ audio_listener_orientation(0, 0, 10, 0, -1, 0);
 global.Debug_Mode=debug_mode
 
 //WEAPONS
-	//AMMO
+//AMMO
 #macro SetMagsandAmmo Mags556 = ds_list_create() Mags45 = ds_list_create();
 SetMagsandAmmo
 ds_list_add(Mags556, 30, 30, 30) ds_list_add(Mags45, 7, 7, 7)
@@ -104,3 +104,4 @@ Followed = 1
 
 // Flash
 flashTimer = 0;
+flashTime = 2

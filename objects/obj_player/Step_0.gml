@@ -126,7 +126,7 @@ if mouse_check_button(mb_left) {
 			ToFireCount = Equipped[| 4]
 			Equipped[| 12] = 0
 			MacroFireEquippedWeapon
-			flashTimer = 5
+			flashTimer = flashTime
 			
 		}
 	}
@@ -141,7 +141,7 @@ if mouse_check_button(mb_left) {
 				ToFireCount = Equipped[| 4]
 				Equipped[| 12] = 0
 				MacroFireEquippedWeapon
-				flashTimer = 5
+				flashTimer = flashTime
 			}
 		}
 	}
@@ -158,7 +158,7 @@ if mouse_check_button_pressed(mb_left) {
 			ToFireCount = Equipped[| 4]
 			Equipped[| 12] = 0
 			MacroFireEquippedWeapon
-			flashTimer = 5
+			flashTimer = flashTime
 		}
 	}
 }
@@ -185,11 +185,11 @@ if keyboard_check(ord("T")) {
 	}
 }
 
-	//Changing FireMode
+//Changing FireMode
 //MAKE THIS SHIT. REEEEEEEEEEEEE
 
 
-	//Loading a Bullet into the Chamber.
+//Loading a Bullet into the Chamber.
 if ToFireCount > 0 {
 	ToFireCount -= 1
 } else {
