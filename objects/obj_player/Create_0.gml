@@ -105,3 +105,6 @@ Followed = 1
 // Flash
 flashTimer = 0;
 flashTime = 2
+
+// Spawn debug console
+instance_create_depth(0,0,0,obj_console)
