@@ -6,10 +6,6 @@ if (target != undefined) {
 		x = target.x
 		y = target.y
 	} else {
-		if (light != undefined) {
-			light_remove_from_world(light);
-			light_destroy(light); 
-		}
 		instance_destroy(self)
 	}
 }
