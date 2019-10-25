@@ -247,6 +247,7 @@ enum command_1 {
 	script,
 	game,
 	console, 
+	party,
 	
 	size
 }
@@ -258,6 +259,7 @@ commands[command_1.view]	= "view"
 commands[command_1.script]	= "script"
 commands[command_1.game]	= "game"
 commands[command_1.console] = "console"
+commands[command_1.party] = "party"
 
 commands_visible = array_create(command_1.size,false) // if we show this command 
 commands_focused = array_create(command_1.size,false) // does this command have focus
@@ -331,6 +333,11 @@ commands_focused = array_create(command_1.size,false) // does this command have 
 		second_level[command_1.console,i++] = "check_for_updates"
 		second_level[command_1.console,i++] = "about"
 	#endregion
+	#region party
+		var i = 0
+		second_level[command_1.party,i++] = "start"
+		second_level[command_1.party,i++] = "stop"
+	#endregion party
 #endregion
 #region third level commands
 third_level[0] = ""

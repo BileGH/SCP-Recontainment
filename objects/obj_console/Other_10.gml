@@ -553,6 +553,30 @@ if (text_part[0] == commands[command_1.create]) {
 		
 		command_done = true
 	#endregion
+} else if (text_part[0] == commands[command_1.party]) {
+	#region party
+	
+	var parse_parts = array_length_1d(text_part)
+	
+	if (parse_parts == 1) {
+		temp_post_message = "Should we start or stop the party?" 
+		event_user(1);
+	} else {
+		if (text_part[1] == "start") {
+			temp_post_message = "LETS PARTY"
+			event_user(1);
+		} else if (text_part[1] == "stop") {
+			temp_post_message = "Ok stop the party."
+			event_user(1);
+		} else {
+			temp_post_message = "type in english please. 'start' or 'stop'."
+			event_user(1);
+		}
+	}
+	
+	
+	
+	#endregion
 } else {
 	temp_post_message = "WARNING: The Console was asked to do something it doesnt know how to do"
 	event_user(1); // post message to the history 
