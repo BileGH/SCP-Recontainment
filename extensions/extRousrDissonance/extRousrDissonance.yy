@@ -1,7 +1,7 @@
 {
     "id": "e611e218-8a3c-4ae1-94d8-1fb46e501371",
     "modelName": "GMExtension",
-    "mvc": "1.0",
+    "mvc": "1.2",
     "name": "extRousrDissonance",
     "IncludedResources": [
         
@@ -20,6 +20,7 @@
     "copyToTargets": 35184372088898,
     "date": "2017-03-10 12:11:15",
     "description": "",
+    "exportToGame": true,
     "extensionName": "",
     "files": [
         {
@@ -336,9 +337,12 @@
     "maccompilerflags": "",
     "maclinkerflags": "",
     "macsourcedir": "",
+    "options": null,
+    "optionsFile": "options.json",
     "packageID": "",
     "productID": "",
     "sourcedir": "",
+    "supportedTargets": 35184372088898,
     "tvosProps": false,
     "tvosSystemFrameworkEntries": [
         
