@@ -1303,6 +1303,14 @@
             }
         },
         {
+            "Key": "614c2e0b-b56f-4ffd-91ef-88194cad0d43",
+            "Value": {
+                "id": "3348eaa2-e506-412a-bd5d-bae6c20ea464",
+                "resourcePath": "objects\\obj_console\\obj_console.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "61595192-5b28-4582-a96d-09f60f8366c8",
             "Value": {
                 "id": "3a0a665a-70d3-4bfc-824b-e4e72203b53e",
@@ -1356,6 +1364,14 @@
                 "id": "54df9072-6ad7-4008-92f1-fda4d544d411",
                 "resourcePath": "scripts\\lighting_global\\lighting_global.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "660173aa-6ad7-40fb-96f8-b3c22e51ef38",
+            "Value": {
+                "id": "6a8ee6fd-6e55-4967-9e25-3d2b38d2d135",
+                "resourcePath": "views\\660173aa-6ad7-40fb-96f8-b3c22e51ef38.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2388,6 +2404,14 @@
                 "id": "c08f632b-5682-4a5e-8f37-9528312322ef",
                 "resourcePath": "scripts\\light_remove_from_world\\light_remove_from_world.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b457de92-7943-4bea-bd87-0f7cda8505fb",
+            "Value": {
+                "id": "327f264f-e765-4db0-a357-c0a6832032a4",
+                "resourcePath": "fonts\\font_console\\font_console.yy",
+                "resourceType": "GMFont"
             }
         },
         {
