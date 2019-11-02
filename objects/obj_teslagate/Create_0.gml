@@ -5,7 +5,7 @@ active = true
 
 // Controls sprite drawing and other functions.
 // 0: Horizontal (Default), 1: Vertical
-orientation = 0
+// orientation = 0 (Has been moved to the GMS built-in "Variables" function on the object. Access this variable by there.)
 
 // State of the tesla gate. The cycle is (2-3-4 Repeat)
 // 0: Idle, 1: Buzz, 2: Charge (Wind up), 3: Firing (Dealing damage), 4: Cooling
