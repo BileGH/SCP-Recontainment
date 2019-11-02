@@ -559,14 +559,6 @@
             }
         },
         {
-            "Key": "25eb29c1-5017-428b-b070-2bc4ea4fa5ae",
-            "Value": {
-                "id": "f1c85c02-55eb-4005-93dc-d7e0b955393c",
-                "resourcePath": "rooms\\rm_lighting_demo_single_point\\rm_lighting_demo_single_point.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "26778ec4-0011-4e84-9e8b-cb44f977776d",
             "Value": {
                 "id": "3e0b6078-a70d-4509-bf1d-e9a377406549",
@@ -972,14 +964,6 @@
                 "id": "d79f7875-680e-4a0f-bc7f-f8c25e2c056b",
                 "resourcePath": "objects\\Example\\Example.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "4394bac2-3971-4b03-9410-a3a545169582",
-            "Value": {
-                "id": "81c5ff77-ee87-450b-aa66-6090b09ad4f2",
-                "resourcePath": "views\\4394bac2-3971-4b03-9410-a3a545169582.yy",
-                "resourceType": "GMFolder"
             }
         },
         {
@@ -1991,14 +1975,6 @@
             }
         },
         {
-            "Key": "8cc1c0b6-2bdb-4006-ba8b-ddf10ec6bfbd",
-            "Value": {
-                "id": "62aed9a0-8210-4a31-8912-3731d22431e3",
-                "resourcePath": "rooms\\rm_lighting_demo_single_directional\\rm_lighting_demo_single_directional.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "8d1ed33b-c9a0-4ce1-bb31-e68a0bb895c8",
             "Value": {
                 "id": "13747b0f-97b8-4cc8-8e72-af6a548b2dc9",
@@ -2012,14 +1988,6 @@
                 "id": "9bc9df0f-7a2c-455d-bc19-8f2c97853fb7",
                 "resourcePath": "sprites\\spr_lut_light_intensity_line\\spr_lut_light_intensity_line.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "90486d1f-4f15-4697-9263-ade70c47573c",
-            "Value": {
-                "id": "607f227e-cc1b-437f-872f-52a55ce284fa",
-                "resourcePath": "rooms\\rm_lighting_demo_single_line\\rm_lighting_demo_single_line.yy",
-                "resourceType": "GMRoom"
             }
         },
         {
@@ -2999,14 +2967,6 @@
             }
         },
         {
-            "Key": "da7ae039-89dc-4bb9-8642-bc4b85b29b0c",
-            "Value": {
-                "id": "4e864dd5-c5c4-4904-939a-e02d3536d093",
-                "resourcePath": "rooms\\rm_lighting_demo_single_area\\rm_lighting_demo_single_area.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "da7d6452-4ca5-441f-aa36-51319e05876a",
             "Value": {
                 "id": "19c1db16-19b5-4d07-9161-1ceaee48c95e",
@@ -3196,14 +3156,6 @@
                 "id": "fcefacd8-eca8-4588-bfb3-c5bcbb342d34",
                 "resourcePath": "sprites\\txr_menu_cursor_select\\txr_menu_cursor_select.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "ebda08eb-a49a-423f-ae58-b90f7caabf86",
-            "Value": {
-                "id": "390469d4-fa3c-4274-a58a-99e0ca380957",
-                "resourcePath": "rooms\\rm_lighting_demo_single_spot\\rm_lighting_demo_single_spot.yy",
-                "resourceType": "GMRoom"
             }
         },
         {
