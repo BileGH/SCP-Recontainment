@@ -1,3 +1,4 @@
+#region Timer Handling
 // Update Timers
 if (changeStateTimer > 0) {--changeStateTimer}
 if (buzzSoundTimer > 0) {--buzzSoundTimer}
@@ -9,12 +10,30 @@ if (reactivationTimer > 0) {--reactivationTimer}
 if !(active) && (reactivationTimer <= 0) {
 	active = true
 }
+#endregion
 
+#region Update Sprite Vertices
+var amountX = sprite_width / 2
+var amountY = sprite_height / 2
 
+x1 = x-amountX
+y1 = y-amountY
 
+x2 = x+amountX
+y2 = y-amountY
+
+x3 = x+amountX
+y3 = y+amountY
+
+x4 = x-amountX
+y4 = y+amountY
+#endregion
+
+#region If tesla is active
 if (active) {
 	switch(state) {
 		case 0:
+		#region Idle State
 		// ==================================== Idle State ====================================
 		
 		// Get triggered by player. (TODO: trigger by NPC)
@@ -26,8 +45,9 @@ if (active) {
 		
 		
 		break;
-		
+		#endregion
 		case 1:
+		#region Buzz State
 		// ==================================== Buzz State =============================================
 		
 		// Play buzz sounds
@@ -50,8 +70,9 @@ if (active) {
 		}
 		
 		break;
-		
+		#endregion
 		case 2:
+		#region Charge State
 		// ==================================== Charge State ====================================
 		
 		// Wind up and fire
@@ -67,20 +88,21 @@ if (active) {
 		}
 		
 		break;
-		
+		#endregion
 		case 3:
+		#region Fire State
 		// ==================================== Fire Sate ====================================
 		
 		// Fire until cooldown.
 		if (fireTimer > 0) {
 			firing = true
 			if plyExists {
-				if plyIsWithinKillDistance {
+				if point_in_rectangle(obj_player.x,obj_player.y,x1,y1,x3,y3) {
 					with(obj_player) {instance_destroy()}
 				}
 			}
 			var npc = instance_nearest(x,y,npc_mtf)
-			if (distance_to_object(npc)<killDistance) {
+			if point_in_rectangle(npc.x,npc.y,x1,y1,x3,y3) {
 				with(npc) {instance_destroy()}
 			}
 			
@@ -92,8 +114,9 @@ if (active) {
 			state = 4
 		}
 		break;
-		
+		#endregion
 		case 4:
+		#region Cooling State
 		// ==================================== Cooling State ====================================
 		
 		// Reset tesla after cooling.
@@ -102,12 +125,13 @@ if (active) {
 		} else {
 			state = 0
 		}
-		
-		
 		break;
+		#endregion
 	}
 }
+#endregion
 
+#region Deactivation
 if (activationState == 1) {
 	if (activationTimer <= 0) {
 		if (active) {
@@ -126,3 +150,4 @@ if (activationState == 1) {
 		}
 	}
 }
+#endregion

@@ -1,5 +1,25 @@
 image_speed = 0
 
+#region Sprite Vertices
+// Sprite Positioning
+var amountX = sprite_width / 2
+var amountY = sprite_height / 2
+
+x1 = x-amountX
+y1 = y-amountY
+
+x2 = x+amountX
+y2 = y-amountY
+
+x3 = x+amountX
+y3 = y+amountY
+
+x4 = x-amountX
+y4 = y+amountY
+
+#endregion
+
+#region Variables
 // If tesla gate is active.
 active = true
 
@@ -54,15 +74,17 @@ reactivationTimer = 0
 // Time it takes (in seconds) for the tesla to come back online wen the above timer expires.
 timeToReactivate = 60
 
-// "Self-Explanatory" Macros
+#endregion
 
+#region Macros
+// "Self-Explanatory" Macros
 #macro plyExists (instance_exists(obj_player))
 #macro plyIsWithinChargeDistance (distance_to_point(obj_player.x,obj_player.y)<chargeDistance)
 #macro plyIsWithinBuzzDistance (distance_to_point(obj_player.x,obj_player.y)<buzzDistance)
-#macro plyIsWithinKillDistance (distance_to_point(obj_player.x,obj_player.y)<killDistance)
 #macro plyIsWithinInteractionDistance (distance_to_point(obj_player.x, obj_player.y)<interactionRange)
 #macro resetTimers changeStateTimer = 0 buzzSoundTimer = 0 fireTimer = 0 windTimer = 0 coolTimer = 0
 
 #macro setWindTimer resetTimers windTimer = floor(room_speed * 1.22)
 #macro setBuzzSoundTimer resetTimers buzzSoundTimer = floor(room_speed * 1.8)
 #macro setCoolTimer resetTimers coolTimer = floor(room_speed * 1)
+#endregion
