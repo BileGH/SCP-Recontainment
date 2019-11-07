@@ -101,10 +101,22 @@ if (active) {
 					with(obj_player) {instance_destroy()}
 				}
 			}
-			var npc = instance_nearest(x,y,npc_mtf)
-			if point_in_rectangle(npc.x,npc.y,x1,y1,x3,y3) {
-				with(npc) {instance_destroy()}
+			
+			
+			
+			var npc = instance_nearest(x,y,npc_mtf);
+			if !is_undefined(npc) {
+				if point_in_rectangle(npc.x,npc.y,x1,y1,x3,y3) {
+					with(npc) {instance_destroy()}
+				}
 			}
+			var npc = instance_nearest(x,y,npc_dclass);
+			if !is_undefined(npc) {
+				if point_in_rectangle(npc.x,npc.y,x1,y1,x3,y3) {
+					with(npc) {instance_destroy()}
+				}
+			}
+			
 			
 			
 			
