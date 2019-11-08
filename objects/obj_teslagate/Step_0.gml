@@ -68,6 +68,9 @@ if (active) {
 			// Player has moved within charge distance
 			audio_play_sound(snd_tesla_windup,1,false)
 			setWindTimer
+			
+			windSoundPlaying = true
+			
 			state = 2
 		} else if plyIsWithinBuzzDistance {
 			// Player is still within buzz distance. Just replay file.
@@ -91,6 +94,9 @@ if (active) {
 			if plyExists {
 				if (fireTimer <= 0) {
 					audio_play_sound(snd_tesla_shock,1,false)
+					
+					fireSoundPlaying = true;
+					
 					fireTimer = 12 // 12 steps of damage
 					state = 3
 				}
