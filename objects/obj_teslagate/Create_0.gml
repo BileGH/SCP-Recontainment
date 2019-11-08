@@ -40,14 +40,20 @@ active = true
 // 0: Idle, 1: Buzz, 2: Charge (Wind up), 3: Firing (Dealing damage), 4: Cooling
 state = 0
 
+// Range for interaction
+interactionRange = 540
+
 // Timer for changing states.
 changeStateTimer = 0
 
 // Distance from wich tesla starts buzzing.
-buzzDistance = 480 // used in macro
+buzzDistance = 480
 
 // Distance at wich it begins to charge and enter state 2.
-chargeDistance = 380 // used in macro
+chargeDistance = 380
+
+// Sound "loops" based on timers.
+buzzSoundTimer = 0
 
 // Timer for winding up
 windTimer = 0
@@ -81,6 +87,7 @@ timeToReactivate = 60
 #macro plyExists (instance_exists(obj_player))
 #macro plyIsWithinChargeDistance (distance_to_point(obj_player.x,obj_player.y)<chargeDistance)
 #macro plyIsWithinBuzzDistance (distance_to_point(obj_player.x,obj_player.y)<buzzDistance)
+#macro plyIsWithinInteractionDistance (distance_to_point(obj_player.x, obj_player.y)<interactionRange)
 #macro teslaResetTimers changeStateTimer = 0 buzzSoundTimer = 0 fireTimer = 0 windTimer = 0 coolTimer = 0
 
 #macro setWindTimer teslaResetTimers windTimer = floor(room_speed * 1.22)
