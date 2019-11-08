@@ -18,7 +18,13 @@ x4 = x-amountX
 y4 = y+amountY
 
 #endregion
+#region SOUND REWRITE
+// This is the beginning of the new code rewrite.
+windSoundPlaying = false;
+chargeSoundPlaying = false;
+buzzSoundPlaying = false;
 
+#endregion
 #region Variables
 // If tesla gate is active.
 active = true
