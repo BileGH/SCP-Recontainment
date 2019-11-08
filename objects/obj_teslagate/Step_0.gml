@@ -7,7 +7,6 @@
 #region Timer Handling
 // Update Timers
 if (changeStateTimer > 0) {--changeStateTimer}
-if (buzzSoundTimer > 0) {--buzzSoundTimer}
 if (fireTimer > 0) {--fireTimer}
 if (windTimer > 0) {--windTimer}
 if (activationTimer > 0) {--activationTimer}
@@ -19,13 +18,14 @@ if !(active) && (reactivationTimer <= 0) {
 #endregion
 
 #region Update Sprite Vertices
-if (orientation == 1) {
+if (orientation == 0) {
 	var amountX = sprite_width / 2
 	var amountY = sprite_height / 2
 } else {
 	var amountX = sprite_height / 2
 	var amountY = sprite_width / 2
 }
+
 x1 = x-amountX
 y1 = y-amountY
 
@@ -66,17 +66,23 @@ if (active) {
 		// Play buzz sound and check if player is still within range or has moved closer
 		if plyIsWithinChargeDistance {
 			// Player has moved within charge distance
-			audio_play_sound(snd_tesla_windup,1,false)
-			setWindTimer
+			if !waitingAudioEnd {
+				if !audio_is_playing(snd_tesla_windup) {
+					audio_play_sound(snd_tesla_windup,1,false)
+					waitingAudioEnd = true
+				}
+			}
 			
-			windSoundPlaying = true
-			
-			state = 2
+			if waitingAudioEnd {
+				if !audio_is_playing(snd_tesla_windup) {
+					state = 2
+					waitingAudioEnd = false;
+				}
+			}
 		} else if plyIsWithinBuzzDistance {
 			// Player is still within buzz distance. Just replay file.
-			if (buzzSoundTimer <= 0) {
+			if !audio_is_playing(snd_tesla_idle) {
 				audio_play_sound(snd_tesla_idle,1,false)
-				setBuzzSoundTimer
 			}
 		} else {
 			state = 0
@@ -94,9 +100,6 @@ if (active) {
 			if plyExists {
 				if (fireTimer <= 0) {
 					audio_play_sound(snd_tesla_shock,1,false)
-					
-					fireSoundPlaying = true;
-					
 					fireTimer = 12 // 12 steps of damage
 					state = 3
 				}
@@ -121,13 +124,13 @@ if (active) {
 			
 			
 			var npc = instance_nearest(x,y,npc_mtf);
-			if !is_undefined(npc) {
+			if instance_exists(npc) {
 				if point_in_rectangle(npc.x,npc.y,x1,y1,x3,y3) {
 					with(npc) {instance_destroy()}
 				}
 			}
 			var npc = instance_nearest(x,y,npc_dclass);
-			if !is_undefined(npc) {
+			if instance_exists(npc) {
 				if point_in_rectangle(npc.x,npc.y,x1,y1,x3,y3) {
 					with(npc) {instance_destroy()}
 				}

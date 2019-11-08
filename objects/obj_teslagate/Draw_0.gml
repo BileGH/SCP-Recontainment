@@ -1,7 +1,8 @@
 
 if (global.Debug_Mode) {
 	draw_self()
-	draw_text(x,y-32,string(state))
+	draw_set_font(fnt_default)
+	draw_text(x,y+64,string(state))
 }
 
 if (orientation == 0) {
