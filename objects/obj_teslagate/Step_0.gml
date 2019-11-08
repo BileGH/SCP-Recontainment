@@ -1,3 +1,9 @@
+// IMPORTANT!
+// TO DO: Rewrite the sound code.
+// The current sound code is based on steps, if the player is having lag, the sounds will delay.
+// Maybe rewrite to checking if the sound is finished playing?
+// Also: SAVE A BACKUP OF THIS DAMN CODE BEFORE THANOS SNAPPING IT
+
 #region Timer Handling
 // Update Timers
 if (changeStateTimer > 0) {--changeStateTimer}
@@ -13,9 +19,13 @@ if !(active) && (reactivationTimer <= 0) {
 #endregion
 
 #region Update Sprite Vertices
-var amountX = sprite_width / 2
-var amountY = sprite_height / 2
-
+if (orientation == 1) {
+	var amountX = sprite_width / 2
+	var amountY = sprite_height / 2
+} else {
+	var amountX = sprite_height / 2
+	var amountY = sprite_width / 2
+}
 x1 = x-amountX
 y1 = y-amountY
 
