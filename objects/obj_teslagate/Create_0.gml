@@ -1,15 +1,47 @@
 image_speed = 0
 
+#region Sprite Vertices
+// Sprite Positioning
+if (orientation == 0) {
+	var amountX = sprite_width / 2
+	var amountY = sprite_height / 2
+} else {
+	var amountX = sprite_height / 2
+	var amountY = sprite_width / 2
+}
+x1 = x-amountX
+y1 = y-amountY
+
+x2 = x+amountX
+y2 = y-amountY
+
+x3 = x+amountX
+y3 = y+amountY
+
+x4 = x-amountX
+y4 = y+amountY
+
+#endregion
+
+#region SOUND REWRITE
+// This is the beginning of the new code rewrite.
+waitingAudioEnd = false;
+
+#endregion
+#region Variables
 // If tesla gate is active.
 active = true
 
 // Controls sprite drawing and other functions.
 // 0: Horizontal (Default), 1: Vertical
-orientation = 0
+// orientation = 0 (Has been moved to the GMS built-in "Variables" function on the object. Access this variable by there.)
 
 // State of the tesla gate. The cycle is (2-3-4 Repeat)
 // 0: Idle, 1: Buzz, 2: Charge (Wind up), 3: Firing (Dealing damage), 4: Cooling
 state = 0
+
+// Range for interaction
+interactionRange = 540
 
 // Timer for changing states.
 changeStateTimer = 0
@@ -39,14 +71,8 @@ activationTimer = 0
 // 0: Idle 1: In-Transition.
 activationState = 0
 
-// Lethal distance of the tesla gate.
-killDistance = 60
-
 // Is this Tesla firing?
 firing = false
-
-// The interaction range of this object.
-interactionRange = buzzDistance - 20
 
 // Timer for the tesla gate to reactivate itself
 reactivationTimer = 0
@@ -54,15 +80,17 @@ reactivationTimer = 0
 // Time it takes (in seconds) for the tesla to come back online wen the above timer expires.
 timeToReactivate = 60
 
-// "Self-Explanatory" Macros
+#endregion
 
+#region Macros
+// "Self-Explanatory" Macros
 #macro plyExists (instance_exists(obj_player))
 #macro plyIsWithinChargeDistance (distance_to_point(obj_player.x,obj_player.y)<chargeDistance)
 #macro plyIsWithinBuzzDistance (distance_to_point(obj_player.x,obj_player.y)<buzzDistance)
-#macro plyIsWithinKillDistance (distance_to_point(obj_player.x,obj_player.y)<killDistance)
 #macro plyIsWithinInteractionDistance (distance_to_point(obj_player.x, obj_player.y)<interactionRange)
-#macro resetTimers changeStateTimer = 0 buzzSoundTimer = 0 fireTimer = 0 windTimer = 0 coolTimer = 0
+#macro teslaResetTimers changeStateTimer = 0 buzzSoundTimer = 0 fireTimer = 0 windTimer = 0 coolTimer = 0
 
-#macro setWindTimer resetTimers windTimer = floor(room_speed * 1.22)
-#macro setBuzzSoundTimer resetTimers buzzSoundTimer = floor(room_speed * 1.8)
-#macro setCoolTimer resetTimers coolTimer = floor(room_speed * 1)
+#macro setWindTimer teslaResetTimers windTimer = floor(room_speed * 1.22)
+#macro setBuzzSoundTimer teslaResetTimers buzzSoundTimer = floor(room_speed * 1.8)
+#macro setCoolTimer teslaResetTimers coolTimer = floor(room_speed * 1)
+#endregion
