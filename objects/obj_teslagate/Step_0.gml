@@ -1,8 +1,45 @@
-// IMPORTANT!
-// TO DO: Rewrite the sound code.
-// The current sound code is based on steps, if the player is having lag, the sounds will delay.
-// Maybe rewrite to checking if the sound is finished playing?
-// Also: SAVE A BACKUP OF THIS DAMN CODE BEFORE THANOS SNAPPING IT
+#region First Step
+if firstStep {
+	#region Update Sprite Vertices
+	if (orientation == 0) {
+		var amountX = sprite_width / 2
+		var amountY = sprite_height / 2
+	} else {
+		var amountX = sprite_height / 2
+		var amountY = sprite_width / 2
+	}
+
+	x1 = x-amountX
+	y1 = y-amountY
+
+	x2 = x+amountX
+	y2 = y-amountY
+
+	x3 = x+amountX
+	y3 = y+amountY
+
+	x4 = x-amountX
+	y4 = y+amountY
+	#endregion
+	#region Create Lights	
+	var rpx = (x1 + x4) / 2 // Reactor Position X
+	var rpy = (y1 + y4) / 2 // Reactor Position Y
+	
+	//RL_1 = light_create_point(rpx, rpy, 12, c_blue, 64, 5) // Reactor Light 1
+	
+	var rpx = (x2 + x3) / 2 // Reactor Position X
+	var rpy = (y2 + y3) / 2 // Reactor Position Y
+	
+	
+	//RL_2 = light_create_point(rpx, rpy, 12, c_blue, 64, 5) // Reactor Light 2
+	
+	//light_add_to_world(RL_1)
+	//light_add_to_world(RL_2)
+	
+	#endregion
+	firstStep = false
+}
+#endregion
 
 #region Timer Handling
 // Update Timers
@@ -17,27 +54,6 @@ if !(active) && (reactivationTimer <= 0) {
 }
 #endregion
 
-#region Update Sprite Vertices
-if (orientation == 0) {
-	var amountX = sprite_width / 2
-	var amountY = sprite_height / 2
-} else {
-	var amountX = sprite_height / 2
-	var amountY = sprite_width / 2
-}
-
-x1 = x-amountX
-y1 = y-amountY
-
-x2 = x+amountX
-y2 = y-amountY
-
-x3 = x+amountX
-y3 = y+amountY
-
-x4 = x-amountX
-y4 = y+amountY
-#endregion
 
 #region If tesla is active
 if (active) {

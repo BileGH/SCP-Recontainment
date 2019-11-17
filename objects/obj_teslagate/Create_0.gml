@@ -2,6 +2,8 @@ image_speed = 0
 
 #region Sprite Vertices
 // Sprite Positioning
+
+/*
 if (orientation == 0) {
 	var amountX = sprite_width / 2
 	var amountY = sprite_height / 2
@@ -21,13 +23,9 @@ y3 = y+amountY
 x4 = x-amountX
 y4 = y+amountY
 
+*/
 #endregion
 
-#region SOUND REWRITE
-// This is the beginning of the new code rewrite.
-waitingAudioEnd = false;
-
-#endregion
 #region Variables
 // If tesla gate is active.
 active = true
@@ -79,6 +77,13 @@ reactivationTimer = 0
 
 // Time it takes (in seconds) for the tesla to come back online wen the above timer expires.
 timeToReactivate = 60
+
+// Is this the first step of this object?
+firstStep = true
+
+// This is the beginning of the new code rewrite.
+waitingAudioEnd = false;
+
 
 #endregion
 
