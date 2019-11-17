@@ -10,7 +10,7 @@
         "84334f4e-b6d2-4ffe-89cf-f8641f75877e"
     ],
     "filterType": "GMObject",
-    "folderName": "Lighting",
+    "folderName": "Lighting System",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
