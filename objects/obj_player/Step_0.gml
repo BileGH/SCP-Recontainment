@@ -93,7 +93,7 @@ if speed > CurrentSpeed {
 image_angle = point_direction(x, y, mouse_x, mouse_y);
 
 //INVENTORY
-
+/*
 if keyboard_check_pressed(ord("1")) {
 	if Equipped != Equip1 {
 		audio_stop_sound(snd_equip_hg)
@@ -202,6 +202,7 @@ if ToFireCount > 0 {
 	}
 }
 
+*/
 
 //Keycard
 

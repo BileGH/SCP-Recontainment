@@ -3,6 +3,12 @@ if (global.Debug_Mode) {
 	draw_self()
 	draw_set_font(fnt_default)
 	draw_text(x,y+64,string(state))
+	draw_set_color(c_red)
+	draw_rectangle(x1-2,y1-2,x1+2,y1+2,false)
+	draw_rectangle(x2-2,y2-2,x2+2,y2+2,false)
+	draw_rectangle(x3-2,y3-2,x3+2,y3+2,false)
+	draw_rectangle(x4-2,y4-2,x4+2,y4+2,false)
+	draw_set_color(c_white)
 }
 
 if (orientation == 0) {

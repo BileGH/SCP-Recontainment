@@ -22,19 +22,51 @@ if firstStep {
 	y4 = y+amountY
 	#endregion
 	#region Create Lights	
-	var rpx = (x1 + x4) / 2 // Reactor Position X
-	var rpy = (y1 + y4) / 2 // Reactor Position Y
 	
-	//RL_1 = light_create_point(rpx, rpy, 12, c_blue, 64, 5) // Reactor Light 1
+	FL = instance_create_layer(x,y,"Lights",light_generic) // Field Light
 	
-	var rpx = (x2 + x3) / 2 // Reactor Position X
-	var rpy = (y2 + y3) / 2 // Reactor Position Y
+	with (FL) {
+		Light_Type = "Point Light"
+		Light_Shadow_Length = 64
+		Light_Color = $FFFFFF1C
+		Light_Range = 256
+		Light_Intensity = 0
+	}
 	
 	
-	//RL_2 = light_create_point(rpx, rpy, 12, c_blue, 64, 5) // Reactor Light 2
+	if (orientation == 0) {
+		var rpx = x - lengthdir_x(sprite_width,0)/2
+		var rpy = y
+	} else {
+		var rpx = x
+		var rpy = y - lengthdir_y(sprite_width,90)/2
+	}
 	
-	//light_add_to_world(RL_1)
-	//light_add_to_world(RL_2)
+	RL_1 = instance_create_layer(rpx,rpy,"Lights",light_generic) // Reactor Light 1
+	with (RL_1) {
+		Light_Type = "Point Light"
+		Light_Shadow_Length = 32
+		Light_Color = $FFFFFF1C
+		Light_Range = 64
+		Light_Intensity = 4.5
+	}
+	
+	if (orientation == 0) {
+		var rpx = x + lengthdir_x(sprite_width,0)/2
+		var rpy = y
+	} else {
+		var rpx = x
+		var rpy = y + lengthdir_y(sprite_width,90)/2
+	}
+	
+	RL_2 = instance_create_layer(rpx,rpy,"Lights",light_generic) // Reactor Light 2
+	with (RL_2) {
+		Light_Type = "Point Light"
+		Light_Shadow_Length = 32
+		Light_Color = $FFFFFF1C
+		Light_Range = 64
+		Light_Intensity = 4.5
+	}
 	
 	#endregion
 	firstStep = false
@@ -131,6 +163,10 @@ if (active) {
 		// Fire until cooldown.
 		if (fireTimer > 0) {
 			firing = true
+			with (FL) {
+				light[| eLight.Intensity] = irandom_range(0,Light_Intensity)
+				light[| eLight.Flags] |= eLightFlags.Dirty
+			}
 			if plyExists {
 				if point_in_rectangle(obj_player.x,obj_player.y,x1,y1,x3,y3) {
 					with(obj_player) {instance_destroy()}

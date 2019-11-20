@@ -751,14 +751,6 @@
             }
         },
         {
-            "Key": "37c7a4a8-876b-44f0-bd18-15723c57cbc7",
-            "Value": {
-                "id": "e45e9823-de77-4001-9ce2-7a958abcff29",
-                "resourcePath": "objects\\obj_DClass_AI\\obj_DClass_AI.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "38448c10-ad2f-4129-8fee-a69332122ba3",
             "Value": {
                 "id": "e70deabe-1b65-4a19-8a99-e7548fbb015b",
@@ -2047,6 +2039,14 @@
             }
         },
         {
+            "Key": "99afe77b-11e0-48cd-8925-ffc4730116bf",
+            "Value": {
+                "id": "88f7b27e-d25a-4ad3-80c5-3443477ed256",
+                "resourcePath": "objects\\light_generic\\light_generic.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "99c636c6-3325-4140-8676-1c487eacba7f",
             "Value": {
                 "id": "3ed4ff1e-9e6b-4d65-913f-c5092b9f0572",
@@ -2292,14 +2292,6 @@
                 "id": "1f9f68f1-88ff-4621-abd4-ced9c2d683ec",
                 "resourcePath": "datafiles_yy\\README.md.yy",
                 "resourceType": "GMIncludedFile"
-            }
-        },
-        {
-            "Key": "b0f3ba90-c9b6-4e49-8b74-534cf687d24e",
-            "Value": {
-                "id": "011ac5bb-36fd-4acb-bf2e-c40a2f5b59fb",
-                "resourcePath": "objects\\obj_DClass_explorer_follow\\obj_DClass_explorer_follow.yy",
-                "resourceType": "GMObject"
             }
         },
         {

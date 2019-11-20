@@ -4,14 +4,6 @@ CurrentSpeed = 6; //Current speed
 Stamina = 300;
 global.femur_broken=0
 
-//AMMO
-Ammo556 = 40
-Ammo45 = 40
-
-//Equipped variables which need constant updates
-
-ToFire = 1
-ToFireCount = 0
 
 //Stuff
 step = 0; //Timer until you take a step
@@ -56,7 +48,17 @@ audio_listener_orientation(0, 0, 10, 0, -1, 0);
 //DEBUG
 global.Debug_Mode=debug_mode
 
+/*
 //WEAPONS
+
+//AMMO
+Ammo556 = 40
+Ammo45 = 40
+
+//Equipped variables which need constant updates
+
+ToFire = 1
+ToFireCount = 0
 //AMMO
 #macro SetMagsandAmmo Mags556 = ds_list_create() Mags45 = ds_list_create();
 SetMagsandAmmo
@@ -88,9 +90,6 @@ ds_list_add(DSWeaponSCAR, 30, 1, 26, 3, 6, 3, 1, 0, Ammo556, Mags556, 5, 0, 0, 0
 17 Sound for firing
 18 Sound for Equipping
 19 Sound for Reloading
-*/
-
-
 
 //WEAPONS AND EQUIPS
 Equip1 = DSWeaponSCAR
@@ -98,6 +97,15 @@ Equip2 = DSWeaponM1911
 Equipped = Equip1
 
 CurrentMagazine = string(Equipped[|9])
+*/
+
+#region Weapon System 2
+// New Weapon System
+
+
+
+
+#endregion
 
 //AI
 Followed = 1
