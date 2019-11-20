@@ -1,3 +1,7 @@
+// Making use of OOP
+event_inherited()
+
+
 HP=100
 spd=random_range(1,10);
 stop=0;
@@ -12,5 +16,3 @@ AI_path = path_add();
 on_defined_coordinates = true;
 get_coordinates = true;
 goto_coordinates = false;
-
-MacroPlayerNPCMaster

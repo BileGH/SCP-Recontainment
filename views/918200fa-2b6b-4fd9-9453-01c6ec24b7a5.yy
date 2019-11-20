@@ -10,7 +10,8 @@
         "78ca6a46-f134-482d-8a13-245511e5b730",
         "b0f3ba90-c9b6-4e49-8b74-534cf687d24e",
         "37c7a4a8-876b-44f0-bd18-15723c57cbc7",
-        "6b12aeba-f082-4eab-a2e8-45dd90df92b4"
+        "6b12aeba-f082-4eab-a2e8-45dd90df92b4",
+        "4bd36943-df3b-4b9d-a6e1-dd056fc35823"
     ],
     "filterType": "GMObject",
     "folderName": "People",

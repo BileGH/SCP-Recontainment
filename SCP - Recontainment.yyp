@@ -1023,6 +1023,14 @@
             }
         },
         {
+            "Key": "4bd36943-df3b-4b9d-a6e1-dd056fc35823",
+            "Value": {
+                "id": "1d6e69ec-b83e-491e-ad9e-1014d21ce0e4",
+                "resourcePath": "objects\\npc_default\\npc_default.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4c4eaf83-42f5-4a7b-9221-b562615a397e",
             "Value": {
                 "id": "ab7dee33-62fa-4a91-a256-9bc9c4af9567",
@@ -2039,6 +2047,14 @@
             }
         },
         {
+            "Key": "99c636c6-3325-4140-8676-1c487eacba7f",
+            "Value": {
+                "id": "3ed4ff1e-9e6b-4d65-913f-c5092b9f0572",
+                "resourcePath": "objects\\obj_button\\obj_button.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9aeae089-ae71-4916-91cb-bc01064b2a74",
             "Value": {
                 "id": "7bca5e5e-8d55-4ff0-bc4b-12cc644e934f",
@@ -2652,14 +2668,6 @@
                 "id": "a1d8634d-d73b-4d5c-9b11-f97ced40f702",
                 "resourcePath": "sprites\\txr_door_vertical_open\\txr_door_vertical_open.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "ce005716-0f94-47cb-92fc-2a6003a72731",
-            "Value": {
-                "id": "560dd5e6-7700-4431-9252-c75c64b4c209",
-                "resourcePath": "objects\\obj_muzzleflash\\obj_muzzleflash.yy",
-                "resourceType": "GMObject"
             }
         },
         {
