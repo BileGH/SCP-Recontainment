@@ -2631,6 +2631,14 @@
             }
         },
         {
+            "Key": "cc0c08e1-5c2c-4152-a025-a1bb607af10e",
+            "Value": {
+                "id": "f2262acc-239c-4c30-a2cf-5e2056bfc195",
+                "resourcePath": "sprites\\spr_button103\\spr_button103.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cc6f7f61-1e60-40ae-9c11-41eed5a452eb",
             "Value": {
                 "id": "71c39ad1-7aa6-42e5-92bc-e3ccabf43f1c",
@@ -3060,6 +3068,14 @@
                 "id": "d06f33c5-c2bd-4653-ba7b-72160e36c636",
                 "resourcePath": "sounds\\q_intercom_tesla1\\q_intercom_tesla1.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "eda9635a-38ef-4c0d-bac3-1105492628d6",
+            "Value": {
+                "id": "ca0a8b1f-2c48-46bd-b74f-1a5e1142df16",
+                "resourcePath": "sprites\\spr_buttondown\\spr_buttondown.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
