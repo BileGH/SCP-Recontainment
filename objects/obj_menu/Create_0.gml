@@ -6,8 +6,8 @@ btnLoad = instance_create_layer(64,256 + (dist * ++k),"UI",obj_button)
 btnExit = instance_create_layer(64,256 + (dist * ++k),"UI",obj_button)
 
 
-var scalex = 1
-var scaley = 1
+var scalex = 0.75
+var scaley = 0.5
 with (btnPlay) {
 	hasText = true
 	text = "Play"

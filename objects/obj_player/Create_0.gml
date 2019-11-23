@@ -1,15 +1,35 @@
+#region Variables
+#region Stats
 //STATS
 HP = 100; //Player Health
 CurrentSpeed = 6; //Current speed
 Stamina = 300;
 global.femur_broken=0
-
-
-//Stuff
+#endregion
+#region Timers
+// Flash
+flashTimer = 0;
+flashTime = 2
+#endregion
+#region Movement
+Speed = 0.5
+HowSlowerToSlowDown = 1.5
+WalkingSpeed = 6
+RunningSpeed = 12
+StepSoundSpeed = 11
+ToStepTimer = 25
+ActualSpeed = Speed + HowSlowerToSlowDown
 step = 0; //Timer until you take a step
 sc = 0; //
-
 canMove = true
+#endregion
+#region Other
+//AI
+Followed = 1
+
+
+#endregion
+#endregion
 
 #region Blinking
 //BLINKING
@@ -21,14 +41,6 @@ draw_set_font(fnt_default);
 draw_set_color(c_black);
 
 #endregion
-
-Speed = 0.5
-HowSlowerToSlowDown = 1.5
-WalkingSpeed = 6
-RunningSpeed = 12
-StepSoundSpeed = 11
-ToStepTimer = 25
-ActualSpeed = Speed + HowSlowerToSlowDown
 
 #region Macros
 //MACROS
@@ -48,13 +60,17 @@ MacroPlayerNPCMaster
 
 #endregion
 
+#region Audio Systme
 //AUDIO SYSTEM
 audio_falloff_set_model(audio_falloff_linear_distance);
 audio_listener_position(x,y,0)
 audio_listener_orientation(0, 0, 10, 0, -1, 0);
+#endregion
 
+#region Debug
 //DEBUG
 global.Debug_Mode=debug_mode
+#endregion
 
 #region Old Weapon System (Commented Out)
 /*
@@ -121,13 +137,7 @@ CurrentMagazine = string(Equipped[|9])
 
 #endregion
 
-
-//AI
-Followed = 1
-
-// Flash
-flashTimer = 0;
-flashTime = 2
-
+#region Other code
 // Spawn debug console
 instance_create_depth(0,0,0,obj_console)
+#endregion

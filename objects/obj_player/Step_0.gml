@@ -1,4 +1,6 @@
+#region Timers
 if (flashTimer > 0) {--flashTimer}
+#endregion
 
 #region Saving
 //SAVING
@@ -47,57 +49,59 @@ if blk < 1 {
 
 #region Movement
 //MOVEMENT
-CurrentSpeed = WalkingSpeed
-if keyboard_check(vk_lshift) && Stamina > 0 {
-	CurrentSpeed = RunningSpeed;
-	Stamina -= 1;
-	sc = 60;
-	StepSoundSpeed = 10
-} else {
-	StepSoundSpeed = 11
-}
+if (canMove) {
+	CurrentSpeed = WalkingSpeed
+	if keyboard_check(vk_lshift) && Stamina > 0 {
+		CurrentSpeed = RunningSpeed;
+		Stamina -= 1;
+		sc = 60;
+		StepSoundSpeed = 10
+	} else {
+		StepSoundSpeed = 11
+	}
 
-sc = sc - 1;
+	sc = sc - 1;
 
-if sc < 1 && Stamina < 300 {Stamina = Stamina + 1};
+	if sc < 1 && Stamina < 300 {Stamina = Stamina + 1};
 
-MOVING = 0
-if keyboard_check(ord("W")) {
-	vspeed -= ActualSpeed;
-	MOVING = 1
-}
-if keyboard_check(ord("S")) {
-	vspeed += ActualSpeed;
-	MOVING = 1
-}
-if keyboard_check(ord("A")) {
-	hspeed -= ActualSpeed;
-	MOVING = 1
-}
-if keyboard_check(ord("D")) {
-	hspeed += ActualSpeed;
-	MOVING = 1
-}
+	MOVING = 0
+	if keyboard_check(ord("W")) {
+		vspeed -= ActualSpeed;
+		MOVING = 1
+	}
+	if keyboard_check(ord("S")) {
+		vspeed += ActualSpeed;
+		MOVING = 1
+	}
+	if keyboard_check(ord("A")) {
+		hspeed -= ActualSpeed;
+		MOVING = 1
+	}
+	if keyboard_check(ord("D")) {
+		hspeed += ActualSpeed;
+		MOVING = 1
+	}
 
-if step < 1 {
-			audio_emitter_falloff(SoundEmitter, 300, 750, 1);
-			audio_play_sound_on(SoundEmitter,snd_mtf_walk,0,1)
-	step = ToStepTimer
+	if step < 1 {
+				audio_emitter_falloff(SoundEmitter, 300, 750, 1);
+				audio_play_sound_on(SoundEmitter,snd_mtf_walk,0,1)
+		step = ToStepTimer
+	}
+
+	if speed > 0 {
+		speed -= HowSlowerToSlowDown
+		step -= speed / StepSoundSpeed
+	} else {
+		speed = 0
+	}
+
+	if speed > CurrentSpeed {
+		speed -= (speed - CurrentSpeed) / 2
+	}
+
+
+	image_angle = point_direction(x, y, mouse_x, mouse_y);
 }
-
-if speed > 0 {
-	speed -= HowSlowerToSlowDown
-	step -= speed / StepSoundSpeed
-} else {
-	speed = 0
-}
-
-if speed > CurrentSpeed {
-	speed -= (speed - CurrentSpeed) / 2
-}
-
-
-image_angle = point_direction(x, y, mouse_x, mouse_y);
 #endregion
 
 #region Old Inventory Code
