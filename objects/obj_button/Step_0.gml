@@ -1,5 +1,5 @@
 if firstStep {
-	if (text == undefined || text == "") {hasText = false}
+	if (text == undefined) {hasText = false}
 	if (font == undefined) {hasText = false}
 	if (mouseTrigger == undefined) {mouseTrigger = mb_any}
 	firstStep = false
@@ -10,7 +10,7 @@ if (interactTimer > 0) {--interactTimer}
 
 // User Input Handling
 
-if point_in_rectangle(mouse_x,mouse_y,x,y,x + (sprite_width * image_xscale),y + (sprite_height * image_yscale)) {
+if point_in_rectangle(mouse_x,mouse_y,x,y,x + (sprite_width * 1),y + (sprite_height * 1)) {
 	mouseOver = true
 	if mouse_check_button(mouseTrigger) {
 		mousePressing = true

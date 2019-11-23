@@ -1,8 +1,9 @@
+// Variables to be set by another object.
 firstStep = true
 text = undefined
 hasText = false
 font = undefined
-mouseTrigger = mb_left
+mouseTrigger = undefined
 
 
 // Variables for outside reference
