@@ -26,7 +26,7 @@ if keyboard_check(vk_lalt) {
 blink = blink - 1;
 
 if blink < 1 {
-	instance_create_layer(x, y, "Top_Layer", obj_blink)
+	if !instance_exists(obj_blink) {instance_create_layer(x, y, "Top_Layer", obj_blink)}
 	global.blinked = 1;
 };
 if global.blinked = 1 blk = blk - 1;
