@@ -9,6 +9,9 @@ global.femur_broken=0
 step = 0; //Timer until you take a step
 sc = 0; //
 
+canMove = true
+
+#region Blinking
 //BLINKING
 global.blinked = 0; //The state when you have blinked
 blk = 6; //The time you stay with closed eyes, while blinking
@@ -16,6 +19,8 @@ blink = 600; //Timer until you blink
 //HUD
 draw_set_font(fnt_default);
 draw_set_color(c_black);
+
+#endregion
 
 Speed = 0.5
 HowSlowerToSlowDown = 1.5
@@ -25,6 +30,7 @@ StepSoundSpeed = 11
 ToStepTimer = 25
 ActualSpeed = Speed + HowSlowerToSlowDown
 
+#region Macros
 //MACROS
 #macro MacroFireEquippedWeapon var Bullet = instance_create_layer(x+lengthdir_x(Equipped[|15],image_angle+Equipped[|16]), y+lengthdir_y(Equipped[|15],image_angle+Equipped[|16]), "BulletLayer", obj_bullet) with(Bullet) {Damage = other.Equipped[| 2] + random_range(-other.Equipped[| 3], other.Equipped[| 3]) image_angle = other.image_angle Owner = other.id }
 
@@ -40,6 +46,8 @@ ActualSpeed = Speed + HowSlowerToSlowDown
 #macro MacroPlayerNPCMaster MacroSoundEmitters MacroBleedingStatus MacroBloodPuddles
 MacroPlayerNPCMaster
 
+#endregion
+
 //AUDIO SYSTEM
 audio_falloff_set_model(audio_falloff_linear_distance);
 audio_listener_position(x,y,0)
@@ -48,6 +56,7 @@ audio_listener_orientation(0, 0, 10, 0, -1, 0);
 //DEBUG
 global.Debug_Mode=debug_mode
 
+#region Old Weapon System (Commented Out)
 /*
 //WEAPONS
 
@@ -98,6 +107,11 @@ Equipped = Equip1
 
 CurrentMagazine = string(Equipped[|9])
 */
+#endregion
+
+#region Inventory
+
+#endregion
 
 #region Weapon System 2
 // New Weapon System
@@ -106,6 +120,7 @@ CurrentMagazine = string(Equipped[|9])
 
 
 #endregion
+
 
 //AI
 Followed = 1

@@ -1,5 +1,6 @@
 if (flashTimer > 0) {--flashTimer}
 
+#region Saving
 //SAVING
 if keyboard_check(vk_f8) game_save("save")
 
@@ -12,11 +13,16 @@ if keyboard_check(vk_escape) {
 	game_save("save")
 	room_goto(map_menu)
 }
+#endregion
 
+#region Death
 //DEATH
 
 if HP <= 0 instance_destroy();
 
+#endregion
+
+#region Blinking
 //BLINKING
 
 if keyboard_check(vk_lalt) {
@@ -37,9 +43,10 @@ if blk < 1 {
 	blink = 600;
 	instance_destroy(obj_blink, true)
 };
+#endregion
 
+#region Movement
 //MOVEMENT
-
 CurrentSpeed = WalkingSpeed
 if keyboard_check(vk_lshift) && Stamina > 0 {
 	CurrentSpeed = RunningSpeed;
@@ -91,7 +98,9 @@ if speed > CurrentSpeed {
 
 
 image_angle = point_direction(x, y, mouse_x, mouse_y);
+#endregion
 
+#region Old Inventory Code
 //INVENTORY
 /*
 if keyboard_check_pressed(ord("1")) {
@@ -203,13 +212,10 @@ if ToFireCount > 0 {
 }
 
 */
+#endregion
 
-//Keycard
-
-//SUICIDE
-
+#region Collision
 //COLLISION
-
 
 if collision_line(x, y, x, y + vspeed, obj_wall, 0, 0) {
 	vspeed = 0 x = xprevious
@@ -224,11 +230,15 @@ if collision_line(x, y, x, y + vspeed, obj_door, 1, 0) {
 if collision_line(x, y, x + hspeed, y, obj_door, 1, 0) {
 	hspeed = 0 y = yprevious
 }
+#endregion
 
+#region Bleeding
 //BLEEDING
 #macro MacroBleeding if Bleeding>0 {Bleeding -= BleedingNaturalHealing ToBloodDrip-=Bleeding HP-=Bleeding  if ToBloodDrip<=0 {var Blood = instance_create_layer(x+random_range(-10,10), y+random_range(-10,10), "Bottom_Layer" , obj_blood_drip) ToBloodDrip=ToReBloodDrip with (Blood) {image_xscale=1+(other.Bleeding*32) image_yscale=1+(other.Bleeding*32)}}};
 MacroBleeding
+#endregion
 
+#region Audio System
 //AUDIO SYSTEM
 if speed > 0
    {
@@ -238,6 +248,9 @@ audio_listener_velocity(abs(hspeed),abs(vspeed),0)
 
 MacroSoundEmittersPositionSet
 
+#endregion
+
+#region Debug
 //DEBUG
 if keyboard_check(ord("K"))
 and keyboard_check_pressed(ord("O")) {
@@ -249,3 +262,4 @@ and keyboard_check_pressed(ord("O")) {
 }
 
 if keyboard_check(ord("P")) and global.Debug_Mode {instance_place(mouse_x,mouse_y,self)}
+#endregion
