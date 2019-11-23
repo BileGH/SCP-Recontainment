@@ -127,6 +127,8 @@ CurrentMagazine = string(Equipped[|9])
 
 #region Inventory
 
+invsys_load()
+
 #endregion
 
 #region Weapon System 2
