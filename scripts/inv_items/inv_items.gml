@@ -1,4 +1,5 @@
 var i = 0
+items[0] = "empty"
 items[++i] = "weapon_scar"
 items[++i] = "weapon_9mm"
 items[++i] = "weapon_grenade"

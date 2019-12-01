@@ -7,7 +7,7 @@ for (var i = 0; i < 8; ++i) {
 		self.inv[i] = "PLY" // Inventory Type NPC / PLY
 	} else {
 		// above 0 is item information
-		self.inv[i] = "empty" // Item ID
+		self.inv[i] = 0 // Item ID
 	}
 }
 
@@ -28,13 +28,5 @@ if (self.object_index != obj_player) {
 			inv[0] = "NPC"
 			inv[1] = "item_paper_orientation"
 		}
-	}
-} else {
-	with (self) {
-		var k = 0
-		inv[k++] = "PLY"
-		inv[k++] = "weapon_scar"
-		inv[k++] = "weapon_9mm"
-		inv[k++] = "keycard_omnni"
 	}
 }

@@ -1,8 +1,8 @@
 {
-    "id": "3e358983-21ca-4cbe-91ac-338b2bc6613b",
+    "id": "e7438dad-d1b4-46b5-a329-5a5b36c50515",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "inv_drop",
+    "name": "item",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -9,7 +9,5 @@ if (instance_nearest(obj_player.x,obj_player.y, obj_teslagate).id = id) {
 				if (active) {audio_play_sound(q_player_tesla0,2,false)}
 			}
 		}
-		
-		
 	}
 }

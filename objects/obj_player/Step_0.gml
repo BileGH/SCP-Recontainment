@@ -1,5 +1,6 @@
 #region Timers
 if (flashTimer > 0) {--flashTimer}
+if (interactionTimer > 0) {--interactionTimer}
 #endregion
 
 #region Saving
@@ -216,6 +217,31 @@ if ToFireCount > 0 {
 }
 
 */
+#endregion
+
+#region Inventory
+
+if (canOpenInv) {
+	if keyboard_check(invOpenKey) {
+		if (interactTimer <= 0) {
+			if hasInvOpen {
+				hasInvOpen = false
+				if instance_exists(inventoryObj) {instance_destroy(inventoryObj)}
+			} else {
+				hasInvOpen = true
+				inventoryObj = instance_create_layer(x,y,"UI",obj_inventory)
+			}
+		}
+	}
+	
+	
+	if hasInvOpen {
+		canMove = false
+	} else {
+		canMove = true
+	}
+}
+
 #endregion
 
 #region Collision

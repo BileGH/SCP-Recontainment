@@ -10,6 +10,8 @@ global.femur_broken=0
 // Flash
 flashTimer = 0;
 flashTime = 2
+interactionTimer = 0;
+interactionTime = 10
 #endregion
 #region Movement
 Speed = 0.5
@@ -128,6 +130,15 @@ CurrentMagazine = string(Equipped[|9])
 #region Inventory
 
 invsys_load()
+
+canOpenInv = true
+hasInvOpen = false
+invOpenKey = vk_tab
+inventoryObj = noone
+
+var k = 0 
+inv[++k] = item("weapon_scar")
+inv[++k] = item("weapon_9mm")
 
 #endregion
 
