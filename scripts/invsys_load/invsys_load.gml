@@ -26,7 +26,12 @@ if (self.object_index != obj_player) {
 			inv[k++] = "keycard_" + string(floor(irandom_range(2,5)))
 		} else if object_index == npc_dclass {
 			inv[0] = "NPC"
-			inv[1] = "item_paper_orientation"
+			var chance = floor(irandom_range(1,5))
+			if (chance == 5) {
+				inv[1] = "item_paper_orientation"
+			} else {
+				inv[1] = "empty"
+			}
 		}
 	}
 }

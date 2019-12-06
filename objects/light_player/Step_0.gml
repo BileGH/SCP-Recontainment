@@ -1,4 +1,4 @@
-if instance_exists(obj_player) {
+jif instance_exists(obj_player) {
 	with (obj_player) {
 		if canMove {
 			other.light[| eLight.Direction] = point_direction(x,y,mouse_x,mouse_y)

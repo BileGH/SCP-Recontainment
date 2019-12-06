@@ -1,5 +1,7 @@
 image_speed = 0
 
+event_inherited()
+
 #region Sprite Vertices
 // Sprite Positioning
 
@@ -98,4 +100,4 @@ waitingAudioEnd = false;
 #macro setWindTimer teslaResetTimers windTimer = floor(room_speed * 1.22)
 #macro setBuzzSoundTimer teslaResetTimers buzzSoundTimer = floor(room_speed * 1.8)
 #macro setCoolTimer teslaResetTimers coolTimer = floor(room_speed * 1)
-#endregion
+#

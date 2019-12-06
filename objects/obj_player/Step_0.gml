@@ -219,6 +219,21 @@ if ToFireCount > 0 {
 */
 #endregion
 
+#region Interaction
+
+interactTarget = instance_nearest(x,y,obj_interactable)
+
+if keyboard_check(interactKey) {
+	if (interactTimer <= 0) {
+		interactTimer = interactTime
+		if instance_exists(interactTarget) {
+			with interactTarget {interact = true}
+		}
+	}
+}
+
+#endregion
+
 #region Inventory
 
 if (canOpenInv) {

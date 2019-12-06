@@ -25,6 +25,10 @@ step = 0; //Timer until you take a step
 sc = 0; //
 canMove = true
 #endregion
+#region Binds
+invOpenKey = vk_tab
+interactKey = ord("E")
+#endregion
 #region Other
 //AI
 Followed = 1
@@ -127,13 +131,17 @@ CurrentMagazine = string(Equipped[|9])
 */
 #endregion
 
-#region Inventory
+#region Interaction
 
-invsys_load()
+interactTarget = noone
+
+#endregion
+
+#region Inventory
 
 canOpenInv = true
 hasInvOpen = false
-invOpenKey = vk_tab
+
 inventoryObj = noone
 
 var k = 0 

@@ -86,7 +86,6 @@ if !(active) && (reactivationTimer <= 0) {
 }
 #endregion
 
-
 #region If tesla is active
 if (active) {
 	switch(state) {
@@ -232,5 +231,18 @@ if (activationState == 1) {
 			activationState = 0
 		}
 	}
+}
+#endregion
+
+#region Interaction
+if interact {
+	if (activationTimer <= 0) {
+		if (activationState == 0) {
+			activationTimer = room_speed * 8
+			activationState = 1
+			if (active) {audio_play_sound(q_player_tesla0,2,false)}
+		}
+	}
+	interact = false
 }
 #endregion
