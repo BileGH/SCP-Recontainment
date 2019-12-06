@@ -221,24 +221,28 @@ if ToFireCount > 0 {
 
 #region Interaction
 
-interactTarget = instance_nearest(x,y,obj_interactable)
+interactTarget = instance_nearest(mouse_x,mouse_y,obj_interactable)
 
 if keyboard_check(interactKey) {
-	if (interactTimer <= 0) {
-		interactTimer = interactTime
-		if instance_exists(interactTarget) {
-			with interactTarget {interact = true}
+	if (interactionTimer <= 0) {
+		interactionTimer = interactionTime
+		if (distance_to_object(interactTarget) < interactDistance) {
+			if instance_exists(interactTarget) {
+				with interactTarget {interact = true}
+			}
 		}
+		
+
 	}
 }
-
 #endregion
 
 #region Inventory
 
 if (canOpenInv) {
 	if keyboard_check(invOpenKey) {
-		if (interactTimer <= 0) {
+		if (interactionTimer <= 0) {
+			interactionTimer = interactionTime
 			if hasInvOpen {
 				hasInvOpen = false
 				if instance_exists(inventoryObj) {instance_destroy(inventoryObj)}

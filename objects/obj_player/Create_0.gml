@@ -134,6 +134,7 @@ CurrentMagazine = string(Equipped[|9])
 #region Interaction
 
 interactTarget = noone
+interactDistance = 360
 
 #endregion
 
@@ -145,8 +146,8 @@ hasInvOpen = false
 inventoryObj = noone
 
 var k = 0 
-inv[++k] = item("weapon_scar")
-inv[++k] = item("weapon_9mm")
+inv[++k] = "weapon_scar"
+inv[++k] = "weapon_9mm"
 
 #endregion
 
