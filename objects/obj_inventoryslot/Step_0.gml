@@ -57,19 +57,38 @@ if (interactTimer <= 0) { // If interaction timer is zero...
 						break
 						case "weapon_9mm":
 						// Take mag out
+						if instance_exists(obj_console) {
+							with (obj_console) {
+								temp_post_message = "Attempted to take out 9mm maganize"
+								event_user(1)
+							}
+						}
 						break
 						case "paper_dclass":
 						// Quit inventory and spawn paper
-						
+						if instance_exists(obj_console) {
+							with (obj_console) {
+								temp_post_message = "Attempted to read 173 document"
+								event_user(1)
+							}
+						}
 						break;
 					}
 				}
 			} else {
 				if (mHoldTime > 30) { //  on Mouse Hold...
 					// Move Item
+					if instance_exists(obj_console) {
+						with (obj_console) {
+							temp_post_message = "Attempted to move an object from inventory"
+							event_user(1)
+						}
+					}
+					slotItem = "empty"
 					with (obj_inventory) {
 						mouseItem = other.slotItem
 						mouseItemFromSlot = other.slot
+						mouseHasItem = true
 					}
 				}
 			}

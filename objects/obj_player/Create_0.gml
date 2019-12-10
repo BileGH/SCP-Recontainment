@@ -1,3 +1,11 @@
+if !audio_is_playing(snd_game_music) {
+	audio_play_sound(snd_game_music,0,true)
+}
+
+if (instance_number(obj_player) > 1) {instance_destroy(self)}
+
+randomize();
+
 #region Variables
 #region Stats
 //STATS
@@ -151,6 +159,7 @@ for (var i = 0; i < 16; ++i) {
 var k = 0 
 inv[++k] = "weapon_scar"
 inv[++k] = "weapon_9mm"
+inv[++k] = "paper_173"
 
 #endregion
 
@@ -165,4 +174,7 @@ inv[++k] = "weapon_9mm"
 #region Other code
 // Spawn debug console
 instance_create_depth(0,0,0,obj_console)
+
+// Spawn cursor
+instance_create_layer(1,1,"UI",obj_cursor)
 #endregion

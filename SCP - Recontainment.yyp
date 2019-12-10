@@ -1471,6 +1471,14 @@
             }
         },
         {
+            "Key": "6a5bb7b7-2843-4fe0-82e1-1486d865030b",
+            "Value": {
+                "id": "d7ed7f9a-206f-44c9-90ed-df581585fd57",
+                "resourcePath": "sprites\\spr_inv_scar\\spr_inv_scar.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6a80bc63-4d42-4b01-8b63-2d9b730e75d2",
             "Value": {
                 "id": "fda6e29b-9f38-407e-aca6-92f8b0574ea3",
@@ -1871,6 +1879,14 @@
             }
         },
         {
+            "Key": "86e6838a-1d94-4766-a511-0b98ba7b58ff",
+            "Value": {
+                "id": "9ee3cdd3-6009-4cc0-8a41-cbdb49c5ffaa",
+                "resourcePath": "sprites\\spr_inv_paper\\spr_inv_paper.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "87ee5485-a301-4595-b2cf-8cca1a7380fa",
             "Value": {
                 "id": "0dab18c7-0394-4e72-aed8-fd017d555f02",
@@ -2039,6 +2055,14 @@
             }
         },
         {
+            "Key": "95397518-d370-41f8-8755-fc28630ccb6a",
+            "Value": {
+                "id": "83df712f-70c0-4a27-9cc4-d5d146e3e711",
+                "resourcePath": "views\\95397518-d370-41f8-8755-fc28630ccb6a.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "9641a99b-cbc7-4712-a2e6-527e34f1157d",
             "Value": {
                 "id": "d249d25d-15e0-4acf-8c08-3f01b0b87692",
@@ -2116,6 +2140,14 @@
                 "id": "88f7b27e-d25a-4ad3-80c5-3443477ed256",
                 "resourcePath": "objects\\light_generic\\light_generic.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "99bb664d-cf28-4d3b-bb6d-80c21efad1b7",
+            "Value": {
+                "id": "e16cdc76-965f-4a71-bb3f-9b7713896a8f",
+                "resourcePath": "sprites\\spr_inv_9mm\\spr_inv_9mm.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2940,6 +2972,14 @@
                 "id": "4afc9e47-22d2-46b9-9995-c02b0d00b11e",
                 "resourcePath": "sprites\\txr_femur_breaker\\txr_femur_breaker.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d78e5ecb-c361-4ae1-bad3-5e779194ac04",
+            "Value": {
+                "id": "ee1ac374-c50f-43db-8925-c62652eb2a53",
+                "resourcePath": "views\\d78e5ecb-c361-4ae1-bad3-5e779194ac04.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

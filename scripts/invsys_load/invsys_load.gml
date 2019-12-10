@@ -12,23 +12,23 @@ for (var i = 0; i < 8; ++i) {
 }
 
 // If it's a NPC, we can already setup a predefined inventory
-if (self.object_index != obj_player) {
+if (self != obj_player) {
 	with (self) {
-		if object_index == npc_mtf {
+		if self == npc_mtf {
 			var k = 0
 			inv[k++] = "NPC"
 			inv[k++] = "weapon_scar"
 			inv[k++] = "weapon_9mm"
-			inv[k++] = "keycard_omnni"
-		} else if object_index == npc_scientist {
+			inv[k++] = "keycard_lvl4"
+		} else if self == npc_scientist {
 			var k = 0
 			inv[k++] = "NPC"
-			inv[k++] = "keycard_" + string(floor(irandom_range(2,5)))
-		} else if object_index == npc_dclass {
+			inv[k++] = "keycard_lvl" + string(floor(irandom_range(2,5)))
+		} else if self == npc_dclass {
 			inv[0] = "NPC"
 			var chance = floor(irandom_range(1,5))
 			if (chance == 5) {
-				inv[1] = "item_paper_orientation"
+				inv[1] = "paper_173"
 			} else {
 				inv[1] = "empty"
 			}

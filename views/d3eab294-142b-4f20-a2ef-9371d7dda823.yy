@@ -7,7 +7,7 @@
         "671d2797-0b73-4966-b6d9-fe624b7c4ab3"
     ],
     "filterType": "GMScript",
-    "folderName": "ICG",
+    "folderName": "GZR",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

@@ -256,7 +256,7 @@ if (canOpenInv) {
 				if instance_exists(inventoryObj) {instance_destroy(inventoryObj)}
 			} else {
 				hasInvOpen = true
-				inventoryObj = instance_create_layer(x,y,"UI",obj_inventory)
+				inventoryObj = instance_create_layer(x,y,"UI3",obj_inventory)
 			}
 		}
 	}

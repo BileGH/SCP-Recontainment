@@ -7,4 +7,4 @@ interactTime = 30
 mcounter = 0
 mHoldTime = 0
 drawItem = true
-size = 64
+size = 128
