@@ -343,6 +343,14 @@
             }
         },
         {
+            "Key": "160b9daf-5f54-432d-ab02-af4fbe0c0c61",
+            "Value": {
+                "id": "8c84aa8f-42f1-4832-bf15-3c18ca81ab63",
+                "resourcePath": "objects\\obj_inventoryslot\\obj_inventoryslot.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "160ed784-580e-4744-9016-5eda90c9db34",
             "Value": {
                 "id": "bb3c1864-0d1a-409e-9dd4-b03e21d0d777",
@@ -2714,7 +2722,7 @@
             "Key": "cc0c08e1-5c2c-4152-a025-a1bb607af10e",
             "Value": {
                 "id": "f2262acc-239c-4c30-a2cf-5e2056bfc195",
-                "resourcePath": "sprites\\spr_button103\\spr_button103.yy",
+                "resourcePath": "sprites\\spr_buttonup\\spr_buttonup.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2748,14 +2756,6 @@
                 "id": "a1d8634d-d73b-4d5c-9b11-f97ced40f702",
                 "resourcePath": "sprites\\txr_door_vertical_open\\txr_door_vertical_open.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "cf406604-21be-46c4-af24-c953cbaa1501",
-            "Value": {
-                "id": "3a0e60cd-6185-4618-91e7-932f5cf55a1c",
-                "resourcePath": "objects\\obj_UI\\obj_UI.yy",
-                "resourceType": "GMObject"
             }
         },
         {

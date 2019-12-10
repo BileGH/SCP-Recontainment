@@ -84,8 +84,8 @@ if (canMove) {
 	}
 
 	if step < 1 {
-				audio_emitter_falloff(SoundEmitter, 300, 750, 1);
-				audio_play_sound_on(SoundEmitter,snd_mtf_walk,0,1)
+		audio_emitter_falloff(SoundEmitter, 300, 750, 1);
+		audio_play_sound_on(SoundEmitter,snd_mtf_walk,0,1)
 		step = ToStepTimer
 	}
 
@@ -102,6 +102,14 @@ if (canMove) {
 
 
 	image_angle = point_direction(x, y, mouse_x, mouse_y);
+} else {
+	MOVING = 0
+	if speed > 0 {
+		speed -= HowSlowerToSlowDown
+		step -= speed / StepSoundSpeed
+	} else {
+		speed = 0
+	}
 }
 #endregion
 
@@ -260,6 +268,7 @@ if (canOpenInv) {
 		canMove = true
 	}
 }
+
 
 #endregion
 

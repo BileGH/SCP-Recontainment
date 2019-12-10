@@ -142,8 +142,11 @@ interactDistance = 360
 
 canOpenInv = true
 hasInvOpen = false
-
 inventoryObj = noone
+
+for (var i = 0; i < 16; ++i) {
+    inv[i] = "empty"
+}
 
 var k = 0 
 inv[++k] = "weapon_scar"

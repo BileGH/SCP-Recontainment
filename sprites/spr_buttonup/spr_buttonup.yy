@@ -2,7 +2,7 @@
     "id": "cc0c08e1-5c2c-4152-a025-a1bb607af10e",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_button103",
+    "name": "spr_buttonup",
     "For3D": false,
     "HTile": false,
     "VTile": false,
