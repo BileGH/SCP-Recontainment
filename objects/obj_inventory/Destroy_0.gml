@@ -1,4 +1,7 @@
 /// @description Destroy all item slots
-with (obj_inventoryslot) {
-	instance_destroy(self)
+for (var i = 1; i < 15; ++i) {
+    with (slot[i]) {
+		obj_player.inv[i] = slotItem
+		instance_destroy(self)
+	}
 }

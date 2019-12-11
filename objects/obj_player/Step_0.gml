@@ -234,13 +234,14 @@ interactTarget = instance_nearest(mouse_x,mouse_y,obj_interactable)
 if keyboard_check(interactKey) {
 	if (interactionTimer <= 0) {
 		interactionTimer = interactionTime
-		if (distance_to_object(interactTarget) < interactDistance) {
-			if instance_exists(interactTarget) {
-				with interactTarget {interact = true}
+		if instance_exists(interactTarget) {
+			if (distance_to_object(interactTarget) < interactTarget.interactDistance) {
+				with interactTarget {
+					interactCaller = other
+					interact = true
+				}
 			}
 		}
-		
-
 	}
 }
 #endregion

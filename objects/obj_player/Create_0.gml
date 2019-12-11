@@ -152,7 +152,8 @@ canOpenInv = true
 hasInvOpen = false
 inventoryObj = noone
 
-for (var i = 0; i < 16; ++i) {
+inv[0] = "PLY" // Player Inventory Type
+for (var i = 1; i < 15; ++i) {
     inv[i] = "empty"
 }
 
@@ -160,6 +161,19 @@ var k = 0
 inv[++k] = "weapon_scar"
 inv[++k] = "weapon_9mm"
 inv[++k] = "paper_173"
+inv[++k] = "paper_173"
+inv[++k] = "paper_173"
+inv[++k] = "paper_173"
+inv[++k] = "paper_173"
+inv[++k] = "empty"
+inv[++k] = "empty"
+inv[++k] = "empty"
+inv[++k] = "empty"
+inv[++k] = "empty"
+inv[++k] = "empty"
+inv[++k] = "empty"
+
+
 
 #endregion
 

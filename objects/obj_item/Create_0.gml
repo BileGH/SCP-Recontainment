@@ -1,10 +1,9 @@
-/// @description Create variables
+/// @description Insert description here
+// You can write your code in this editor
 
-event_inherited()
+// Inherit the parent event
+event_inherited();
 
-// Self variables
-firstStep = true
-
-
-// Changeable Variables
+interactDistance = 80
 item = "empty"
+firstStep = true

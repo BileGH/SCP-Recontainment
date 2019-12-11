@@ -1,0 +1,1 @@
+if interact { interact = false }

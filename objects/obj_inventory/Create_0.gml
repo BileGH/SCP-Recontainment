@@ -13,7 +13,7 @@ slot[0] = "empty"
 
 // Row 1
 for (var i = 1; i < 8; ++i) {
-	slot[i] = instance_create_layer(xc + (172* i),yc,"UI2",obj_inventoryslot)
+	slot[i] = instance_create_layer(xc + (172 * i),yc,"UI2",obj_inventoryslot)
 	with (slot[i]) {
 		slot = i
 		slotItem = obj_player.inv[i]
@@ -22,10 +22,10 @@ for (var i = 1; i < 8; ++i) {
 
 // Row 1
 for (var i = 1; i < 8; ++i) {
-	slot[i+8] = instance_create_layer(xc + (172 * i),yc + 186,"UI2",obj_inventoryslot)
-	with (slot[i+8]) {
-		slot = i + 8
-		slotItem = obj_player.inv[i + 8]
+	slot[i+7] = instance_create_layer(xc + (172 * i),yc + 186,"UI2",obj_inventoryslot)
+	with (slot[i+7]) {
+		slot = i + 7
+		slotItem = obj_player.inv[i + 7]
 	}
 }
 

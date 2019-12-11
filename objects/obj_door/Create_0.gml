@@ -1,5 +1,7 @@
 image_speed = 0
 
+event_inherited()
+
 Open = 0
 Opening = 0
 ImageOpen = image_number - 1
