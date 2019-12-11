@@ -1,6 +1,6 @@
 if mouseHasItem {
 	if mouse_check_button_released(mb_left) {
-		if !point_in_rectangle(mouse_x,mouse_y,x - (sprite_width * image_xscale)/2,y - (sprite_height * image_yscale)/2,x + (sprite_width * image_xscale)/2,y + (sprite_height * image_yscale)/2) {
+		if !point_in_rectangle(mouse_x,mouse_y,x - (128 * image_xscale),y - (64 * image_yscale),x + (128 * image_xscale),y + (64 * image_yscale)) {
 			// Drop item
 			if instance_exists(obj_player) {
 				var itemObj = instance_create_layer(obj_player.x,obj_player.y,"Instances",obj_item)
