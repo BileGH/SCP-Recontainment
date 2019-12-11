@@ -151,7 +151,8 @@ interactDistance = 360
 canOpenInv = true
 hasInvOpen = false
 inventoryObj = noone
-
+mxprev = 0
+myprev = 0
 inv[0] = "PLY" // Player Inventory Type
 for (var i = 1; i < 15; ++i) {
     inv[i] = "empty"

@@ -254,9 +254,12 @@ if (canOpenInv) {
 			interactionTimer = interactionTime
 			if hasInvOpen {
 				hasInvOpen = false
+				window_mouse_set(mxprev,myprev)
 				if instance_exists(inventoryObj) {instance_destroy(inventoryObj)}
 			} else {
 				hasInvOpen = true
+				mxprev = window_mouse_get_x()
+				myprev = window_mouse_get_y()
 				inventoryObj = instance_create_layer(x,y,"UI3",obj_inventory)
 			}
 		}
