@@ -1,6 +1,6 @@
 
 {
-    "name": "map_menu",
+    "name": "rm_menu",
     "id": "9d961cbc-0a49-4753-96d9-16934ba5d1d8",
     "creationCodeFile": "",
     "inheritCode": false,

@@ -1,6 +1,6 @@
 
 {
-    "name": "map_intro",
+    "name": "rm_intro",
     "id": "69797329-18b9-4793-8365-6c5d815a835e",
     "creationCodeFile": "",
     "inheritCode": false,
