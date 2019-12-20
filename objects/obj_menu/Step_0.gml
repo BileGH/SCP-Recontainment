@@ -17,3 +17,9 @@ with (btnExit) {
 		game_end()
 	}
 }
+
+if !audio_is_playing(snd_pc_startup) {
+	if !audio_is_playing(snd_pc_loop2){
+		audio_play_sound(snd_pc_loop2,0,false)
+	}
+}

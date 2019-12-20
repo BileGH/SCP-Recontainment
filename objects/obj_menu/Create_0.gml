@@ -1,9 +1,9 @@
 // Spawn menu
 var k = 0
-var dist = 164
-btnPlay = instance_create_layer(608 + (dist * ++k),256,"UI",obj_button)
-btnLoad = instance_create_layer(608 + (dist * ++k),256,"UI",obj_button)
-btnExit = instance_create_layer(608 + (dist * ++k),256,"UI",obj_button)
+var dist = 256
+btnPlay = instance_create_layer(480 + (dist * ++k),288,"UI",obj_button)
+btnLoad = instance_create_layer(480 + (dist * ++k),288,"UI",obj_button)
+btnExit = instance_create_layer(480 + (dist * ++k),288,"UI",obj_button)
 
 
 var scalex = 0.125

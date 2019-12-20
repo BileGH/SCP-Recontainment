@@ -4,6 +4,15 @@ if (loading) {
 		room = rm_menu
 	} else {
 		// Do loading stuff.
+		
+		if (loadStage > 0) {
+			if !audio_is_playing(snd_pc_startup) {
+				if !audio_is_playing(snd_pc_loop1) {
+					audio_play_sound(snd_pc_loop1,0,false)
+				}
+			}
+		}
+		
 		switch (loadStage) {
 			case 0:
 			#region Loading0
@@ -16,10 +25,7 @@ if (loading) {
 			case 1:
 			#region Loading1
 			loadText = localization("loading1")
-			if !audio_is_playing(snd_pc_startup) {
-				audio_play_sound(choose(snd_pc_loop1,snd_pc_loop2),0,true)
-				loadStage += 1
-			}
+			loadStage += 1
 			#endregion	
 			break
 			
