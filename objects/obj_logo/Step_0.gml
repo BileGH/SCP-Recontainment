@@ -7,7 +7,7 @@ if (interactTimer <= 0) {
 			stage = 0
 			alpha = 0
 		} else {
-			//room_goto(map_menu)
+			room_goto(rm_loading)
 		}
 	}
 } else {

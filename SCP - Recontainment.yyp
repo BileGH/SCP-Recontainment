@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "0ec59b66-9a95-4df7-9785-8faa238b8584",
+            "Value": {
+                "id": "bd299548-b3de-414f-8318-c2ad539a3bc3",
+                "resourcePath": "fonts\\fnt_courier24\\fnt_courier24.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "0ef88f6d-2a03-4c45-b880-bd4b04f632ab",
             "Value": {
                 "id": "8a7e9cde-1b12-4521-8cae-0b0a9a92cedc",
@@ -1012,14 +1020,6 @@
                 "id": "60577972-a102-4e5f-bd43-d94abfd55c57",
                 "resourcePath": "sounds\\snd_scp096_scream_1\\snd_scp096_scream_1.yy",
                 "resourceType": "GMSound"
-            }
-        },
-        {
-            "Key": "4825a8af-5c27-4ebf-86ff-2bc8e8187e04",
-            "Value": {
-                "id": "ab73a2da-2781-4f9b-8245-4de6f806617d",
-                "resourcePath": "sprites\\spr_folder\\spr_folder.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -1855,6 +1855,14 @@
             }
         },
         {
+            "Key": "84a015b5-6715-43f8-8cbb-9ca6f6209f7e",
+            "Value": {
+                "id": "bfda7f34-4c4e-4738-82ab-de396641ee08",
+                "resourcePath": "fonts\\fnt_courier32\\fnt_courier32.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "84b133d5-259f-47da-8693-525764c6af80",
             "Value": {
                 "id": "cb4e099b-bfef-4c47-915f-a02784a8ffe2",
@@ -2143,6 +2151,14 @@
             }
         },
         {
+            "Key": "999cff75-790e-46c2-ba2c-f241fe0f24a9",
+            "Value": {
+                "id": "56dedabc-571c-4843-94e2-8d8efcde6f3b",
+                "resourcePath": "sprites\\spr_folder\\spr_folder.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "99afe77b-11e0-48cd-8925-ffc4730116bf",
             "Value": {
                 "id": "88f7b27e-d25a-4ad3-80c5-3443477ed256",
@@ -2300,6 +2316,14 @@
                 "id": "ff702933-9d2b-4c7e-a86a-ebd06904616e",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "a990bbc8-f2c0-4462-9d78-25e38a16a69f",
+            "Value": {
+                "id": "07d34045-357d-4c92-ac96-c74ba8de9c76",
+                "resourcePath": "sprites\\spr_monitor\\spr_monitor.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3204,6 +3228,14 @@
                 "id": "246752b3-b89f-4a7d-96b9-02da41e5dc05",
                 "resourcePath": "sounds\\snd_alarm4\\snd_alarm4.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "e89cb5e5-5cf5-4151-ac8d-300379b0e234",
+            "Value": {
+                "id": "7aaf73a5-f352-4ede-bd20-206f9e018447",
+                "resourcePath": "fonts\\fnt_courier16\\fnt_courier16.yy",
+                "resourceType": "GMFont"
             }
         },
         {

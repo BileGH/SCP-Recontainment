@@ -1,34 +1,43 @@
 // Spawn menu
 var k = 0
-var dist = 128
-btnPlay = instance_create_layer(64,256 + (dist * ++k),"UI",obj_button)
-btnLoad = instance_create_layer(64,256 + (dist * ++k),"UI",obj_button)
-btnExit = instance_create_layer(64,256 + (dist * ++k),"UI",obj_button)
+var dist = 164
+btnPlay = instance_create_layer(608 + (dist * ++k),256,"UI",obj_button)
+btnLoad = instance_create_layer(608 + (dist * ++k),256,"UI",obj_button)
+btnExit = instance_create_layer(608 + (dist * ++k),256,"UI",obj_button)
 
 
-var scalex = 0.75
-var scaley = 0.5
+var scalex = 0.125
+var scaley = 0.125
+var spr = spr_folder
+var offsetY = 64
+var fnt = fnt_courier24
 with (btnPlay) {
 	hasText = true
-	text = "Play"
-	font = fnt_default
+	text = localization("button_newgame")
+	font = fnt
 	image_xscale = scalex
 	image_yscale = scaley
+	image_index = spr
+	textOffsetY = offsetY
 }
 
 with (btnLoad) {
 	hasText = true
-	text = "Load"
-	font = fnt_default
+	text = localization("button_options")
+	font = fnt
 	image_xscale = scalex
 	image_yscale = scaley
+	image_index = spr
+	textOffsetY = offsetY
 }
 
 with (btnExit) {
 	hasText = true
-	text = "Exit"
-	font = fnt_default
+	text = localization("button_exit")
+	font = fnt
 	image_xscale = scalex
 	image_yscale = scaley
+	image_index = spr
+	textOffsetY = offsetY
 }
 

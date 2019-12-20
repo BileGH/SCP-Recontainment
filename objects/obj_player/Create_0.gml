@@ -178,6 +178,14 @@ inv[++k] = "empty"
 
 #endregion
 
+#region Hotbar
+
+#endregion
+
+#region Shooting
+
+#endregion
+
 #region Weapon System 2
 // New Weapon System
 

@@ -276,6 +276,14 @@ if (canOpenInv) {
 
 #endregion
 
+#region Hotbar
+
+#endregion
+
+#region Shooting
+
+#endregion
+
 #region Collision
 //COLLISION
 

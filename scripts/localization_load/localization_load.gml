@@ -13,6 +13,15 @@ localization_add("loading1")
 localization_add("loading2")
 localization_add("loading3")
 localization_add("loading4")
+var i = "item_"
+localization_add(i + "empty")
+localization_add(i + "weapon_scar")
+localization_add(i + "weapon_9mm")
+localization_add(i + "paper_173")
+var b = "button_"
+localization_add(b + "newgame")
+localization_add(b + "options")
+localization_add(b + "exit")
 #endregion
 ini_close()
 

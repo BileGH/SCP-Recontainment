@@ -5,7 +5,8 @@ if hasText {
 	draw_set_valign(fa_middle)
 	
 	if font_exists(font) {
-		draw_text(x+(sprite_width/2),y+(sprite_height/2),text)
+		draw_set_font(font)
+		draw_text(x+(sprite_width/2)+textOffsetX,y+(sprite_height/2)+textOffsetY,text)
 	}
 	
 	draw_set_halign(fa_left)

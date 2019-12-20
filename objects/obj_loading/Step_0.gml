@@ -8,7 +8,7 @@ if (loading) {
 			case 0:
 			#region Loading0
 			loadText = localization("loading0")
-			
+			audio_play_sound(snd_pc_startup,0,false)
 			loadStage += 1
 			#endregion
 			break
@@ -16,7 +16,10 @@ if (loading) {
 			case 1:
 			#region Loading1
 			loadText = localization("loading1")
-			loadStage += 1
+			if !audio_is_playing(snd_pc_startup) {
+				audio_play_sound(choose(snd_pc_loop1,snd_pc_loop2),0,true)
+				loadStage += 1
+			}
 			#endregion	
 			break
 			
