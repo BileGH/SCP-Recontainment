@@ -7,7 +7,7 @@
         "c37ae7e3-4d81-4617-bc41-854eddfe681c"
     ],
     "filterType": "GMObject",
-    "folderName": "Loading",
+    "folderName": "Logo",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

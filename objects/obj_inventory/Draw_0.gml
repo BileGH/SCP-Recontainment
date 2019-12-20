@@ -3,7 +3,8 @@ draw_self()
 // Item Descriptions
 if (mouseIn > 0) {
 	with (slot[mouseIn]) {
-		other.textToDraw = "Empty"
+		other.textToDraw = localization("item_" + slotItem)
+		/*
 		switch(slotItem) {
 			case "weapon_scar":
 			// Called P90 until we replace the sprite
@@ -16,6 +17,7 @@ if (mouseIn > 0) {
 			other.textToDraw = "Document SCP-173"
 			break
 		}
+		*/
 	}
 }
 

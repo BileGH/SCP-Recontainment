@@ -1,0 +1,15 @@
+stage = 0
+image = 0
+var k = 0
+img[k++] = spr_logo
+img[k++] = spr_logo2
+img[k++] = spr_loadwarn
+alpha = 0
+interactTime = 60
+interactTimer = interactTime
+var t = 0
+screenTime[t++] = 120
+screenTime[t++] = 120
+screenTime[t++] = 360
+screenTimer = 0
+leaveTimer = 30

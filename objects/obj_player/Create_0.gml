@@ -187,9 +187,6 @@ inv[++k] = "empty"
 #endregion
 
 #region Other code
-// Spawn debug console
-instance_create_depth(0,0,0,obj_console)
-
 // Spawn cursor
 instance_create_layer(1,1,"UI",obj_cursor)
 #endregion
