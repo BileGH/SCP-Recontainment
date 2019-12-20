@@ -1,3 +1,12 @@
+switch(inv[htbrsl]) {
+	case "weapon_scar":
+	image_index = txr_player_ScarL
+	break
+	case "weapon_9mm":
+	image_index = txr_player_hg
+	break
+}
+
 draw_self()
 /*
 if global.Debug_Mode {

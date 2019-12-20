@@ -1,10 +1,10 @@
-var Splatter = instance_create_layer(x, y, "BulletLayer", obj_effectsplatter)
+var Splatter = instance_create_layer(x, y, "Bullets", obj_effectsplatter)
 with(Splatter) {
 	image_angle = other.image_angle + 180 sprite_index = other.ToSplatter
 }
 
 for (var i = HowManyEffectsCreate; i > 0; i -= 1) {
-	var Effect = instance_create_layer(x, y, "BulletLayer", obj_effectair)
+	var Effect = instance_create_layer(x, y, "Bullets", obj_effectair)
 	with(Effect) {
 		direction = other.image_angle + 180 + random_range(-30, 30) sprite_index = other.ToEffect
 	}

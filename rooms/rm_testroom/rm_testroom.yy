@@ -384,7 +384,7 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "BulletLayer",
+            "name": "Bullets",
             "id": "5cf949f2-bfda-481f-a298-52b7b414365c",
             "depth": 1100,
             "grid_x": 32,

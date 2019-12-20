@@ -277,11 +277,50 @@ if (canOpenInv) {
 #endregion
 
 #region Hotbar
-
+if keyboard_check_pressed(ord("1")) {
+	htbrsl = 1
+} else
+if keyboard_check_pressed(ord("2")) {
+	htbrsl = 2
+} else
+if keyboard_check_pressed(ord("3")) {
+	htbrsl = 3
+} else
+if keyboard_check_pressed(ord("4")) {
+	htbrsl = 4
+}
 #endregion
 
 #region Shooting
-
+if (fireTimer <= 0) {
+	if mouse_check_button(mb_left) {
+		fireTimer = fireInterval
+		switch(inv[htbrsl]) {
+			case "weapon_scar":
+			PlayFiringSound
+			var dir = point_direction(x,y,mouse_x,mouse_y)
+			var bullet = instance_create_layer(x + lengthdir_x(32,dir + 6),y+ lengthdir_y(32,dir + 6),"Bullets",obj_bullet)
+			with bullet {
+				Damage = 12 
+				image_angle = other.image_angle
+				Owner = other.id
+			}
+			break
+			case "weapon_9mm":
+			PlayFiringSound
+			var dir = point_direction(x,y,mouse_x,mouse_y)
+			var bullet = instance_create_layer(x + lengthdir_x(32,dir + 6),y+ lengthdir_y(32,dir + 6),"Bullets",obj_bullet)
+			with bullet {
+				Damage = 8 
+				image_angle = other.image_angle
+				Owner = other.id
+			}
+			break
+		}
+	}
+} else {
+	--fireTimer
+}
 #endregion
 
 #region Collision

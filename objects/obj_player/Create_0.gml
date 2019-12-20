@@ -61,7 +61,7 @@ draw_set_color(c_black);
 #macro MacroFireEquippedWeapon var Bullet = instance_create_layer(x+lengthdir_x(Equipped[|15],image_angle+Equipped[|16]), y+lengthdir_y(Equipped[|15],image_angle+Equipped[|16]), "BulletLayer", obj_bullet) with(Bullet) {Damage = other.Equipped[| 2] + random_range(-other.Equipped[| 3], other.Equipped[| 3]) image_angle = other.image_angle Owner = other.id }
 
 #macro MacroBloodPuddles HowManyBloodPuddles = 3 HowFarOutBloodPuddles = 6;
-#macro MacroMakeBloodPuddlesAndCorpse var Corpse = instance_create_layer(x,y,"BulletLayer",CorpseName) with Corpse {image_angle=random_range(other.image_angle-10,other.image_angle+10)}for (i = HowManyBloodPuddles; i > 1; i -= 1) {instance_create_layer(x + random_range(-HowFarOutBloodPuddles, HowFarOutBloodPuddles), y + random_range(-HowFarOutBloodPuddles, HowFarOutBloodPuddles), "Bottom_Layer", obj_blood_puddle);}
+#macro MacroMakeBloodPuddlesAndCorpse var Corpse = instance_create_layer(x,y,"Bullets",CorpseName) with Corpse {image_angle=random_range(other.image_angle-10,other.image_angle+10)}for (i = HowManyBloodPuddles; i > 1; i -= 1) {instance_create_layer(x + random_range(-HowFarOutBloodPuddles, HowFarOutBloodPuddles), y + random_range(-HowFarOutBloodPuddles, HowFarOutBloodPuddles), "Bottom_Layer", obj_blood_puddle);}
 
 #macro MacroBleedingStatus Bleeding = 0 BleedingNaturalHealing = 0.00001 ToBloodDrip = 0.5 ToReBloodDrip = 0.5
 
@@ -72,6 +72,7 @@ draw_set_color(c_black);
 #macro MacroPlayerNPCMaster MacroSoundEmitters MacroBleedingStatus MacroBloodPuddles
 MacroPlayerNPCMaster
 
+#macro PlayFiringSound audio_emitter_falloff(SoundEmitter2, 2500, 8000, 1); audio_play_sound_on(SoundEmitter2,snd_hg_shot,0,1); audio_emitter_falloff(SoundEmitter, 300, 750, 1); audio_play_sound_on(SoundEmitter,snd_bullet_drop,0,1)
 #endregion
 
 #region Audio Systme
@@ -179,19 +180,12 @@ inv[++k] = "empty"
 #endregion
 
 #region Hotbar
-
+htbrsl = 1 // Hot Bar Selection
 #endregion
 
 #region Shooting
-
-#endregion
-
-#region Weapon System 2
-// New Weapon System
-
-
-
-
+fireInterval = 6
+fireTimer = 0
 #endregion
 
 #region Other code
