@@ -14,8 +14,7 @@
         "10f7f779-2d30-4fef-91f9-ed53f63ae0c8",
         "568e3f9b-2e23-431a-bfcd-6a529c55d001",
         "b301a6d9-c824-4a48-808a-83babad19c3f",
-        "69cb967e-768b-4b2a-8300-2d1e61ed9684",
-        "b0b3330e-1a5b-4bf0-9667-e5c717d98f40"
+        "69cb967e-768b-4b2a-8300-2d1e61ed9684"
     ],
     "filterType": "GMObject",
     "folderName": "Technical",

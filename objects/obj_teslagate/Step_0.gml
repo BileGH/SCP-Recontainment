@@ -243,6 +243,7 @@ if interact {
 			if (active) {audio_play_sound(q_player_tesla0,2,false)}
 		}
 	}
-	interact = false
 }
 #endregion
+
+event_inherited()

@@ -6,6 +6,8 @@ if (interactTimer <= 0) {
 			image += 1
 			stage = 0
 			alpha = 0
+		} else {
+			//room_goto(map_menu)
 		}
 	}
 } else {
@@ -39,6 +41,7 @@ switch (stage) {
 		var images = (array_length_1d(img) - 1)
 		if (image < images) {
 			++image
+			stage = 0
 		} else {
 			if (leaveTimer <= 0) {
 				//room_goto(rm_loading)
