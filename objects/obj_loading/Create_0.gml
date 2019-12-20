@@ -1,6 +1,15 @@
-x=room_width/2;
-y=room_height/2
-
-image_alpha=0;
-
-if debug_mode {room_goto(map_test_room)}
+stage = 0
+image = 0
+var k = 0
+img[k++] = spr_logo
+img[k++] = spr_loadwarn
+img[k++] = spr_logo
+alpha = 0
+interactTime = 60
+interactTimer = interactTime
+var t = 0
+screenTime[t++] = 120
+screenTime[t++] = 120
+screenTime[t++] = 120
+screenTimer = 0
+leaveTimer = 30

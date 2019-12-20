@@ -1,6 +1,54 @@
-image_alpha=min(image_alpha+0.005,1);
-
-if image_alpha=1 
-{
-	instance_change(obj_loading2,1);
+if (interactTimer <= 0) {
+	if keyboard_check(vk_anykey) {
+		var images = (array_length_1d(img) - 1)
+		if (image < images) {
+			interactTimer = interactTime
+			image += 1
+			stage = 0
+			alpha = 0
+		}
+	}
+} else {
+	--interactTimer
 }
+
+switch (stage) {
+	case 0:
+	if (alpha < 1) {
+		alpha += 0.015
+	} else {
+		++stage
+		alpha = 1
+		screenTimer = screenTime[image]
+	}
+	break
+	
+	case 1:
+	if (screenTimer < 0) {
+		++stage
+	} else {
+		--screenTimer
+	}
+	break
+	
+	case 2:
+	if (alpha > 0) {
+		alpha -= 0.015
+	} else {
+		alpha = 0
+		var images = (array_length_1d(img) - 1)
+		if (image < images) {
+			++image
+		} else {
+			if (leaveTimer <= 0) {
+				//room_goto(rm_loading)
+				room_goto(map_menu)
+			} else {
+				--leaveTimer
+			}
+		}
+	}
+	break
+}
+
+image_index = img[image]

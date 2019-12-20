@@ -279,17 +279,17 @@ if (canOpenInv) {
 #region Collision
 //COLLISION
 
-if collision_line(x, y, x, y + vspeed, obj_wall, 0, 0) {
+if collision_line(x, y, x, y + vspeed, obj_wall, 0, 0) || collision_line(x, y, x, y + vspeed, prop_static, 0, 0) {
 	vspeed = 0 x = xprevious
 }
-if collision_line(x, y, x + hspeed, y, obj_wall, 0, 0) {
+if collision_line(x, y, x + hspeed, y, obj_wall, 0, 0) || collision_line(x, y, x + hspeed, y, prop_static, 0, 0) {
 	hspeed = 0 y = yprevious
 }
 
-if collision_line(x, y, x, y + vspeed, obj_door, 1, 0) {
+if collision_line(x, y, x, y + vspeed, obj_door, 1, 0) || collision_line(x, y, x, y + vspeed, prop_static, 1, 0) {
 	vspeed = 0 x = xprevious
 }
-if collision_line(x, y, x + hspeed, y, obj_door, 1, 0) {
+if collision_line(x, y, x + hspeed, y, obj_door, 1, 0) || collision_line(x, y, x + hspeed, y, prop_static, 1, 0) {
 	hspeed = 0 y = yprevious
 }
 #endregion
