@@ -26,9 +26,10 @@ var freeSlot = 0
 if interact {
 	// TODO : Pickup sound
 	with (interactCaller) {
+		if (object_index == obj_player) {
+			displayText = localization("getitem")
+		}
 		if inv[0] == "PLY" {
-
-			
 			for (var i = 14; i > 0; --i) {
 				if inv[i] == "empty" {
 					freeSlot = i
@@ -44,6 +45,18 @@ if interact {
 			
 		} else if inv[0] == "NPC" {
 			// TODO: NPC pickup
+			for (var i = 14; i > 0; --i) {
+				if inv[i] == "empty" {
+					freeSlot = i
+					hasFreeSlot = true
+				}
+			}
+			
+			if hasFreeSlot {
+				self.inv[freeSlot] = other.item
+			} else {
+				// TODO: Player message
+			}
 		}
 	}
 	if hasFreeSlot {

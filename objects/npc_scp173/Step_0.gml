@@ -1,11 +1,12 @@
-speed=0
+event_inherited()
 
-if global.blinked=1 && instance_exists(obj_player)
-{
-	move_towards_point(obj_player.x,obj_player.y,50)
-	image_angle=direction;
+var seen = false
+for (var i = 0; i < array_length_1d(viewingEnts)-1; ++i) {
+	if viewingEnts[i] != noone {seen = true}
 }
 
-wait=wait-1
+if seen {canMove = false} else {canMove = true}
 
-if wait<1 scare=0;
+if thinking {
+	
+}

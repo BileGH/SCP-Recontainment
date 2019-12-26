@@ -1,374 +1,304 @@
+#region First Step
+if firstStep {
+	// TODO: Update key binds
+	firstStep = false
+}
+#endregion
+
 #region Timers
 if (flashTimer > 0) {--flashTimer}
 if (interactionTimer > 0) {--interactionTimer}
 #endregion
 
-#region Saving
-//SAVING
-if keyboard_check(vk_f8) game_save("save")
-
-if keyboard_check(vk_f9) game_load("save")
-
-if (global.Debug_Mode) {
-	if keyboard_check(ord("P")) {x = mouse_x; y = mouse_y}
-}
-if keyboard_check(vk_escape) {
-	game_save("save")
-	room_goto(map_menu)
-}
-#endregion
-
-#region Death
-//DEATH
-
-if HP <= 0 instance_destroy();
+#region Stats
+if (hp <= 0) {isAlive = false} else {isAlive = true}
 
 #endregion
 
-#region Blinking
-//BLINKING
 
-if keyboard_check(vk_lalt) {
-	blk = 3 blink = 0
-}
-
-blink = blink - 1;
-
-if blink < 1 {
-	if !instance_exists(obj_blink) {instance_create_layer(x, y, "Top_Layer", obj_blink)}
-	global.blinked = 1;
-};
-if global.blinked = 1 blk = blk - 1;
-
-if blk < 1 {
-	global.blinked = 0;
-	blk = 10;
-	blink = 600;
-	instance_destroy(obj_blink, true)
-};
-#endregion
-
-#region Movement
-//MOVEMENT
-if (canMove) {
-	CurrentSpeed = WalkingSpeed
-	if keyboard_check(vk_lshift) && Stamina > 0 {
-		CurrentSpeed = RunningSpeed;
-		Stamina -= 1;
-		sc = 60;
-		StepSoundSpeed = 10
-	} else {
-		StepSoundSpeed = 11
+if isAlive {
+	#region Code to run only when alive
+	if instance_exists(blood) {
+		instance_destroy(blood)
+		blood = noone
 	}
+	#region Blinking
 
-	sc = sc - 1;
-
-	if sc < 1 && Stamina < 300 {Stamina = Stamina + 1};
-
-	MOVING = 0
-	if keyboard_check(ord("W")) {
-		vspeed -= ActualSpeed;
-		MOVING = 1
-	}
-	if keyboard_check(ord("S")) {
-		vspeed += ActualSpeed;
-		MOVING = 1
-	}
-	if keyboard_check(ord("A")) {
-		hspeed -= ActualSpeed;
-		MOVING = 1
-	}
-	if keyboard_check(ord("D")) {
-		hspeed += ActualSpeed;
-		MOVING = 1
-	}
-
-	if step < 1 {
-		audio_emitter_falloff(SoundEmitter, 300, 750, 1);
-		audio_play_sound_on(SoundEmitter,snd_mtf_walk,0,1)
-		step = ToStepTimer
-	}
-
-	if speed > 0 {
-		speed -= HowSlowerToSlowDown
-		step -= speed / StepSoundSpeed
-	} else {
-		speed = 0
-	}
-
-	if speed > CurrentSpeed {
-		speed -= (speed - CurrentSpeed) / 2
-	}
-
-
-	image_angle = point_direction(x, y, mouse_x, mouse_y);
-} else {
-	MOVING = 0
-	if speed > 0 {
-		speed -= HowSlowerToSlowDown
-		step -= speed / StepSoundSpeed
-	} else {
-		speed = 0
-	}
-}
-#endregion
-
-#region Old Inventory Code
-//INVENTORY
-/*
-if keyboard_check_pressed(ord("1")) {
-	if Equipped != Equip1 {
-		audio_stop_sound(snd_equip_hg)
-		audio_play_sound(snd_equip_hg, 1, 0)
-	}
-	Equipped = Equip1
-	sprite_index = string(Equipped[|14])
-	CurrentMagazine = string(Equipped[|9])
-}
-
-
-if keyboard_check_pressed(ord("2")) {
-	if Equipped != Equip2 {
-		audio_stop_sound(snd_equip_hg)
-		audio_play_sound(snd_equip_hg, 1, 0)
-	}
-	Equipped = Equip2
-	sprite_index = string(Equipped[|14])
-	CurrentMagazine = string(Equipped[|9])
-}
-
-
-//SHOOTING AND RELOADING
-	//Auto and Burst Firing.
-if mouse_check_button(mb_left) {
-	if Equipped[| Equipped[| 10]] = 3 {
-		if Equipped[| 12] = 1 {
-			audio_emitter_falloff(SoundEmitter2, 2500, 8000, 1);
-			audio_play_sound_on(SoundEmitter2,snd_hg_shot,0,1)
-			audio_emitter_falloff(SoundEmitter, 300, 750, 1);
-			audio_play_sound_on(SoundEmitter,snd_bullet_drop,0,1)
-			ToFire = 0
-			ToFireCount = Equipped[| 4]
-			Equipped[| 12] = 0
-			MacroFireEquippedWeapon
-			flashTimer = flashTime
-			
-		}
-	}
-	if Equipped[| Equipped[| 10]] = 2 {
-		for (i = 3; i > 0; i -= 1) {
-			if Equipped[| 12] = 1 {
-				audio_emitter_falloff(SoundEmitter2, 2500, 8000, 1);
-				audio_play_sound_on(SoundEmitter2,snd_hg_shot,0,1)
-				audio_emitter_falloff(SoundEmitter, 300, 750, 1);
-				audio_play_sound_on(SoundEmitter,snd_bullet_drop,0,1)
-				ToFire = 0
-				ToFireCount = Equipped[| 4]
-				Equipped[| 12] = 0
-				MacroFireEquippedWeapon
-				flashTimer = flashTime
+	if keyboard_check(vk_lalt) {
+		blinking = true
+		canOpenInv = false
+		blinkTimer = blinkTime
+		if instance_exists(spriteObject) {
+			with(spriteObject) {
+				delTimer = 5
 			}
 		}
 	}
-}
-	//Single (1) FireMode Firing.
-if mouse_check_button_pressed(mb_left) {
-	if Equipped[| Equipped[| 10]] = 1 {
-		if Equipped[| 12] = 1 {
-			audio_emitter_falloff(SoundEmitter2, 2500, 8000, 1);
-			audio_play_sound_on(SoundEmitter2,snd_hg_shot,0,1)
-			audio_emitter_falloff(SoundEmitter, 300, 750, 1);
-			audio_play_sound_on(SoundEmitter,snd_bullet_drop,0,1)
-			ToFire = 0
-			ToFireCount = Equipped[| 4]
-			Equipped[| 12] = 0
-			MacroFireEquippedWeapon
-			flashTimer = flashTime
+
+	if blinking {
+		canOpenInv = false
+		if !instance_exists(spriteObject) {
+			spriteObject = instance_create_layer(x,y,"UI",obj_sprite)
+			with (spriteObject) {
+				behaviour = "static"
+				color = c_black
+				drawType = "rect"
+				isTemp = true
+				delTimer = 5
+				x1 = camera_get_view_x(view_camera[0])
+				y1 = camera_get_view_y(view_camera[0])
+				x2 = x1 + view_wport[0]/2
+				y2 = y1 + view_hport[0]/2
+			}
+		}
+	} else {
+		canOpenInv = true
+	}
+
+	#region NPC Blink Code Copy
+	// NPC Behaviour copy
+	if (blinkTimer <= 0) {
+		// Blink
+		blinking = true
+		if eyesSmoked {
+			blinkTimer = blinkTime * 0.65
+		} else {
+			blinkTimer = blinkTime
+		}
+	} else {
+		--blinkTimer
+		blinking = false
+	}
+
+	if eyesSmoked {
+		if (eyesSmokeTimer > 0) {
+			--eyesSmokeTimer
+		} else
+		if (eyesSmokeTimer <= 0) {
+			eyesSmoked = false
 		}
 	}
-}
+	#endregion
 
-	//Reloading.
-if keyboard_check_pressed(ord("R")) {
-	if Equipped[| 11] = ds_list_size(Equipped[|9]) - 1 {
-		Equipped[| 11] = 0
-		audio_stop_sound(snd_hg_reload)
-		audio_play_sound(snd_hg_reload, 1, 0)
+	#endregion
+
+	#region Visibility
+
+
+	#region NPC Visibility Code Copy
+	if canSee {
+		var ox = x
+		var oy = y
+		var size = 2048
+		var dir = direction
+		var fov = 45
+		var x1 = ox + lengthdir_x(size,dir+(fov/2))
+		var y1 = oy + lengthdir_y(size,dir+(fov/2))
+		var x2 = ox + lengthdir_x(size,dir-(fov/2))
+		var y2 = oy + lengthdir_y(size,dir-(fov/2))
+		#region 173 Visibility
+		// 173 Code
+		if instance_exists(npc_scp173) {
+			if point_in_triangle(npc_scp173.x,npc_scp173.y,x1,y1,x2,y2,ox,oy) {
+				// 173 is in this entity's FOV
+				if (collision_line(npc_scp173.x,npc_scp173.y,x,y,obj_wall,false,false) == noone) {
+					// 173 is in sights
+					sight173 = true
+					// Add this ent to SCP 173 sight list
+					with(npc_scp173) {
+						var hasFreeSlot = false
+						var freeSlot = 0
+						for (var i = array_length_1d(viewingEnts) - 1; i > 0; --i) {
+							if viewingEnts[i] == noone {
+								hasFreeSlot = true
+								freeSlot = i
+							}
+						}
+						
+						if hasFreeSlot {
+							viewingEnts[freeSlot] = other
+						} else {
+							viewingEnts[array_length_1d(viewingEnts)] = other
+						}
+						
+					}
+				} else {
+					sight173 = false
+				}
+			} else {
+				sight173 = false
+			}
+		} else {
+			sight173 = false
+		}	
+		#endregion
 	}
-	else {
-		Equipped[| 11] += 1
-		audio_stop_sound(snd_hg_reload)
-		audio_play_sound(snd_hg_reload, 1, 0)
+	#endregion
+
+
+	#endregion
+
+	#region Movement
+	if keyboard_check(vk_shift) {
+		running = true
+		var spd = 4
+	} else {
+		running = false
+		var spd = 2
 	}
-}
-
-	//Loading Ammo into the Magazine.
-if keyboard_check(ord("T")) {
-	if Equipped[| 8] > 0 and CurrentMagazine[|Equipped[|11]]< Equipped[| 0] {
-		CurrentMagazine[|Equipped[|11]] += 1
-		Equipped[| 8] -= 1
+	if canMove {
+		if (keyboard_check(ord("W"))) {
+			vspeed -= spd;
+			moving = true
+		}
+		if (keyboard_check(ord("S"))) {
+			vspeed += spd;
+			moving = true
+		}
+		if (keyboard_check(ord("D"))) {
+			hspeed += spd;
+			moving = true
+		}
+		if (keyboard_check(ord("A"))) {
+			hspeed -= spd;
+			moving = true
+		}
+	
+		image_angle = point_direction(x,y, mouse_x ,mouse_y);
+	
+		if speed > 0 {
+			speed -= speed / 6
+		} else {
+			speed = 0
+		}
+	} else {
+		moving = false
+		if speed > 0 {
+			speed -= 1
+		} else {
+			speed = 0
+		}
 	}
-}
+	#endregion
+	
+	#region Interaction
 
-//Changing FireMode
-//MAKE THIS SHIT. REEEEEEEEEEEEE
+	interactTarget = instance_nearest(mouse_x,mouse_y,obj_interactable)
 
-
-//Loading a Bullet into the Chamber.
-if ToFireCount > 0 {
-	ToFireCount -= 1
-} else {
-	if Equipped[| 12] = 0 and CurrentMagazine[|Equipped[|11]]> 0 {
-		Equipped[| 12] = 1
-		CurrentMagazine[|Equipped[|11]] -= 1
-	}
-}
-
-*/
-#endregion
-
-#region Interaction
-
-interactTarget = instance_nearest(mouse_x,mouse_y,obj_interactable)
-
-if keyboard_check(interactKey) {
-	if (interactionTimer <= 0) {
-		interactionTimer = interactionTime
-		if instance_exists(interactTarget) {
-			if (distance_to_object(interactTarget) < interactTarget.interactDistance) {
-				with interactTarget {
-					interactCaller = other
-					interact = true
+	if keyboard_check(interactKey) {
+		if (interactionTimer <= 0) {
+			interactionTimer = interactionTime
+			if instance_exists(interactTarget) {
+				if (distance_to_object(interactTarget) < interactTarget.interactDistance) {
+					with interactTarget {
+						interactCaller = other
+						interact = true
+					}
 				}
 			}
 		}
 	}
-}
-#endregion
+	#endregion
 
-#region Inventory
+	#region Inventory
 
-if (canOpenInv) {
-	if keyboard_check(invOpenKey) {
-		if (interactionTimer <= 0) {
-			interactionTimer = interactionTime
-			if hasInvOpen {
-				hasInvOpen = false
-				window_mouse_set(mxprev,myprev)
-				if instance_exists(inventoryObj) {instance_destroy(inventoryObj)}
-			} else {
-				hasInvOpen = true
-				mxprev = window_mouse_get_x()
-				myprev = window_mouse_get_y()
-				inventoryObj = instance_create_layer(x,y,"UI3",obj_inventory)
+	if (canOpenInv) {
+		if keyboard_check(invOpenKey) {
+			if (interactionTimer <= 0) {
+				interactionTimer = interactionTime
+				if hasInvOpen {
+					hasInvOpen = false
+					pause = false
+					window_mouse_set(mxprev,myprev)
+					if instance_exists(inventoryObj) {instance_destroy(inventoryObj)}
+				} else {
+					hasInvOpen = true
+					pause = true
+					mxprev = window_mouse_get_x()
+					myprev = window_mouse_get_y()
+					inventoryObj = instance_create_layer(x,y,"UI3",obj_inventory)
+				}
 			}
 		}
+	
+	
+		if hasInvOpen {
+			canMove = false
+		} else {
+			canMove = true
+		}
 	}
-	
-	
-	if hasInvOpen {
-		canMove = false
+
+
+	#endregion
+
+	#region Hotbar
+	if keyboard_check_pressed(ord("1")) {
+		htbrsl = 1
+	} else
+	if keyboard_check_pressed(ord("2")) {
+		htbrsl = 2
+	} else
+	if keyboard_check_pressed(ord("3")) {
+		htbrsl = 3
+	} else
+	if keyboard_check_pressed(ord("4")) {
+		htbrsl = 4
+	}
+	#endregion
+
+	#region Shooting
+	if (fireTimer <= 0) {
+		if mouse_check_button(mb_left) {
+			fireTimer = fireInterval
+			switch(inv[htbrsl]) {
+				case "weapon_scar":
+				audio_play_sound(snd_hg_shot,1,false)
+				var dir = point_direction(x,y,mouse_x,mouse_y)
+				var bullet = instance_create_layer(x + lengthdir_x(32,dir + 6),y+ lengthdir_y(32,dir + 6),"Bullets",obj_bullet)
+				with bullet {
+					direction = point_direction(x,y,mouse_x,mouse_y)
+				}
+				break
+				case "weapon_9mm":
+				audio_play_sound(snd_hg_shot,1,false)
+				var dir = point_direction(x,y,mouse_x,mouse_y)
+				var bullet = instance_create_layer(x + lengthdir_x(32,dir + 6),y+ lengthdir_y(32,dir + 6),"Bullets",obj_bullet)
+				with bullet {
+					direction = point_direction(x,y,mouse_x,mouse_y)
+				}
+				break
+			}
+		}
 	} else {
-		canMove = true
+		--fireTimer
 	}
-}
-
-
-#endregion
-
-#region Hotbar
-if keyboard_check_pressed(ord("1")) {
-	htbrsl = 1
-} else
-if keyboard_check_pressed(ord("2")) {
-	htbrsl = 2
-} else
-if keyboard_check_pressed(ord("3")) {
-	htbrsl = 3
-} else
-if keyboard_check_pressed(ord("4")) {
-	htbrsl = 4
-}
-#endregion
-
-#region Shooting
-if (fireTimer <= 0) {
-	if mouse_check_button(mb_left) {
-		fireTimer = fireInterval
-		switch(inv[htbrsl]) {
-			case "weapon_scar":
-			PlayFiringSound
-			var dir = point_direction(x,y,mouse_x,mouse_y)
-			var bullet = instance_create_layer(x + lengthdir_x(32,dir + 6),y+ lengthdir_y(32,dir + 6),"Bullets",obj_bullet)
-			with bullet {
-				Damage = 12 
-				image_angle = other.image_angle
-				Owner = other.id
-			}
-			break
-			case "weapon_9mm":
-			PlayFiringSound
-			var dir = point_direction(x,y,mouse_x,mouse_y)
-			var bullet = instance_create_layer(x + lengthdir_x(32,dir + 6),y+ lengthdir_y(32,dir + 6),"Bullets",obj_bullet)
-			with bullet {
-				Damage = 8 
-				image_angle = other.image_angle
-				Owner = other.id
-			}
-			break
-		}
-	}
+	#endregion
+	
+	#endregion
 } else {
-	--fireTimer
+	#region Code to run only when dead
+	image_index = spr_player_dead
+	if !instance_exists(blood) {
+		blood = instance_create_layer(x,y,"Bottom_Layer",obj_blood_puddle)
+	}
+	#endregion
 }
-#endregion
 
 #region Collision
 //COLLISION
 
 if collision_line(x, y, x, y + vspeed, obj_wall, 0, 0) || collision_line(x, y, x, y + vspeed, prop_static, 0, 0) {
 	vspeed = 0 x = xprevious
+	vspeed -= 0.15
 }
 if collision_line(x, y, x + hspeed, y, obj_wall, 0, 0) || collision_line(x, y, x + hspeed, y, prop_static, 0, 0) {
 	hspeed = 0 y = yprevious
+	hspeed -= 0.15
 }
-
-if collision_line(x, y, x, y + vspeed, obj_door, 1, 0) || collision_line(x, y, x, y + vspeed, prop_static, 1, 0) {
-	vspeed = 0 x = xprevious
-}
-if collision_line(x, y, x + hspeed, y, obj_door, 1, 0) || collision_line(x, y, x + hspeed, y, prop_static, 1, 0) {
-	hspeed = 0 y = yprevious
-}
-#endregion
-
-#region Bleeding
-//BLEEDING
-#macro MacroBleeding if Bleeding>0 {Bleeding -= BleedingNaturalHealing ToBloodDrip-=Bleeding HP-=Bleeding  if ToBloodDrip<=0 {var Blood = instance_create_layer(x+random_range(-10,10), y+random_range(-10,10), "Bottom_Layer" , obj_blood_drip) ToBloodDrip=ToReBloodDrip with (Blood) {image_xscale=1+(other.Bleeding*32) image_yscale=1+(other.Bleeding*32)}}};
-MacroBleeding
-#endregion
-
-#region Audio System
-//AUDIO SYSTEM
-if speed > 0
-   {
-	audio_listener_position(x,y,0)
-   }
-audio_listener_velocity(abs(hspeed),abs(vspeed),0)
-
-MacroSoundEmittersPositionSet
-
 #endregion
 
 #region Debug
-//DEBUG
-if keyboard_check(ord("K"))
-and keyboard_check_pressed(ord("O")) {
-	if global.Debug_Mode = 0 {
-		global.Debug_Mode = 1
-	} else {
-		global.Debug_Mode = 0
-	}
-}
-
-if keyboard_check(ord("P")) and global.Debug_Mode {instance_place(mouse_x,mouse_y,self)}
+if keyboard_check(ord("P")) and debug_mode {instance_place(mouse_x,mouse_y,self)}
 #endregion
+

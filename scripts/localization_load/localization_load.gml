@@ -13,6 +13,11 @@ localization_add("loading1")
 localization_add("loading2")
 localization_add("loading3")
 localization_add("loading4")
+
+localization_add("getitem")
+localization_add("keycardneeded")
+localization_add("keycardnothing")
+
 var i = "item_"
 localization_add(i + "empty")
 localization_add(i + "weapon_scar")

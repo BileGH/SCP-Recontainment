@@ -10,11 +10,8 @@
         "d5aada23-c31b-4903-b6d4-b89c198018a6",
         "137846bc-800f-41b8-bc35-7778a1b0c51c",
         "4af8dbf8-a9ec-425f-ad79-e29036c47a0b",
-        "10f7f779-2d30-4fef-91f9-ed53f63ae0c8",
-        "2217223e-a98a-435d-82b1-d0dcddbecfd7",
-        "568e3f9b-2e23-431a-bfcd-6a529c55d001",
-        "b301a6d9-c824-4a48-808a-83babad19c3f",
-        "69cb967e-768b-4b2a-8300-2d1e61ed9684"
+        "83b36fa4-c09c-4f05-bd6b-47c7b98d81ed",
+        "10f7f779-2d30-4fef-91f9-ed53f63ae0c8"
     ],
     "filterType": "GMObject",
     "folderName": "Technical",

@@ -1,4 +1,4 @@
-if global.Debug_Mode = 1 {draw_self()}
+if debug_mode = 1 {draw_self()}
 
 /*
 with(obj_player) {

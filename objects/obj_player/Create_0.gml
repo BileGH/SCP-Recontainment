@@ -1,3 +1,7 @@
+#region Other code
+// Spawn cursor
+instance_create_layer(1,1,"UI",obj_cursor)
+
 if !audio_is_playing(snd_game_music) {
 	audio_play_sound(snd_game_music,0,true)
 }
@@ -6,14 +10,9 @@ if (instance_number(obj_player) > 1) {instance_destroy(self)}
 
 randomize();
 
-#region Variables
-#region Stats
-//STATS
-HP = 100; //Player Health
-CurrentSpeed = 6; //Current speed
-Stamina = 300;
-global.femur_broken=0
 #endregion
+
+#region Variables
 #region Timers
 // Flash
 flashTimer = 0;
@@ -22,30 +21,28 @@ interactionTimer = 0;
 interactionTime = 10
 #endregion
 #region Movement
-Speed = 0.5
-HowSlowerToSlowDown = 1.5
-WalkingSpeed = 6
-RunningSpeed = 12
-StepSoundSpeed = 11
-ToStepTimer = 25
-ActualSpeed = Speed + HowSlowerToSlowDown
-step = 0; //Timer until you take a step
-sc = 0; //
+moving = false
 canMove = true
+running = false
 #endregion
 #region Binds
 invOpenKey = vk_tab
 interactKey = ord("E")
 #endregion
+#region Stats
+hp = 100
+stamina = 100
+isAlive = true
+#endregion
 #region Other
-//AI
-Followed = 1
-
-
+firstStep = true
+pause = false
+blood = noone
 #endregion
 #endregion
 
-#region Blinking
+#region Old Blinking
+/*
 //BLINKING
 global.blinked = 0; //The state when you have blinked
 blk = 6; //The time you stay with closed eyes, while blinking
@@ -53,25 +50,30 @@ blink = 600; //Timer until you blink
 //HUD
 draw_set_font(fnt_default);
 draw_set_color(c_black);
+*/
+#endregion
 
+#region Blinking
+blinking = false
+blinkTime = room_speed * 10
+blinkTimer = blinkTime
+eyesOpen = true
+eyesSmoked = false
+eyesSmokeTimer = 0
+spriteObject = noone
+#endregion
+
+#region Visibility
+#region NPC Visiblity Code Copy
+canSee = true
+sight173 = false
+
+visibileEnts[0] = noone
+#endregion
 #endregion
 
 #region Macros
 //MACROS
-#macro MacroFireEquippedWeapon var Bullet = instance_create_layer(x+lengthdir_x(Equipped[|15],image_angle+Equipped[|16]), y+lengthdir_y(Equipped[|15],image_angle+Equipped[|16]), "BulletLayer", obj_bullet) with(Bullet) {Damage = other.Equipped[| 2] + random_range(-other.Equipped[| 3], other.Equipped[| 3]) image_angle = other.image_angle Owner = other.id }
-
-#macro MacroBloodPuddles HowManyBloodPuddles = 3 HowFarOutBloodPuddles = 6;
-#macro MacroMakeBloodPuddlesAndCorpse var Corpse = instance_create_layer(x,y,"Bullets",CorpseName) with Corpse {image_angle=random_range(other.image_angle-10,other.image_angle+10)}for (i = HowManyBloodPuddles; i > 1; i -= 1) {instance_create_layer(x + random_range(-HowFarOutBloodPuddles, HowFarOutBloodPuddles), y + random_range(-HowFarOutBloodPuddles, HowFarOutBloodPuddles), "Bottom_Layer", obj_blood_puddle);}
-
-#macro MacroBleedingStatus Bleeding = 0 BleedingNaturalHealing = 0.00001 ToBloodDrip = 0.5 ToReBloodDrip = 0.5
-
-#macro MacroSoundEmitters SoundEmitter = audio_emitter_create(); audio_emitter_position(SoundEmitter, x, y, 0) audio_emitter_pitch(SoundEmitter, random_range(0.8, 1.2)); SoundEmitter2 = audio_emitter_create(); audio_emitter_position(SoundEmitter2, x, y, 0) audio_emitter_pitch(SoundEmitter2, random_range(0.8, 1.2)); SoundEmitter3 = audio_emitter_create(); audio_emitter_position(SoundEmitter3, x, y, 0) audio_emitter_pitch(SoundEmitter3, random_range(0.8, 1.2)); SoundEmitter4 = audio_emitter_create(); audio_emitter_position(SoundEmitter4, x, y, 0) audio_emitter_pitch(SoundEmitter4, random_range(0.8, 1.2)); audio_stop_all()
-
-#macro MacroSoundEmittersPositionSet audio_emitter_position(SoundEmitter, x, y, 0) audio_emitter_position(SoundEmitter2, x, y, 0) audio_emitter_position(SoundEmitter3, x, y, 0) audio_emitter_position(SoundEmitter4, x, y, 0)
-//MARO OF ALL MACROS
-#macro MacroPlayerNPCMaster MacroSoundEmitters MacroBleedingStatus MacroBloodPuddles
-MacroPlayerNPCMaster
-
 #macro PlayFiringSound audio_emitter_falloff(SoundEmitter2, 2500, 8000, 1); audio_play_sound_on(SoundEmitter2,snd_hg_shot,0,1); audio_emitter_falloff(SoundEmitter, 300, 750, 1); audio_play_sound_on(SoundEmitter,snd_bullet_drop,0,1)
 #endregion
 
@@ -80,11 +82,6 @@ MacroPlayerNPCMaster
 audio_falloff_set_model(audio_falloff_linear_distance);
 audio_listener_position(x,y,0)
 audio_listener_orientation(0, 0, 10, 0, -1, 0);
-#endregion
-
-#region Debug
-//DEBUG
-global.Debug_Mode=debug_mode
 #endregion
 
 #region Old Weapon System (Commented Out)
@@ -184,11 +181,12 @@ htbrsl = 1 // Hot Bar Selection
 #endregion
 
 #region Shooting
-fireInterval = 6
+fireInterval = 4
 fireTimer = 0
 #endregion
 
-#region Other code
-// Spawn cursor
-instance_create_layer(1,1,"UI",obj_cursor)
+#region Text Display
+displayText = ""
+textTime = 15
+textTimer = textTime
 #endregion

@@ -1,5 +1,5 @@
 
-if (global.Debug_Mode) {
+if (debug_mode) {
 	draw_self()
 	draw_set_font(fnt_default)
 	draw_text(x,y+64,string(state))
@@ -30,6 +30,23 @@ if (orientation == 1) {
 
 if (firing) {
 	if (orientation == 0) {
+		if !instance_exists(teslaSprite) {
+			teslaSprite = instance_create_layer(x,y,"Lights",obj_sprite)
+			with (teslaSprite) {
+				
+			}
+		}
+	}
+} else {
+	if instance_exists(teslaSprite) {
+		instance_destroy(teslaSprite)
+		teslaSprite = noone
+	}
+}
+
+/*
+if (firing) {
+	if (orientation == 0) {
 		draw_sprite_pos(txr_teslafield,irandom_range(0,8),x1,y1,x2,y2,x3,y3,x4,y4,1)
 	}
 	
@@ -37,3 +54,4 @@ if (firing) {
 		draw_sprite_pos(txr_teslafield,irandom_range(0,8),x1,y1,x2,y2,x3,y3,x4,y4,1)
 	}
 }
+*/

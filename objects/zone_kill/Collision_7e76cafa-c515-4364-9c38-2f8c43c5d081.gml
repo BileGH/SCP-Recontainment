@@ -1,1 +1,0 @@
-with (obj_player) obj_player.HP=obj_player.HP-1000;

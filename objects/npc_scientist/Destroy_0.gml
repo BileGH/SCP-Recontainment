@@ -1,2 +1,0 @@
-CorpseName = obj_dead_body_scientist
-MacroMakeBloodPuddlesAndCorpse

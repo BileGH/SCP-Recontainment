@@ -1,1 +1,0 @@
-global.insanity=global.insanity+0.000001

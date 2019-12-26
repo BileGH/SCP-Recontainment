@@ -1,1 +1,1 @@
-if (global.Debug_Mode) {draw_self()}
+if (debug_mode) {draw_self()}

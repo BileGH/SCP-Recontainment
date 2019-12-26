@@ -87,6 +87,8 @@ firstStep = true
 // This is the beginning of the new code rewrite.
 waitingAudioEnd = false;
 
+// The sprite that's unlit that will be drawn
+teslaSprite = noone
 
 #endregion
 

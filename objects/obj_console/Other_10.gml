@@ -6,6 +6,12 @@ if (text_part[0] == commands[command_1.create]) {
 	#region CREATE
 		var create_x = room_width/2
 		var create_y = room_height/2
+		
+		if instance_exists(obj_player) {
+			create_x = obj_player.x
+			create_y = obj_player.y
+		}
+		
 		var create_obj = -1
 		
 		var parse_parts = array_length_1d(text_part)
@@ -18,6 +24,9 @@ if (text_part[0] == commands[command_1.create]) {
 			if (!object_exists(object_to_try_and_make)) { // object doesnt exist 
 				temp_post_message = "Object "+string(text_part[1])+" doesnt exist"
 				event_user(1); // post message to the history 
+			} else if object_to_try_and_make == obj_player {
+				temp_post_message = "Object "+string(text_part[1])+" spawning is forbidden"
+				event_user(1);
 			} else {
 				
 				create_obj = object_to_try_and_make
@@ -123,16 +132,19 @@ if (text_part[0] == commands[command_1.create]) {
 				temp_post_message = "Unknown object"
 				event_user(1); // post message to the history 
 			} else {
-				
 				if (instance_number(object_to_try_and_destroy) == 0) { // object doesnt exist 
 					temp_post_message = "Instance count was zero"
 					event_user(1); // post message to the history 
 				} else {
+					if (object_to_try_and_destroy == obj_player) {
+						temp_post_message = "Destroying the player object is forbidden"
+						event_user(1)
+					} else {
 				
 					parse_parts = object_to_try_and_destroy
 					instance_destroy(parse_parts)
 					command_done = true
-
+					}
 				}
 			}
 		}
@@ -573,7 +585,6 @@ if (text_part[0] == commands[command_1.create]) {
 			event_user(1);
 		}
 	}
-	
 	
 	
 	#endregion

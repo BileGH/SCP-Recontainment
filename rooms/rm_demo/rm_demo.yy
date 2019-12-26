@@ -42,7 +42,7 @@
             "name": "Logo",
             "id": "ca76eda0-0985-4dd8-b13e-eea391480c7b",
             "assets": [
-{"__type": "GMRSpriteGraphic_Model:#YoYoStudio.MVCFormat","name": "graphic_77B5F234","id": "3f5f2109-9090-47aa-a748-2e54dbc29582","animationFPS": 15,"animationSpeedType": "0","colour": { "Value": 4294967295 },"frameIndex": 0,"ignore": false,"inheritItemSettings": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRSpriteGraphic","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","spriteId": "99604d07-13bf-4bf7-a2e8-00ec4cef7425","userdefined_animFPS": false,"x": 1081,"y": 520}
+
             ],
             "depth": 100,
             "grid_x": 32,
