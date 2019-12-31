@@ -77,7 +77,7 @@ visibileEnts[0] = noone
 #macro PlayFiringSound audio_emitter_falloff(SoundEmitter2, 2500, 8000, 1); audio_play_sound_on(SoundEmitter2,snd_hg_shot,0,1); audio_emitter_falloff(SoundEmitter, 300, 750, 1); audio_play_sound_on(SoundEmitter,snd_bullet_drop,0,1)
 #endregion
 
-#region Audio Systme
+#region Audio System
 //AUDIO SYSTEM
 audio_falloff_set_model(audio_falloff_linear_distance);
 audio_listener_position(x,y,0)

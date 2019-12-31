@@ -1,0 +1,5 @@
+draw_self()
+draw_set_color(c_black)
+draw_set_font(fnt_courier24)
+draw_text(xc,yc,text)
+draw_set_color(c_white)

@@ -26,6 +26,7 @@ localization_add(i + "paper_173")
 var b = "button_"
 localization_add(b + "newgame")
 localization_add(b + "options")
+localization_add(b + "load")
 localization_add(b + "exit")
 #endregion
 ini_close()

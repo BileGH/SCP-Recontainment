@@ -15,7 +15,7 @@ if (loading) {
 		
 		switch (loadStage) {
 			case 0:
-			#region Loading0
+			#region Loading0 // Loading INIT
 			loadText = localization("loading0")
 			audio_play_sound(snd_pc_startup,0,false)
 			loadStage += 1
@@ -23,8 +23,9 @@ if (loading) {
 			break
 			
 			case 1:
-			#region Loading1
+			#region Loading1 // Graphic Options
 			loadText = localization("loading1")
+			options_load()
 			loadStage += 1
 			#endregion	
 			break
@@ -37,14 +38,14 @@ if (loading) {
 			break
 			
 			case 3:
-			#region Loading3
+			#region Loading3 // Mod Assets
 			loadText = localization("loading3")
 			loadStage += 1
 			#endregion
 			break
 			
 			case 4:
-			#region Loading4
+			#region Loading4 // Finishing stuff
 			loadText = localization("loading4")
 			loading = false
 			loadStage = 0
