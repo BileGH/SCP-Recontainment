@@ -10,7 +10,6 @@ enum EDiscordHandlers {
   Join,
   Spectate,
   JoinRequest,
-  
   Num,
 };
 

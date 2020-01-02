@@ -31,8 +31,24 @@ if (loading) {
 			break
 			
 			case 2:
-			#region Loading2
+			#region Loading2 // Discord Rich Presence
 			loadText = localization("loading2")
+			
+			var appid = "662088666709098526"
+			if !rousr_dissonance_create(appid) {
+				if instance_exists(obj_console) {
+					with (obj_console) {
+						temp_post_message = "WARNING: Discord Rich Presence failed to initialize!"
+						event_user(1)
+					}
+				} else {
+					show_debug_message("WARNING: Discord Rich Presence failed to initialize!")
+				}
+			} else {
+				if debug_mode {rousr_dissonance_set_details("Developing")} else {rousr_dissonance_set_details("Playing")}
+				rousr_dissonance_set_large_image("gamepic","In-game")
+			}
+			
 			loadStage += 1
 			#endregion
 			break
